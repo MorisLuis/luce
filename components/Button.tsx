@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonInterface {
-    onClick: (() => void) | ((e: any) => Promise<void>)
+    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
     title: string;
 }
 

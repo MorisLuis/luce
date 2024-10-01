@@ -6,8 +6,10 @@ import { Button } from '@/components/Button';
 import { Title } from '@/components/Title';
 import styles from "../../../styles/productDetails.module.scss";
 import { Subtitle } from '@/components/Subtitle';
+import { Product } from '@/interface/product';
 
-export default function ProductDetails({ product }: any) {
+
+export default function ProductDetails({ product }: { product: Product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [fade, setFade] = useState(false); // Estado para la transición de opacidad
 
@@ -25,7 +27,7 @@ export default function ProductDetails({ product }: any) {
         <div className={styles.ProductDetails}>
             <Title title={`${product.name}`} />
             <div className={styles.imageBannerContent}>
-                <div 
+                <div
                     className={`${styles.imageBanner} ${fade ? styles.fade : ''}`}
                     onMouseEnter={() => setCurrentImageIndex(1)}
                     onMouseLeave={() => setCurrentImageIndex(0)}
@@ -55,8 +57,14 @@ export default function ProductDetails({ product }: any) {
                 <p>{product.categories.join(', ')}</p>
                 <Button
                     title='Descargar PDF'
-                    onClick={() => window.open(`/pdf/${product.pdf}`, '_blank')}
+                    onClick={() => {
+                        const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
+                        if (!newWindow) {
+                            console.error('La ventana emergente fue bloqueada.');
+                        }
+                    }}
                 />
+
             </div>
         </div>
     );

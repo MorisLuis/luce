@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export async function POST(req: any) {
+export async function POST(req: Request) {
     const { email, subject, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
@@ -35,7 +35,7 @@ export async function POST(req: any) {
     try {
         await transporter.sendMail(mailOptions);
         return new Response(JSON.stringify({ message: 'Correo enviado exitosamente!' }), { status: 200 });
-    } catch (error: any) {
+    } catch (error) {
         console.error('Error al enviar el correo:', error);
         return new Response(JSON.stringify({ message: 'Error al enviar el correo.' }), { status: 500 });
     }

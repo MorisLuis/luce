@@ -3,6 +3,7 @@
 import React from 'react';
 import { products } from '@/data/products';
 import ProductDetails from './ProductDetails';
+import { Product } from '@/interface/product';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const product = products.find((prod) => prod.id === Number(params.id));
@@ -14,8 +15,14 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = products.find((prod) => prod.id === Number(params.id));
 
-  return <ProductDetails product={product} />;
+
+export default function ProductPage({ params }: { params: { id: string } }) {
+    const product: Product | undefined = products.find((prod) => prod.id === Number(params.id));
+
+    if (!product) {
+        return <div>Producto no encontrado</div>; // O redirigir a otra página
+    }
+
+    return <ProductDetails product={product} />;
 }

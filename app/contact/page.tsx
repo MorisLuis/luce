@@ -9,7 +9,7 @@ export default function Contact() {
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const res = await fetch('/api/sendEmail', {
@@ -27,6 +27,14 @@ export default function Contact() {
             setMessage('');
         } else {
             setResponse('Error al enviar el correo. Inténtalo de nuevo.');
+        }
+    };
+
+    // Función para manejar el clic en el botón que simula el envío del formulario
+    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const form = e.currentTarget.closest('form');  // Encuentra el formulario más cercano
+        if (form) {
+            form.requestSubmit(); // Envia el formulario
         }
     };
 
@@ -66,7 +74,7 @@ export default function Contact() {
 
                 <Button
                     title='Enviar'
-                    onClick={handleSubmit}
+                    onClick={handleButtonClick} // Ahora usamos la función handleButtonClick
                 />
             </form>
             {response && <p>{response}</p>}
