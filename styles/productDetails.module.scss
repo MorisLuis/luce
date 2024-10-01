@@ -1,0 +1,18 @@
+.ProductDetails{
+    display: 'flex';
+    padding: 0 200px;
+
+    .imageBannerContent{
+        padding: 50px 0px;
+        .imageBanner {
+            width: 50vw; 
+            height: 300px;
+            position: relative;
+    
+            .image{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
