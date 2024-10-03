@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { Title } from '@/components/Title';
-import styles from "../../../styles/productDetails.module.scss";
 import { Subtitle } from '@/components/Subtitle';
 import { Product } from '@/interface/product';
+import styles from "../../../styles/productDetails.module.scss";
 
 
 export default function ProductDetails({ product }: { product: Product }) {
@@ -25,45 +25,64 @@ export default function ProductDetails({ product }: { product: Product }) {
 
     return (
         <div className={styles.ProductDetails}>
-            <Title title={`${product.name}`} />
-            <div className={styles.imageBannerContent}>
-                <div
-                    className={`${styles.imageBanner} ${fade ? styles.fade : ''}`}
-                    onMouseEnter={() => setCurrentImageIndex(1)}
-                    onMouseLeave={() => setCurrentImageIndex(0)}
-                >
-                    <Image
-                        src={`/images/${product.images[currentImageIndex].src}`}
-                        alt={product.images[currentImageIndex].alt}
-                        layout="fill" // Hace que la imagen ocupe todo el contenedor
-                        objectFit="cover" // Mantiene la imagen dentro del contenedor
-                    />
-                </div>
-            </div>
-            <div>
-                <Subtitle title={`Marca: ${product.brand}`} />
-                <p>{product.shortDescription}</p>
-                <h3>Descripción extensa:</h3>
-                <p>{product.longDescription}</p>
-                <h3>Especificaciones:</h3>
-                <ul>
-                    <li>Fuente de luz: {product.specifications.lightSource}</li>
-                    <li>Potencia máxima: {product.specifications.maxPower}</li>
-                    <li>Lúmenes totales: {product.specifications.lumens}</li>
-                    <li>Temperatura de color: {product.specifications.colorTemperature}</li>
-                    <li>Peso: {product.specifications.weight}</li>
-                </ul>
-                <h3>Categorías:</h3>
-                <p>{product.categories.join(', ')}</p>
-                <Button
-                    title='Descargar PDF'
-                    onClick={() => {
-                        const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
-                        if (!newWindow) {
-                            console.error('La ventana emergente fue bloqueada.');
-                        }
+            <div className={styles.ProductDetailsHeaderContainer}>
+                <Title
+                    title={`${product.name}`}
+                    styles={{
+                        width: "50%",
+                        display: 'flex',
+                        alignItems: 'flex-end'
                     }}
                 />
+                <div className={styles.imageBannerContent}>
+                    <div
+                        className={`${styles.imageBanner} ${fade ? styles.fade : ''}`}
+                        onMouseEnter={() => setCurrentImageIndex(1)}
+                        onMouseLeave={() => setCurrentImageIndex(0)}
+                    >
+                        <Image
+                            src={`/images/${product.images[currentImageIndex].src}`}
+                            alt={product.images[currentImageIndex].alt}
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.ProductDetailsContent}>
+                <Subtitle title={`Marca: ${product.brand}`} />
+                <section>
+                    <p>{product.shortDescription}</p>
+                    <h3>Descripción extensa:</h3>
+                    <p>{product.longDescription}</p>
+                </section>
+                <section>
+                    <h3>Especificaciones:</h3>
+                    <ul className={styles.specifications}>
+                        <li>Fuente de luz: {product.specifications.lightSource}</li>
+                        <li>Potencia máxima: {product.specifications.maxPower}</li>
+                        <li>Lúmenes totales: {product.specifications.lumens}</li>
+                        <li>Temperatura de color: {product.specifications.colorTemperature}</li>
+                        <li>Peso: {product.specifications.weight}</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Categorías:</h3>
+                    <p>{product.categories.join(', ')}</p>
+                </section>
+                {
+                    product.pdf &&
+                    <Button
+                        title='Descargar PDF'
+                        onClick={() => {
+                            const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
+                            if (!newWindow) {
+                                console.error('La ventana emergente fue bloqueada.');
+                            }
+                        }}
+                    />
+                }
 
             </div>
         </div>

@@ -17,7 +17,7 @@ export interface Product {
     };
     categories: string[];
     mainImage: string;
-    pdf: string;
+    pdf?: string;
     seo: {
         keywords: string[],
         metaDescription: string;

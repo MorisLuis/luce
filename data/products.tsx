@@ -23,7 +23,7 @@ export const products: Product[] = [
             { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
             // Más imágenes...
         ],
-        pdf: "Lampara_schwung_odysseylg_fichatecnica.pdf",
+        //pdf: "Lampara_schwung_odysseylg_fichatecnica.pdf",
         seo: {
             keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",

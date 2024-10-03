@@ -1,18 +1,44 @@
+@import "./main.scss";
+
 .ProductDetails{
     display: 'flex';
-    padding: 0 200px;
+    padding: 10px 200px 100px;
+    width: 100%;
 
-    .imageBannerContent{
-        padding: 50px 0px;
-        .imageBanner {
-            width: 50vw; 
-            height: 300px;
-            position: relative;
-    
-            .image{
-                width: 100px;
-                height: 100px;
+    .ProductDetailsHeaderContainer{
+        display: flex;
+        flex-direction:row;
+        width: 100%;
+        align-content: flex-end;
+        margin-bottom: $global-margin-bottom * 10;
+
+        .imageBannerContent{
+            margin: $global-margin-bottom 0px;
+            width: 100%;
+        
+            .imageBanner {
+                //width: 80%; 
+                height: 300px;
+                min-height: 70vh;
+                position: relative;
+        
+                .image{
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+        }
+    };
+
+    .ProductDetailsContent {
+        > section {
+            margin: $global-margin-bottom * 5 0px;
+        }
+        .specifications{
+            > li {
+                list-style: none;
             }
         }
     }
+
 }
