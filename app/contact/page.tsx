@@ -2,6 +2,7 @@
 import { Button } from '@/components/Button';
 import { Title } from '@/components/Title';
 import React, { useState } from 'react';
+import styles from "../../styles/Contact.module.scss";
 
 export default function Contact() {
     const [email, setEmail] = useState('');
@@ -39,10 +40,10 @@ export default function Contact() {
     };
 
     return (
-        <div>
+        <div className={styles.Contact}>
             <Title title='Contacto'/>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form onSubmit={handleSubmit} className={styles.ContactForm}>
+                <div className={styles.inputContainer}>
                     <label htmlFor="email">Tu Email:</label>
                     <input
                         type="email"
@@ -50,9 +51,10 @@ export default function Contact() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
+                        className='input'
                     />
                 </div>
-                <div>
+                <div className={styles.inputContainer}>
                     <label htmlFor="subject">Asunto:</label>
                     <input
                         type="text"
@@ -60,15 +62,17 @@ export default function Contact() {
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         required
+                        className='input'
                     />
                 </div>
-                <div>
+                <div className={styles.inputContainer}>
                     <label htmlFor="message">Mensaje:</label>
                     <textarea
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
+                        className='input'
                     />
                 </div>
 

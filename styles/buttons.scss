@@ -3,11 +3,18 @@
     background-color: "transparent";
     border-width: 1px;
     padding: 10px 30px;
-    border-radius: 100px;
+    border-radius: $global-border-radius;
 
     &:hover{
         background-color: $color-tertiary;
         color: $text-color-secondary;
         cursor: pointer;
     }
+}
+
+.input{
+    height: 30px;
+    border-color: $color-border;
+    border-radius: $global-border-radius;
+    border-width: 1px;
 }

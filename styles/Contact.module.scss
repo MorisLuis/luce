@@ -1,0 +1,23 @@
+@import "./main.scss";
+
+.Contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 200px 100px;
+    border-bottom: solid;
+    border-color: $color-border-tertiary;
+    border-width: 1px;
+
+    .ContactForm {
+
+        .inputContainer{
+            display: flex;
+            margin-bottom: $global-margin-bottom;
+
+            label{
+                width: 10%;
+            }
+        }
+    }
+}
