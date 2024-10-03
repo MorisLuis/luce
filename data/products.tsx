@@ -44,10 +44,10 @@ export const products: Product[] = [
             colorTemperature: "2200-3000 K",
         },
         categories: ["Productos", "Schwung Design", "Colección Globe", "Candiles"],
-        mainImage: "armstrong-linear/candil_schwung_armstronglinear_apagado.jpg",
+        mainImage: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
         images: [
-            { src: "armstrong-linear/candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
-            { src: "armstrong-linear/candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
             // Más imágenes...
         ],
         pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",
