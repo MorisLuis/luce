@@ -1,0 +1,50 @@
+@import "./main.scss";
+
+.topNavigation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 60px;
+    border-bottom: solid;
+    border-color: $color-border-tertiary;
+    border-width: 1px;
+
+
+    li :hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        list-style: none;
+    }
+};
+
+
+.bottomNavigation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 60px;
+    border-top: solid;
+    border-color: $color-border-tertiary;
+    border-width: 1px;
+
+    li :hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        list-style: none;
+
+        .column {
+            display: flex;
+            flex-direction: column
+        }
+    }
+}

@@ -32,12 +32,7 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
           <Nav />
 
-          <div
-            style={{
-              minHeight: "100vh",
-              display: 'flex'
-            }}
-          >
+          <div style={{ minHeight: "100vh", display: 'flex' }} >
             {children}
           </div>
           <Footer />
