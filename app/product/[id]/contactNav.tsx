@@ -1,31 +1,31 @@
 "use client";
-import { Button } from '@/components/Button';
-import { Title } from '@/components/Title';
-import React, { useState } from 'react';
-import styles from "../../styles/Contact.module.scss";
-import { sendEmail } from '@/services/sendEmail';
 
-export default function Contact() {
+import React, { useState } from 'react';
+import { sendEmailProduct } from '@/services/sendEmail';
+import { Button } from '@/components/Button';
+import { Product } from '@/interface/product';
+import styles from "../../../styles/Navigation.module.scss";
+
+export const ContactNav = ({ product }: { product: Product }) => {
+
+
     const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
+    const [sendingEmail, setSendingEmail] = useState(false)
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setSendingEmail(true)
 
         try {
-            const res = await sendEmail({
+            const res = await sendEmailProduct({
                 email,
-                subject,
-                message
+                product
             });
 
             if (res.ok) {
                 setResponse('Correo enviado exitosamente!');
-                setEmail('');
-                setSubject('');
-                setMessage('');
+                //setEmail('');
             } else {
                 const errorData = await res.json();
                 setResponse(`Error al enviar el correo: ${errorData.message || 'Inténtalo de nuevo.'}`);
@@ -33,6 +33,8 @@ export default function Contact() {
         } catch (error) {
             console.error('Error al enviar el correo:', error);
             setResponse('Error al enviar el correo. Inténtalo de nuevo.');
+        } finally {
+            setSendingEmail(false);
         }
     };
 
@@ -44,8 +46,7 @@ export default function Contact() {
     };
 
     return (
-        <div className={styles.Contact}>
-            <Title title='Contacto' />
+        <nav className={styles.ContactNavNavigation}>
             <form onSubmit={handleSubmit} className={styles.ContactForm}>
                 <div className={styles.inputContainer}>
                     <label htmlFor="email">Tu Email:</label>
@@ -58,34 +59,20 @@ export default function Contact() {
                         className='input'
                     />
                 </div>
-                <div className={styles.inputContainer}>
-                    <label htmlFor="subject">Asunto:</label>
-                    <input
-                        type="text"
-                        id="subject"
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
-                        required
-                        className='input'
-                    />
-                </div>
-                <div className={styles.inputContainer}>
-                    <label htmlFor="message">Mensaje:</label>
-                    <textarea
-                        id="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                        className='input'
-                    />
-                </div>
 
                 <Button
                     title='Enviar'
-                    onClick={handleButtonClick} // Ahora usamos la función handleButtonClick
+                    onClick={handleButtonClick}
                 />
+                {
+                    sendingEmail &&
+                    <div>Enviando correo...</div>
+                }
+                {
+                    response &&
+                    <div>Información enviada exitosamente a {email}</div>
+                }
             </form>
-            {response && <p>{response}</p>}
-        </div>
+        </nav>
     );
 }

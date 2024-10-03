@@ -10,6 +10,7 @@
     border-width: 1px;
 
 
+
     li :hover {
         text-decoration: underline;
     }
@@ -47,4 +48,14 @@
             flex-direction: column
         }
     }
+};
+
+.ContactNavNavigation{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 40px 200px;
+    border-top: solid;
+    border-color: $color-border-tertiary;
+    border-width: 1px;
 }
