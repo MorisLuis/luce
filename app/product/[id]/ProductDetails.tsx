@@ -45,7 +45,6 @@ export default function ProductDetails({ product }: { product: Product }) {
                             alt={product.images[currentImageIndex].alt}
                             layout="fill"
                             objectFit="cover"
-                            unoptimized
                         />
                     </div>
                 </div>

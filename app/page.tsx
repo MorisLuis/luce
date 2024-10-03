@@ -16,7 +16,6 @@ export default function Home() {
                 width={300}
                 height={300}
                 objectFit="cover"
-                
               />
             </div>
             <div className={styles.productName}>{product.name}</div>
