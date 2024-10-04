@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation'; // Cambiar de next/router a next/navigation
 import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { Title } from '@/components/Title';
@@ -8,10 +9,10 @@ import { Subtitle } from '@/components/Subtitle';
 import { Product } from '@/interface/product';
 import styles from "../../../styles/productDetails.module.scss";
 
-
 export default function ProductDetails({ product }: { product: Product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [fade, setFade] = useState(false); // Estado para la transición de opacidad
+    const router = useRouter(); // Usar el hook de next/navigation
 
     useEffect(() => {
         setFade(true); // Activa la transición cuando cambia el índice
@@ -25,6 +26,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
     return (
         <div className={styles.ProductDetails}>
+            <button onClick={() => router.push("/categories")}>Regresar</button> {/* Navegar hacia la página anterior */}
             <div className={styles.ProductDetailsHeaderContainer}>
                 <Title
                     title={`${product.name}`}

@@ -16,7 +16,7 @@ export const products: Product[] = [
             colorTemperature: "2200-3000 K",
             weight: "2.4 kg / 5.3 lb",
         },
-        categories: ["Productos", "Schwung Design", "Lámparas arbotantes"],
+        categories: ["Productos", "Schwung Design", "Lámparas arbotante"],
         mainImage: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg",
         images: [
             { src: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg", alt: "Vista lateral de la lámpara arbotante apagada." },
