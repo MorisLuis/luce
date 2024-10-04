@@ -24,10 +24,10 @@ function ProductList() {
   );
 
   return (
-    <div>
+    <div className={styles.Categories}>
       <h1>Categorias</h1>
 
-      <nav>
+      <nav  className={styles.CategoriesNavigation}>
         <ul>
           {categories.map((item) => (
             <li
@@ -64,7 +64,7 @@ function ProductList() {
   );
 }
 
-export default function Home() {
+export default function Categories() {
   return (
     <Suspense fallback={<div>Cargando productos...</div>}>
       <ProductList />

@@ -1,39 +1,51 @@
 @import "./main.scss";
 
-.gridContainer {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); // 4 columnas
-  gap: 16px;
+.Categories {
+  padding: 20px 60px;
 
-  .productCard {
-    background-color: $background-color;
-    border: 1px solid $color-border;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s;
-    height: fit-content;
+  .CategoriesNavigation{
+    margin-bottom: 20px;
 
-    :hover{
-      opacity: 90%;
+    > ul {
+      list-style: none;
     }
+  }
 
-    .productLink {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: $text-color;
-
-      .imageWrapper {
-        width: 100%;
-        height: 300px;
-        position: relative;
+  .gridContainer {
+    //padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 columnas
+    gap: 16px;
+  
+    .productCard {
+      background-color: $background-color;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s;
+      height: fit-content;
+  
+      :hover{
+        opacity: 90%;
       }
-
-      .productName {
-        padding: 10px;
-        text-align: center;
+  
+      .productLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: $text-color;
+  
+        .imageWrapper {
+          width: 100%;
+          height: 300px;
+          position: relative;
+        }
+  
+        .productName {
+          padding: 10px;
+          text-align: center;
+        }
       }
     }
   }
