@@ -11,8 +11,8 @@ import styles from "../../../styles/productDetails.module.scss";
 
 export default function ProductDetails({ product }: { product: Product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [fade, setFade] = useState(false); // Estado para la transición de opacidad
-    const router = useRouter(); // Usar el hook de next/navigation
+    const [fade, setFade] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         setFade(true); // Activa la transición cuando cambia el índice
@@ -21,12 +21,20 @@ export default function ProductDetails({ product }: { product: Product }) {
     }, [currentImageIndex]);
 
     if (!product) {
-        return <div>Cargando...</div>; // Manejo de carga si el producto no está disponible
+        return <div>Cargando...</div>;
     }
 
     return (
         <div className={styles.ProductDetails}>
-            <button onClick={() => router.push("/categories")}>Regresar</button> {/* Navegar hacia la página anterior */}
+            <button
+                onClick={() => router.push("/categories")}
+                style={{
+                    borderWidth: 0,
+                    padding: 10,
+                    borderRadius: 5,
+                    cursor: 'pointer'
+                }}
+            >Regresar</button>
             <div className={styles.ProductDetailsHeaderContainer}>
                 <Title
                     title={`${product.name}`}

@@ -17,7 +17,7 @@ export const ContactNav = ({ product }: { product: Product }) => {
         <nav className={styles.ContactNavNavigation}>
             <div className={styles.ContactForm}>
                 <h1
-                    style={{ fontSize: 40 }}
+                    style={{ fontSize: 40, cursor: 'pointer' }}
                     onClick={handleButtonClick}
                 >
                     Me interesa este producto  --{'>'}
