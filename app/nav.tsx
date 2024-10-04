@@ -7,7 +7,8 @@ export const Nav = () => {
         <nav className={styles.topNavigation}>
             <ul className={styles.container}>
                 <li><Link href={'/'}>LUCE</Link></li>
-                <li><Link href={'/'}>Home</Link></li>
+                <li><Link href={'/'}>Inicio</Link></li>
+                <li><Link href={'/categories'}>Categorias</Link></li>
                 <li><Link href={'/contact'}>Contacto</Link></li>
             </ul>
         </nav>
