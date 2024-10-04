@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation'; // Cambiar de next/router a next/navigation
 import Image from 'next/image';
 import { Button } from '@/components/Button';
@@ -10,15 +10,7 @@ import { Product } from '@/interface/product';
 import styles from "../../../styles/productDetails.module.scss";
 
 export default function ProductDetails({ product }: { product: Product }) {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [fade, setFade] = useState(false);
     const router = useRouter();
-
-    useEffect(() => {
-        setFade(true); // Activa la transición cuando cambia el índice
-        const timeout = setTimeout(() => setFade(false), 500); // Espera que termine la transición
-        return () => clearTimeout(timeout); // Limpia el timeout al desmontar
-    }, [currentImageIndex]);
 
     if (!product) {
         return <div>Cargando...</div>;
@@ -45,14 +37,10 @@ export default function ProductDetails({ product }: { product: Product }) {
                     }}
                 />
                 <div className={styles.imageBannerContent}>
-                    <div
-                        className={`${styles.imageBanner} ${fade ? styles.fade : ''}`}
-                        onMouseEnter={() => setCurrentImageIndex(1)}
-                        onMouseLeave={() => setCurrentImageIndex(0)}
-                    >
+                    <div className={`${styles.imageBanner}`}>
                         <Image
-                            src={`/images/${product.images[currentImageIndex].src}`}
-                            alt={product.images[currentImageIndex].alt}
+                            src={`/images/${product.images[1].src}`}
+                            alt={product.images[1].alt}
                             layout="fill"
                             objectFit="cover"
                         />
