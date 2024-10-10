@@ -10,10 +10,10 @@
         flex-direction:row;
         width: 100%;
         align-content: flex-end;
-        margin-bottom: $global-margin-bottom * 10;
+        margin-bottom: $margin-bottom * 10;
 
         .imageBannerContent{
-            margin: $global-margin-bottom 0px;
+            margin: $margin-bottom 0px;
             width: 100%;
         
             .imageBanner {
@@ -32,7 +32,7 @@
 
     .ProductDetailsContent {
         > section {
-            margin: $global-margin-bottom * 5 0px;
+            margin: $margin-bottom * 5 0px;
         }
         .specifications{
             > li {

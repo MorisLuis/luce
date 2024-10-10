@@ -1,42 +1,56 @@
 @import "./main.scss";
 
 .topNavigation {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 20px 60px;
-    border-bottom: solid;
-    border-color: $color-border-tertiary;
-    border-width: 1px;
-
-
-
-    li :hover {
-        text-decoration: underline;
-    }
 
     .container {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        height: 100%;
+        min-width: 400;
+        width: 20%;
+        background-color: $color-primary;
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
 
-        li :hover {
-            text-decoration: none;
+        .luce {
+            font-size: $font-big;
         }
+
+        .section {
+            font-size: $font-normal;
+            font-weight: 'bold';
+            text-transform: uppercase;
+            margin-bottom: $margin-bottom;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        };
 
         .dropdown {
             position: absolute;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            right: - $padding-horizontal; 
+            background-color: $color-primary;
+            margin-top: $margin-bottom;
             z-index: 1000;
-            padding: 10px;
             margin: 0;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
         };
 
         .dropdown li {
-            padding: 5px 0; // Espaciado entre categorías
+            font-size: $font-normal;
+            padding: $padding-horizontal/2 $padding-horizontal;
         }
 
         .dropdown li a {
@@ -47,7 +61,6 @@
         .dropdown li:hover {
             background-color: #f0f0f0; // Color de fondo al pasar el mouse
         }
-
     }
 }
 
