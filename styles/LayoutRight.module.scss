@@ -1,0 +1,48 @@
+@import "./main.scss";
+
+.layoutRight {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    .content{
+        width: 80%;
+
+        @include respond(phone) {
+            width: 100%
+        };
+    }
+
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        width: 20%;
+        padding: $padding-horizontal;
+
+        @include respond(phone) {
+            display: none
+        };
+
+        @include respond(phone) {
+            justify-content:inherit;
+            padding: $padding-horizontal;
+        };
+
+        .imageContainer {
+            width: 100px;
+            height: 100px;
+            position: relative;
+    
+            @include respond(phone) {
+                width: 70px;
+                height: 70px;
+            };
+        };
+    }
+
+}

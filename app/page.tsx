@@ -28,7 +28,7 @@ export default function Home() {
           <Link href={'/contact'}>Contacto</Link>
         </li>
         <li className={styles.section}>
-          <Link href={'/contact'}>Categorias</Link>
+          <Link href={'/categories'}>Categorias</Link>
         </li>
       </div>
     </div>

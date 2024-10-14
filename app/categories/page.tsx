@@ -5,7 +5,8 @@ import Image from "next/image";
 import styles from "../../styles/page.module.scss";
 import Link from "next/link";
 import { products } from "@/data/products";
-import { Suspense, useState } from "react"; // Importar Suspense
+import { Suspense, useState } from "react";
+import LayoutRight from "@/components/LayoutRight";
 
 interface Category {
   id: number;
@@ -60,10 +61,33 @@ function ProductList() {
     setFadeStates((prev) => ({ ...prev, [id]: false })); // Desactivar el fade
   };
 
-  return (
-    <div className={styles.Categories}>
-      <h1>Categorías</h1>
+  const renderContent = () => {
+    return (
+      <div className={styles.gridContainer}>
+        {ProductRender.map((product: Product) => (
+          <div key={product.id} className={styles.productCard}>
+            <Link href={`/product/${product.id}`} className={styles.productLink}>
+              <div
+                className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
+                onMouseEnter={() => handleMouseEnter(product.id)}
+                onMouseLeave={() => handleMouseLeave(product.id)}
+              >
+                <Image
+                  src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
+                  alt={product.images[currentImageIndex[product.id]]?.alt}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    )
+  };
 
+  const renderSideBar = () => {
+    return (
       <nav className={styles.CategoriesNavigation}>
         <ul>
           {categories.map((item) => (
@@ -78,28 +102,15 @@ function ProductList() {
           ))}
         </ul>
       </nav>
+    )
+  }
 
-      <div className={styles.gridContainer}>
-        {ProductRender.map((product: Product) => (
-          <div key={product.id} className={styles.productCard}>
-            <Link href={`/product/${product.id}`} className={styles.productLink}>
-                <div
-                  className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
-                  onMouseEnter={() => handleMouseEnter(product.id)}
-                  onMouseLeave={() => handleMouseLeave(product.id)}
-                >
-                  <Image
-                    src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
-                    alt={product.images[currentImageIndex[product.id]]?.alt}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              <div className={styles.productName}>{product.name}</div>
-            </Link>
-          </div>
-        ))}
-      </div>
+  return (
+    <div className={styles.Categories}>
+      <LayoutRight
+        content={renderContent}
+        sideBar={renderSideBar}
+      />
     </div>
   );
 }

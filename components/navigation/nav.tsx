@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import styles from "../../styles/Navigation.module.scss";
 import { Hamburguer } from './hamburguer';
 import Image from 'next/image';
+import { Header } from './header';
+import { usePathname } from 'next/navigation'
 
 const categories = [
     { id: 1, value: "Todos" },
@@ -17,9 +19,13 @@ const categories = [
 export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [showDropDown, setShowDropDown] = useState(false);
+    const path = usePathname();
 
     return (
         <div className={styles.menu}>
+
+            { path === "/" && <Header/> }
+
             <Hamburguer
                 onClick={() => setShowMenu(!showMenu)}
                 active={showMenu}

@@ -1,11 +1,18 @@
 @import "./main.scss";
 
 .Categories {
-  padding: 20px 60px;
   width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
 
   .CategoriesNavigation{
-    margin-bottom: 20px;
+    margin-bottom: $margin-bottom;
+    width: 100%;
+    height: 100vh;
+    padding: $padding-horizontal;
+
+    padding-top: 10%;
 
     > ul {
       list-style: none;
@@ -13,15 +20,20 @@
   }
 
   .gridContainer {
-    //padding: 60px;
+    width: 100%;
+    padding: $padding-horizontal;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 4 columnas
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+    };
   
     .productCard {
       background-color: $background-color;
       border: 1px solid $color-border;
-      border-radius: 8px;
       overflow: hidden;
       transition: transform 0.2s;
       height: fit-content;

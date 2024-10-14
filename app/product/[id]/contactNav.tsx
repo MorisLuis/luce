@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'; // Asegúrate de usar el import cor
 
 export const ContactNav = ({ product }: { product: Product }) => {
 
-    const router = useRouter(); // Usar el hook de next/navigation
+    const router = useRouter();
     const handleButtonClick = () => {
         router.push(`/contact?productId=${product.id}`);
     };

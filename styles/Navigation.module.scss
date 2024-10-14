@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     z-index: 999;
-    position: relative;
-    padding: $padding-horizontal;
+    position: absolute;
+    top: $padding-horizontal;
+    right: $padding-horizontal;
 
     .imageContainer {
         width: 100px;
@@ -15,9 +16,7 @@
         @include respond(phone) {
             width: 70px;
             height: 70px;
-        }
-
-        ;
+        };
     }
 }
 
@@ -121,11 +120,15 @@
         @include respond(tab-port) {
             right: $padding-horizontal * 2;
             bottom: $padding-horizontal * 2;
+            width: fit-content;
+            height: fit-content;
         }
     
         @include respond(phone) {
             left: $padding-horizontal * 2;
             top: $padding-horizontal * 2 + (70px / 4);
+            width: fit-content;
+            height: fit-content;
         }
     
         .bar {
