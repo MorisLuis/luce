@@ -59,9 +59,7 @@
                         width: 70px;
                         height: 70px;
                     }
-                }
-
-                ;
+                };
             }
 
             .sectionsContainer {
@@ -82,13 +80,7 @@
                         display: flex;
                         justify-content: flex-end;
                         padding-right: $padding-horizontal * 3
-                    }
-
-                    ;
-
-                    /* p {
-                        width: 100%;
-                    } */
+                    };
 
                     &:hover {
                         text-decoration: underline;
@@ -163,7 +155,5 @@
         .activeBar3 {
             transform: translateY(-13px) rotate(-45deg);
         }
-    }
-    
-
+    };
 };
