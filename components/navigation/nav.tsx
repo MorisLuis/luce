@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from "../../styles/Navigation.module.scss";
 import { Hamburguer } from './hamburguer';
+import Image from 'next/image';
 
 const categories = [
     { id: 1, value: "Todos" },
@@ -18,42 +19,58 @@ export const Nav = () => {
     const [showDropDown, setShowDropDown] = useState(false);
 
     return (
-        <div className={styles.topNavigation}>
+        <div className={styles.menu}>
             <Hamburguer
                 onClick={() => setShowMenu(!showMenu)}
+                active={showMenu}
             />
 
-            {/* menu */}
-            {
-                showMenu &&
-                <div className={styles.container}>
-                    <div className={styles.luce}><Link href={'/'}>LUCE</Link></div>
-                    <li className={styles.section}><Link href={'/'}>Inicio</Link></li>
-                    <li className={styles.section}><Link href={'/contact'}>Contacto</Link></li>
-
-                    <li
-                        className={styles.section}
-                        onMouseEnter={() => setShowDropDown(true)}
-                        onMouseLeave={() => setShowDropDown(false)}
-                    >
-                        Categorías
-                        <div style={{ position: 'relative' }}>
-                            {showDropDown && (
-                                <ul className={styles.dropdown}>
-                                    {categories.map(category => (
-                                        <li key={category.id}>
-                                            <Link href={`/categories?category=${category.value}`}>
-                                                {category.value}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+            {/* Menu */}
+            {showMenu && (
+                <div className={styles.menuBackground}>
+                    <div className={styles.menuContainer}>
+                        <div className={styles.luce}>
+                            <Image
+                                src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
+                                alt={'LUCE'}
+                                width={100}
+                                height={100}
+                            />
                         </div>
-                    </li>
 
+                        <div className={styles.sectionsContainer}>
+                            <li className={styles.section}>
+                                <Link href={'/'}>Inicio</Link>
+                            </li>
+                            <li className={styles.section}>
+                                <Link href={'/contact'}>Contacto</Link>
+                            </li>
+
+                            <li
+                                className={styles.section}
+                                onMouseEnter={() => setShowDropDown(true)}
+                                onMouseLeave={() => setShowDropDown(false)}
+                            >
+                                <p>Categorías</p>
+                                <div style={{ position: 'relative' }}>
+                                    {showDropDown && (
+                                        <ul className={styles.dropdown}>
+                                            {categories.map((category) => (
+                                                <li key={category.id}>
+                                                    <Link href={`/categories?category=${category.value}`}>
+                                                        {category.value}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            </li>
+                        </div>
+                    </div>
                 </div>
-            }
+            )}
         </div>
+
     );
 };

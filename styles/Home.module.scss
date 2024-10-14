@@ -1,14 +1,14 @@
 .Home {
-    //padding: 20px 60px;
     width: 100%;
-    position: relative; // Necesario para el contenedor de la imagen
-    height: 100vh; // Ocupa el 100% de la altura de la ventana
-    overflow: hidden; // Para ocultar cualquier desbordamiento
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
 
     .imageContainer {
-        position: relative; // Necesario para que el hijo con layout="fill" funcione
-        width: 100%; // Ocupa el 100% del ancho
-        height: 100%; // Ocupa el 100% de la altura
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
 }

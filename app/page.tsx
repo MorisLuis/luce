@@ -8,8 +8,8 @@ export default function Home() {
         <Image
           src={`/images/armstrong-linear/Candil_schwung_armstronglinear_estudio.jpg`}
           alt={'Imagen Land Page'}
-          layout="fill" // Esto permite que la imagen ocupe todo el contenedor
-          objectFit="cover" // Esto mantendrá la proporción de la imagen
+          layout="fill"
+          objectFit="cover"
         />
       </div>
     </div>
