@@ -11,12 +11,13 @@
     width: 100%;
     height: 100vh;
     padding: $padding-horizontal;
-
     padding-top: 10%;
 
     > ul {
       list-style: none;
-    }
+    };
+
+
   }
 
   .gridContainer {
@@ -30,7 +31,7 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 16px;
     };
-  
+
     .productCard {
       background-color: $background-color;
       border: 1px solid $color-border;

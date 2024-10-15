@@ -43,22 +43,21 @@ function ProductList() {
   const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({}); // Objeto para manejar los estados de fade
   const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>(
     () => {
-      // Inicializa el índice de imagen para cada producto en 0
       const initialIndex: Record<number, number> = {};
       ProductRender.forEach((product) => {
-        initialIndex[product.id] = 0; // Establece el índice inicial como 0 para cada producto
+        initialIndex[product.id] = 0;
       });
       return initialIndex;
     }
   );
   const handleMouseEnter = (id: number) => {
-    setCurrentImageIndex((prev) => ({ ...prev, [id]: 1 })); // Cambiar índice de la imagen al pasar el mouse
-    setFadeStates((prev) => ({ ...prev, [id]: true })); // Activar el fade
+    setCurrentImageIndex((prev) => ({ ...prev, [id]: 1 }));
+    setFadeStates((prev) => ({ ...prev, [id]: true }));
   };
 
   const handleMouseLeave = (id: number) => {
-    setCurrentImageIndex((prev) => ({ ...prev, [id]: 0 })); // Cambiar índice de la imagen al salir el mouse
-    setFadeStates((prev) => ({ ...prev, [id]: false })); // Desactivar el fade
+    setCurrentImageIndex((prev) => ({ ...prev, [id]: 0 }));
+    setFadeStates((prev) => ({ ...prev, [id]: false }));
   };
 
   const renderContent = () => {

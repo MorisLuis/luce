@@ -1,12 +1,10 @@
-"use client"; // Asegúrate de agregar esta línea al inicio del archivo
+"use client";
 
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from "../../styles/Navigation.module.scss";
 import { Hamburguer } from './hamburguer';
 import Image from 'next/image';
-import { Header } from './header';
-import { usePathname } from 'next/navigation'
 
 const categories = [
     { id: 1, value: "Todos" },
@@ -19,13 +17,9 @@ const categories = [
 export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [showDropDown, setShowDropDown] = useState(false);
-    const path = usePathname();
 
     return (
         <div className={styles.menu}>
-
-            { path === "/" && <Header/> }
-
             <Hamburguer
                 onClick={() => setShowMenu(!showMenu)}
                 active={showMenu}
@@ -58,25 +52,20 @@ export const Nav = () => {
                                 onMouseLeave={() => setShowDropDown(false)}
                             >
                                 <p>Categorías</p>
-                                <div style={{ position: 'relative' }}>
-                                    {showDropDown && (
-                                        <ul className={styles.dropdown}>
-                                            {categories.map((category) => (
-                                                <li key={category.id}>
-                                                    <Link href={`/categories?category=${category.value}`}>
-                                                        {category.value}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
+                                <ul className={`${styles.dropdown} ${showDropDown ? styles.active : ""}`}>
+                                    {categories.map((category) => (
+                                        <li key={category.id}>
+                                            <Link href={`/categories?category=${category.value}`}>
+                                                {category.value}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
                         </div>
                     </div>
                 </div>
             )}
         </div>
-
     );
 };
