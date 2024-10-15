@@ -97,7 +97,7 @@ function ProductList() {
                 item.value === category ? { textDecoration: "underline" } : {}
               }
             >
-              <Link href={`/categories/?category=${item.value}`}>{item.value}</Link>
+              <Link href={`/categories/${item.value}`}>{item.value}</Link>
             </li>
           ))}
         </ul>

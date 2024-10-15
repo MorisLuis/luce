@@ -15,7 +15,7 @@ function ProductList() {
     const category = decodeURIComponent(id as string)
 
     const ProductRender = products.filter((product: Product) =>
-        category === "Todos" ? true : product.category.includes(category)
+        category === "Todos" ? true : product.categories.includes(category)
     );
 
     // Estado para manejar el fade y el índice de la imagen actual
