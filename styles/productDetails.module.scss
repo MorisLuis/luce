@@ -1,16 +1,13 @@
 @import "./main.scss";
 
 .ProductDetails{
-    display: 'flex';
-    padding: 10px 200px 100px;
+    padding: $padding $padding-horizontal;
     width: 100%;
+    margin-bottom: 30%;
 
     .ProductDetailsHeaderContainer{
         display: flex;
-        flex-direction:row;
         width: 100%;
-        align-content: flex-end;
-        margin-bottom: $margin-bottom * 10;
 
         .imageBannerContent{
             margin: $margin-bottom 0px;
@@ -30,8 +27,13 @@
     };
 
     .ProductDetailsContent {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        width: 100%;
+
         > section {
-            margin: $margin-bottom * 5 0px;
+            margin: $margin-bottom*2 0px;
         }
         .specifications{
             > li {

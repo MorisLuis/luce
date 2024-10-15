@@ -6,9 +6,10 @@ import { Nav } from './navigation/nav';
 interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar: () => React.ReactNode;
+    bottom?: boolean;
 }
 
-export default function LayoutRight({ content, sideBar }: LayoutRightInterface) {
+export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInterface) {
     return (
         <div className={style.layoutRight}>
             <div className={style.content}>
@@ -29,7 +30,10 @@ export default function LayoutRight({ content, sideBar }: LayoutRightInterface) 
                     </div>
                 </div>
             </div>
+
             <Nav />
+
+            { bottom && <div className={style.bottomSidebar}></div> }
         </div>
     )
 }

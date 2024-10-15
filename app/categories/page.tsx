@@ -17,6 +17,7 @@ interface Product {
   id: number;
   name: string;
   categories: string[];
+  category: string;
   images: {
     src: string;
     alt: string;
@@ -40,7 +41,7 @@ function ProductList() {
   );
 
   // Estado para manejar el fade y el índice de la imagen actual
-  const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({}); // Objeto para manejar los estados de fade
+  const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({});
   const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>(
     () => {
       const initialIndex: Record<number, number> = {};
@@ -65,7 +66,7 @@ function ProductList() {
       <div className={styles.gridContainer}>
         {ProductRender.map((product: Product) => (
           <div key={product.id} className={styles.productCard}>
-            <Link href={`/product/${product.id}`} className={styles.productLink}>
+            <Link href={`/categories/${product.category}`} className={styles.productLink}>
               <div
                 className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
                 onMouseEnter={() => handleMouseEnter(product.id)}

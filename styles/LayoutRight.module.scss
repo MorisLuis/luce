@@ -7,6 +7,7 @@
     width: 100%;
 
     @include respond(phone) {
+        height: 100%;
         flex-direction: column-reverse;
     };
 
@@ -25,11 +26,17 @@
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        position: relative;
-        height: 100%;
-
+        overflow: scroll;
         width: 20%;
         padding: $padding-horizontal;
+        background-color: $color-primary;
+
+        .sidebarcontent{
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
 
         @include respond(phone) {
             width: 100%;
@@ -47,6 +54,14 @@
                 height: 70px;
             };
         };
-    }
+    };
 
+    .bottomSidebar {
+        position: absolute;
+        background-color: $color-primary;
+        width: 20%;
+        height: 10%;
+        right: 0;
+        bottom: 0;
+    };
 }
