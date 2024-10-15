@@ -57,6 +57,7 @@ function ProductList() {
                                     layout="fill"
                                     objectFit="cover"
                                 />
+                                <p className={styles.productName}>{product.name}</p>
                             </div>
                         </Link>
                     </div>
@@ -68,7 +69,8 @@ function ProductList() {
     const renderSideBar = () => {
         return (
             <nav className={styles.CategoriesNavigation}>
-                <h2>Categoria</h2>
+                <h2>{category}</h2>
+                <p>Alguna especificación extra sobre la categoria.</p>
             </nav>
         )
     }

@@ -6,18 +6,24 @@
   flex-direction: row-reverse;
   height: 100%;
 
-  .CategoriesNavigation{
+  .CategoriesNavigation {
     margin-bottom: $margin-bottom;
     width: 100%;
     height: 100vh;
     padding: $padding-horizontal;
     padding-top: 10%;
 
-    > ul {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    h2{
+      text-transform: uppercase;
+    }
+
+    >ul {
       list-style: none;
     };
-
-
   }
 
   .gridContainer {
@@ -30,7 +36,9 @@
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);
       gap: 16px;
-    };
+    }
+
+    ;
 
     .productCard {
       background-color: $background-color;
@@ -38,28 +46,30 @@
       overflow: hidden;
       transition: transform 0.2s;
       height: fit-content;
-  
-      :hover{
+
+      :hover {
         opacity: 90%;
       }
-  
+
       .productLink {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-decoration: none;
         color: $text-color;
-  
+
         .imageWrapper {
           width: 100%;
           height: 300px;
           position: relative;
+
+          .productName {
+            position: absolute;
+            bottom: $padding-horizontal;
+            left: $padding-horizontal;
+          }
         }
 
-        .productName {
-          padding: 10px;
-          text-align: center;
-        }
       }
     }
   }
