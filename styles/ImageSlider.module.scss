@@ -6,6 +6,10 @@
     height: 100vh;
     overflow: hidden;
 
+    @include respond(phone) {
+        height: 80vh;
+    };
+
     .imageWrapper{
         position: relative;
         width: 100%;
