@@ -18,6 +18,11 @@ export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [showDropDown, setShowDropDown] = useState(false);
 
+    const handleNavigate = () => {
+        setShowMenu(false);
+        setShowDropDown(false);
+    };
+
     return (
         <div className={styles.menu}>
             <Hamburguer
@@ -55,7 +60,7 @@ export const Nav = () => {
                                 <ul className={`${styles.dropdown} ${showDropDown ? styles.active : ""}`}>
                                     {categories.map((category) => (
                                         <li key={category.id}>
-                                            <Link href={`/categories?category=${category.value}`}>
+                                            <Link href={`/categories?category=${category.value}`} onClick={handleNavigate}>
                                                 {category.value}
                                             </Link>
                                         </li>
