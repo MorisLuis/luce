@@ -5,7 +5,7 @@ import { Nav } from './navigation/nav';
 
 interface LayoutRightInterface {
     content: () => React.ReactNode;
-    sideBar: () => React.ReactNode;
+    sideBar?: () => React.ReactNode;
     bottom?: boolean;
 }
 
@@ -26,7 +26,7 @@ export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInt
                         />
                     </div>
                     <div className={style.sidebarcontent}>
-                        {sideBar()}
+                        {sideBar?.()}
                     </div>
                 </div>
             </div>

@@ -2,10 +2,11 @@
 import { Button } from '@/components/Button';
 import { Title } from '@/components/Title';
 import React, { Suspense, useEffect, useState } from 'react';
-import styles from "../../styles/Contact.module.scss";
 import { sendEmail } from '@/services/sendEmail';
 import { products } from '@/data/products';
 import { useSearchParams } from 'next/navigation';
+import LayoutRight from '@/components/LayoutRight';
+import styles from "../../styles/Contact.module.scss";
 
 function ContactScreen() {
     const [email, setEmail] = useState('');
@@ -58,55 +59,62 @@ function ContactScreen() {
 
     useEffect(() => {
         getDataOfProduct()
-    }, [productId])
+    }, [productId]);
+
+    const renderContent = () => {
+        return (
+            <div className={styles.Contact}>
+                <div className={styles.ContactContent}>
+                    <Title title='Contacto' styles={{ textAlign: 'center' }} />
+                    <form onSubmit={handleSubmit} className={styles.ContactForm}>
+                        <div className={styles.inputContainer}>
+                            <label htmlFor="email">Tu Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                className='input'
+                            />
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label htmlFor="subject">Asunto:</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
+                                required
+                                className='input'
+                            />
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label htmlFor="message">Mensaje:</label>
+                            <textarea
+                                id="message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
+                                className='input'
+                            />
+                        </div>
+
+                        <Button
+                            title='Enviar'
+                            onClick={handleButtonClick}
+                        />
+                    </form>
+                    {response && <p>{response}</p>}
+                </div>
+            </div>
+        )
+    }
 
     return (
-        <div className={styles.Contact}>
-            <div className={styles.ContactContent}>
-
-                <Title title='Contacto' styles={{ textAlign: 'center' }} />
-                <form onSubmit={handleSubmit} className={styles.ContactForm}>
-                    <div className={styles.inputContainer}>
-                        <label htmlFor="email">Tu Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            className='input'
-                        />
-                    </div>
-                    <div className={styles.inputContainer}>
-                        <label htmlFor="subject">Asunto:</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            required
-                            className='input'
-                        />
-                    </div>
-                    <div className={styles.inputContainer}>
-                        <label htmlFor="message">Mensaje:</label>
-                        <textarea
-                            id="message"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            required
-                            className='input'
-                        />
-                    </div>
-
-                    <Button
-                        title='Enviar'
-                        onClick={handleButtonClick}
-                    />
-                </form>
-                {response && <p>{response}</p>}
-            </div>
-        </div>
+        <LayoutRight
+            content={renderContent}
+        />
     );
 };
 
