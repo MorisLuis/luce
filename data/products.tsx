@@ -22,7 +22,7 @@ export const products: Product[] = [
         images: [
             { src: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg", alt: "Vista lateral de la lámpara arbotante apagada." },
             { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
-            // Más imágenes...
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
         ],
         //pdf: "Lampara_schwung_odysseylg_fichatecnica.pdf",
         seo: {
@@ -50,6 +50,7 @@ export const products: Product[] = [
         images: [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
+            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
             // Más imágenes...
         ],
         pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",

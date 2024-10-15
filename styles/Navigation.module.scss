@@ -90,7 +90,8 @@
 
                     p {
                         &:hover{
-                            text-decoration: underline;                        }
+                            text-decoration: underline;
+                        }
                     };
 
                     .dropdown {
@@ -123,6 +124,10 @@
         transform: translateX(50%);
         bottom: $padding-horizontal * 4;
 
+        @include respond(tab-port) {
+            right: 20%;
+        }
+
         @include respond(phone) {
             top: 5%;
             left: $padding-horizontal;
@@ -139,14 +144,12 @@
             margin-bottom: $margin-bottom / 2;
             transition: all 0.3s ease;
     
-            // Reset position to default when not active
             &:nth-child(1),
             &:nth-child(3) {
                 transform-origin: center;
             }
         }
     
-        // Animaciones para el estado "active"
         .activeBar1 {
             transform: translateY(50%) rotate(45deg);
         }

@@ -29,11 +29,11 @@ export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInt
                         {sideBar?.()}
                     </div>
                 </div>
+            { bottom && <div className={style.bottomSidebar}></div> }
             </div>
 
             <Nav />
 
-            { bottom && <div className={style.bottomSidebar}></div> }
         </div>
     )
 }

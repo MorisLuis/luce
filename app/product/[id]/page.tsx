@@ -1,10 +1,10 @@
-// app/product/[id]/page.tsx
 
 import React from 'react';
 import { products } from '@/data/products';
 import ProductDetails from './ProductDetails';
 import { Product } from '@/interface/product';
 import LayoutRight from '@/components/LayoutRight';
+import ImageSlider from '@/components/ImageSlider';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const product = products.find((prod) => prod.id === Number(params.id));
@@ -25,10 +25,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   const renderContent = () => {
     return (
-      <div>
-        <h1>Producto</h1>
-        <p>{product.brand}</p>
-      </div>
+      <ImageSlider
+        images={product.images}
+      />
     )
   }
 

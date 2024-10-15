@@ -14,6 +14,10 @@
     .content{
         width: 80%;
 
+        @include respond(tab-port) {
+            width: 60%;
+        };
+
         @include respond(phone) {
             width: 100%;
             height: 100%
@@ -30,6 +34,11 @@
         width: 20%;
         padding: $padding-horizontal;
         background-color: $color-primary;
+        position: relative;
+
+        @include respond(tab-port) {
+            width: 40%;
+        };
 
         .sidebarcontent{
 
@@ -58,11 +67,19 @@
     };
 
     .bottomSidebar {
-        position: absolute;
+        position: fixed;
         background-color: $color-primary;
         width: 20%;
-        height: 10%;
+        height: 15%;
         right: 0;
         bottom: 0;
+
+        @include respond(tab-port) {
+            width: 40%;
+        };
+
+        @include respond(phone) {
+            display: none
+        };
     };
 }
