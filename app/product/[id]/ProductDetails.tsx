@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { useRouter } from 'next/navigation'; // Cambiar de next/router a next/navigation
 import { Button } from '@/components/Button';
 import { Subtitle } from '@/components/Subtitle';
 import { Product } from '@/interface/product';
@@ -9,7 +8,6 @@ import styles from "../../../styles/productDetails.module.scss";
 import { Title } from '@/components/Title';
 
 export default function ProductDetails({ product }: { product: Product }) {
-    const router = useRouter();
 
     if (!product) {
         return <div>Cargando...</div>;

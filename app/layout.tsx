@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.scss";
-import { Nav } from "../components/navigation/nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,12 +24,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-
         <div>
           {children}
         </div>
-
-        {/* <Nav /> */}
       </body>
     </html>
   );

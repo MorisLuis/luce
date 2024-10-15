@@ -4,7 +4,6 @@ import React from 'react';
 import { products } from '@/data/products';
 import ProductDetails from './ProductDetails';
 import { Product } from '@/interface/product';
-import { ContactNav } from './contactNav';
 import LayoutRight from '@/components/LayoutRight';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
@@ -16,8 +15,6 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     keywords: product ? product.seo.keywords.join(', ') : '',
   };
 }
-
-
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product: Product | undefined = products.find((prod) => prod.id === Number(params.id));
