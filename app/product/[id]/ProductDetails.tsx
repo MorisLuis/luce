@@ -13,12 +13,13 @@ config.autoAddCss = false;
 import { useRouter } from 'next/navigation';
 
 
-export default function ProductDetails({ product }: { product: Product }) {
+export default function ProductDetails({ product, handleOpenContact }: { product: Product, handleOpenContact: () => void }) {
 
     const router = useRouter();
     const handleGoBack = () => {
         router.back();
-    }
+    };
+
 
     if (!product) return <div>Cargando...</div>;
 
@@ -74,6 +75,17 @@ export default function ProductDetails({ product }: { product: Product }) {
                             const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
                             if (!newWindow) console.error('La ventana emergente fue bloqueada.');
                         }}
+                        extraStyles={{
+                            marginBottom: "10px"
+                        }}
+                    />
+                }
+
+                {
+                    product.pdf &&
+                    <Button
+                        title='Contactar'
+                        onClick={handleOpenContact}
                     />
                 }
 

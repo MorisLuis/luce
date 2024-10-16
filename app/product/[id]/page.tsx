@@ -1,10 +1,5 @@
-
-import React from 'react';
+// Este archivo seguirá siendo un Server Component, sin "use client"
 import { products } from '@/data/products';
-import ProductDetails from './ProductDetails';
-import { Product } from '@/interface/product';
-import LayoutRight from '@/components/LayoutRight';
-import ImageSlider from '@/components/ImageSlider';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const product = products.find((prod) => prod.id === Number(params.id));
@@ -16,25 +11,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
+import ProductClientPage from './ProductClientPage';
+
 export default function ProductPage({ params }: { params: { id: string } }) {
-  const product: Product | undefined = products.find((prod) => prod.id === Number(params.id));
-
-  if (!product) {
-    return <div>Producto no encontrado</div>;
-  };
-
-  const renderContent = () => {
-    return (
-      <ImageSlider images={product.images} />
-    )
-  }
-
-  return (
-    <LayoutRight
-      content={renderContent}
-      sideBar={() => <ProductDetails product={product} />}
-      bottom={true}
-      secondaryDesign={true}
-    />
-  );
+  return <ProductClientPage params={params} />;
 }

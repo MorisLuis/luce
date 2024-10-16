@@ -9,18 +9,24 @@ interface ButtonInterface {
     title: string;
     icon?: IconProp;
     iconStyles?: React.CSSProperties;
+    extraStyles?: React.CSSProperties;
+
+    secondaryDesign?: boolean;
 }
 
 export const Button = ({
     onClick,
     title,
     icon,
-    iconStyles
+    iconStyles,
+    extraStyles,
+    secondaryDesign
 }: ButtonInterface) => {
     return (
         <button
             onClick={onClick}
-            className='button'
+            className={secondaryDesign ? 'button_secondary' : 'button'}
+            style={extraStyles}
         >
             <p>{title}</p>
             {
