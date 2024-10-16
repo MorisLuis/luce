@@ -7,11 +7,7 @@ import Link from "next/link";
 import { products } from "@/data/products";
 import { Suspense, useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
-
-interface Category {
-  id: number;
-  value: string;
-}
+import { categoriesData } from "@/data/categories";
 
 interface Product {
   id: number;
@@ -24,17 +20,9 @@ interface Product {
   }[];
 }
 
-const categories: Category[] = [
-  { id: 1, value: "Todos" },
-  { id: 2, value: "Schwung Design" },
-  { id: 3, value: "Colección Globe" },
-  { id: 4, value: "Candiles" },
-  { id: 5, value: "Lámparas arbotante" },
-];
-
 function ProductList() {
   const searchParams = useSearchParams();
-  const category = searchParams.get("category") || "Todos"; // Obtener el parámetro de la URL
+  const category = searchParams.get("category") || "Todos";
 
   const ProductRender = products.filter((product: Product) =>
     category === "Todos" ? true : product.categories.includes(category)
@@ -92,14 +80,14 @@ function ProductList() {
       <nav className={styles.CategoriesNavigation}>
         <h2>Categoria</h2>
         <ul>
-          {categories.map((item) => (
+          {categoriesData.map((item) => (
             <li
               key={item.id}
               style={
-                item.value === category ? { textDecoration: "underline" } : {}
+                item.name === category ? { textDecoration: "underline" } : {}
               }
             >
-              <Link href={`/categories/${item.value}`}>{item.value}</Link>
+              <Link href={`/categories/${item.name}`}>{item.name}</Link>
             </li>
           ))}
         </ul>

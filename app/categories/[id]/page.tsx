@@ -8,11 +8,17 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
 import { products } from '@/data/products';
+import { categoriesData } from '@/data/categories';
 
 function ProductList() {
     const params = useParams();
     const id = params.id;
-    const category = decodeURIComponent(id as string)
+    const category = decodeURIComponent(id as string);
+
+    console.log({category})
+
+    const categoryData = categoriesData.find((item) => category === item.name);
+    console.log({categoryData})
 
     const ProductRender = products.filter((product: Product) =>
         category === "Todos" ? true : product.categories.includes(category)
@@ -69,8 +75,8 @@ function ProductList() {
     const renderSideBar = () => {
         return (
             <nav className={styles.CategoriesNavigation}>
-                <h2>{category}</h2>
-                <p>Alguna especificación extra sobre la categoria.</p>
+                <h2>{categoryData?.name}</h2>
+                <p>{categoryData?.description}</p>
             </nav>
         )
     }
