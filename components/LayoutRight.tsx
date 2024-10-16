@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import style from '../styles/LayoutRight.module.scss';
 import { Nav } from './navigation/nav';
+import style from '../styles/LayoutRight.module.scss';
 
 interface LayoutRightInterface {
     content: () => React.ReactNode;
@@ -29,11 +29,9 @@ export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInt
                         {sideBar?.()}
                     </div>
                 </div>
-            { bottom && <div className={style.bottomSidebar}></div> }
+                {bottom && <div className={style.bottomSidebar}></div>}
             </div>
-
             <Nav />
-
         </div>
     )
 }
