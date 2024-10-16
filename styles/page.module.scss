@@ -32,13 +32,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    min-height: 100vh;
+    overflow: scroll;
 
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);
       gap: 16px;
-    }
-
-    ;
+    };
 
     .productCard {
       background-color: $background-color;

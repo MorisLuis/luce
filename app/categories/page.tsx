@@ -2,11 +2,11 @@
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import styles from "../../styles/page.module.scss";
 import Link from "next/link";
 import { Suspense, useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
 import { categoriesData } from "@/data/categories";
+import styles from "../../styles/page.module.scss";
 
 function ProductList() {
   const searchParams = useSearchParams();

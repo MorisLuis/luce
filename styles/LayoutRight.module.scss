@@ -33,8 +33,9 @@
         overflow: scroll;
         width: 20%;
         padding: $padding-horizontal;
-        //background-color: $color-primary;
-        position: relative;
+        position: absolute;
+        right: 0px;
+        max-height: 100vh;
 
         @include respond(tab-port) {
             width: 40%;
