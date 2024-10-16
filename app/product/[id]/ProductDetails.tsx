@@ -9,7 +9,7 @@ import { Title } from '@/components/Title';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 import { useRouter } from 'next/navigation';
 
@@ -39,15 +39,20 @@ export default function ProductDetails({ product }: { product: Product }) {
                 <Title title={`${product.name}`} />
             </div>
 
+
+
             <div className={styles.ProductDetailsContent}>
-                <Subtitle title={`Marca: ${product.brand}`} />
                 <section>
+                    <label>Marca:</label>
+                    <p>{product.brand}</p>
                     <p>{product.shortDescription}</p>
-                    <h3>Descripción extensa:</h3>
+                </section>
+                <section>
+                    <label>Descripción extensa:</label>
                     <p>{product.longDescription}</p>
                 </section>
                 <section>
-                    <h3>Especificaciones:</h3>
+                    <label>Especificaciones:</label>
                     <ul className={styles.specifications}>
                         <li>Fuente de luz: {product.specifications.lightSource}</li>
                         <li>Potencia máxima: {product.specifications.maxPower}</li>
@@ -57,38 +62,21 @@ export default function ProductDetails({ product }: { product: Product }) {
                     </ul>
                 </section>
                 <section>
-                    <h3>Categorías:</h3>
+                    <label>Categorías:</label>
                     <p>{product.categories.join(', ')}</p>
                 </section>
-                <section>
-                    <h3>Especificaciones:</h3>
-                    <ul className={styles.specifications}>
-                        <li>Fuente de luz: {product.specifications.lightSource}</li>
-                        <li>Potencia máxima: {product.specifications.maxPower}</li>
-                        <li>Lúmenes totales: {product.specifications.lumens}</li>
-                        <li>Temperatura de color: {product.specifications.colorTemperature}</li>
-                        <li>Peso: {product.specifications.weight}</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Especificaciones:</h3>
-                    <ul className={styles.specifications}>
-                        <li>Fuente de luz: {product.specifications.lightSource}</li>
-                        <li>Potencia máxima: {product.specifications.maxPower}</li>
-                        <li>Lúmenes totales: {product.specifications.lumens}</li>
-                        <li>Temperatura de color: {product.specifications.colorTemperature}</li>
-                        <li>Peso: {product.specifications.weight}</li>
-                    </ul>
-                </section>
+
                 {
                     product.pdf &&
                     <Button
                         title='Descargar PDF'
+                        icon={faArrowLeftLong}
+                        iconStyles={{
+                            rotate: "135deg"
+                        }}
                         onClick={() => {
                             const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
-                            if (!newWindow) {
-                                console.error('La ventana emergente fue bloqueada.');
-                            }
+                            if (!newWindow) console.error('La ventana emergente fue bloqueada.');
                         }}
                     />
                 }

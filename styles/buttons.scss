@@ -1,9 +1,15 @@
 
 .button{
-    background-color: "transparent";
     border-width: 1px;
-    padding: 10px 30px;
-    border-radius: $border-radius;
+    padding: $padding-horizontal / 1.5;
+    border-radius: $border-radius * 20;
+    text-transform: uppercase;
+    font-size: $font-normal;
+    font-weight: bold;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    gap: $padding-horizontal;
 
     &:hover{
         background-color: $color-tertiary;

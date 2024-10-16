@@ -51,13 +51,16 @@
 
         >section {
             margin: $margin-bottom*2 0px;
-        }
 
-        .specifications {
-            >li {
+            label{
+                font-weight: bold;
+            };
+
+            li {
                 list-style: none;
             }
         }
+
     }
 
 }
