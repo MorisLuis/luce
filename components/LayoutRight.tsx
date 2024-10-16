@@ -7,12 +7,16 @@ interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar?: () => React.ReactNode;
     bottom?: boolean;
+
+    secondaryDesign?: boolean;
 }
 
-export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInterface) {
+export default function LayoutRight({ content, sideBar, bottom, secondaryDesign }: LayoutRightInterface) {
     return (
         <div className={style.layoutRight}>
-            <div className={style.content}>
+            <div className={style.sidebarMobil}> {secondaryDesign && sideBar?.()} </div> {/* This is how we show sidebar in movil */}
+
+            <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
                 {content()}
             </div>
             <div className={style.sidebar}>
@@ -23,6 +27,14 @@ export default function LayoutRight({ content, sideBar, bottom }: LayoutRightInt
                             alt={'LUCE'}
                             layout="fill"
                             objectFit="container"
+                            className={style.imageContainerWeb}
+                        />
+                        <Image
+                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                            alt={'LUCE'}
+                            layout="fill"
+                            objectFit="container"
+                            className={style.imageContainerMovil}
                         />
                     </div>
                     <div className={style.sidebarcontent}>

@@ -35,57 +35,60 @@ function ProductList() {
 
   const renderContent = () => {
     return (
-      <div className={styles.gridContainer}>
-        {categoriesData.slice(1).map((category) => (
-          <div key={category.id} className={styles.productCard}>
-            <Link href={`/categories/${category.name}`} className={styles.productLink}>
-              <div
-                className={`${styles.imageWrapper} ${fadeStates[category.id] ? styles.fade : ''}`}
-                onMouseEnter={() => handleMouseEnter(category.id)}
-                onMouseLeave={() => handleMouseLeave(category.id)}
-              >
-                <Image
-                  src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
-                  alt={category.images[currentImageIndex[category.id]]?.alt}
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <p className={styles.productName}>{category.name}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
+      <div className={styles.Categories}>
+        <div className={styles.gridContainer}>
+          <h2>Categoria</h2>
+          {categoriesData.slice(1).map((category) => (
+            <div key={category.id} className={styles.productCard}>
+              <Link href={`/categories/${category.name}`} className={styles.productLink}>
+                <div
+                  className={`${styles.imageWrapper} ${fadeStates[category.id] ? styles.fade : ''}`}
+                  onMouseEnter={() => handleMouseEnter(category.id)}
+                  onMouseLeave={() => handleMouseLeave(category.id)}
+                >
+                  <Image
+                    src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
+                    alt={category.images[currentImageIndex[category.id]]?.alt}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                  <p className={styles.productName}>{category.name}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     )
   };
 
   const renderSideBar = () => {
     return (
-      <nav className={styles.CategoriesNavigation}>
-        <h2>Categoria</h2>
-        <ul>
-          {categoriesData.map((item) => (
-            <li
-              key={item.id}
-              style={
-                item.name === category ? { textDecoration: "underline" } : {}
-              }
-            >
-              <Link href={`/categories/${item.name}`}>{item.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className={styles.Categories}>
+        <nav className={styles.CategoriesNavigation}>
+          <h2>Categoria</h2>
+          <ul>
+            {categoriesData.map((item) => (
+              <li
+                key={item.id}
+                style={
+                  item.name === category ? { textDecoration: "underline" } : {}
+                }
+              >
+                <Link href={`/categories/${item.name}`}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     )
   }
 
   return (
-    <div className={styles.Categories}>
-      <LayoutRight
-        content={renderContent}
-        sideBar={renderSideBar}
-      />
-    </div>
+    <LayoutRight
+      content={renderContent}
+      sideBar={renderSideBar}
+    />
   );
 }
 

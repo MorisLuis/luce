@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Button } from '@/components/Button';
-import { Subtitle } from '@/components/Subtitle';
 import { Product } from '@/interface/product';
 import styles from "../../../styles/productDetails.module.scss";
 import { Title } from '@/components/Title';
@@ -18,13 +17,10 @@ export default function ProductDetails({ product }: { product: Product }) {
 
     const router = useRouter();
     const handleGoBack = () => {
-        //router.push(`/categories/${product.brand}`);
         router.back();
     }
 
-    if (!product) {
-        return <div>Cargando...</div>;
-    }
+    if (!product) return <div>Cargando...</div>;
 
     return (
         <div className={styles.ProductDetails}>

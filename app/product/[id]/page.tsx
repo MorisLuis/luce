@@ -25,9 +25,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   const renderContent = () => {
     return (
-      <ImageSlider
-        images={product.images}
-      />
+      <ImageSlider images={product.images} />
     )
   }
 
@@ -36,6 +34,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       content={renderContent}
       sideBar={() => <ProductDetails product={product} />}
       bottom={true}
+      secondaryDesign={true}
     />
   );
 }
