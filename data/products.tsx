@@ -17,7 +17,6 @@ export const products: Product[] = [
             weight: "2.4 kg / 5.3 lb",
         },
         categories: ["Productos", "Schwung Design", "Lámparas arbotante"],
-        category: "Schwung Design",
         mainImage: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg",
         images: [
             { src: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg", alt: "Vista lateral de la lámpara arbotante apagada." },
@@ -45,7 +44,6 @@ export const products: Product[] = [
             colorTemperature: "2200-3000 K",
         },
         categories: ["Productos", "Schwung Design", "Colección Globe", "Candiles"],
-        category: "Colección Globe",
         mainImage: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
         images: [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },

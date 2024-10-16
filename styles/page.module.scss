@@ -17,28 +17,45 @@
     flex-direction: column;
     text-align: start;
 
-    h2{
+    .goBack {
+      text-transform: uppercase;
+      margin-bottom: $margin-bottom;
+      font-size: $font-normal;
+      display: flex;
+      gap: 5px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
       text-transform: uppercase;
     }
 
     >ul {
       list-style: none;
-    };
+    }
+
+    ;
   }
 
   .gridContainer {
-    width: 100%;
-    padding: $padding-horizontal;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: $padding-horizontal;
     gap: 16px;
-    min-height: 100vh;
+    min-height: auto;
     overflow: scroll;
 
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);
       gap: 16px;
-    };
+    }
+
+    ;
 
     .productCard {
       background-color: $background-color;
@@ -46,10 +63,6 @@
       overflow: hidden;
       transition: transform 0.2s;
       height: fit-content;
-
-      :hover {
-        opacity: 90%;
-      }
 
       .productLink {
         display: flex;

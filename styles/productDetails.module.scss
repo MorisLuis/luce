@@ -1,30 +1,47 @@
 @import "./main.scss";
 
-.ProductDetails{
+.ProductDetails {
     padding: $padding $padding-horizontal;
     width: 100%;
     margin-bottom: 40%;
 
-    .ProductDetailsHeaderContainer{
+    .goBack {
+        text-transform: uppercase;
+        margin-bottom: $margin-bottom;
+        font-size: $font-normal;
         display: flex;
+        gap: 5px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .ProductDetailsHeaderContainer {
+        display: flex;
+        justify-content: flex-start;
+        text-align: start;
         width: 100%;
 
-        .imageBannerContent{
+        .imageBannerContent {
             margin: $margin-bottom 0px;
             width: 100%;
-        
+
             .imageBanner {
                 height: 300px;
                 min-height: 70vh;
                 position: relative;
-        
-                .image{
+
+                .image {
                     width: 100%;
                     height: 100px;
                 }
             }
         }
-    };
+    }
+
+    ;
 
     .ProductDetailsContent {
         display: flex;
@@ -32,11 +49,12 @@
         text-align: start;
         width: 100%;
 
-        > section {
+        >section {
             margin: $margin-bottom*2 0px;
         }
-        .specifications{
-            > li {
+
+        .specifications {
+            >li {
                 list-style: none;
             }
         }

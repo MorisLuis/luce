@@ -6,8 +6,21 @@ import { Subtitle } from '@/components/Subtitle';
 import { Product } from '@/interface/product';
 import styles from "../../../styles/productDetails.module.scss";
 import { Title } from '@/components/Title';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+config.autoAddCss = false;
+import { useRouter } from 'next/navigation';
+
 
 export default function ProductDetails({ product }: { product: Product }) {
+
+    const router = useRouter();
+    const handleGoBack = () => {
+        //router.push(`/categories/${product.brand}`);
+        router.back();
+    }
 
     if (!product) {
         return <div>Cargando...</div>;
@@ -15,8 +28,15 @@ export default function ProductDetails({ product }: { product: Product }) {
 
     return (
         <div className={styles.ProductDetails}>
+            <div
+                className={styles.goBack}
+                onClick={handleGoBack}
+            >
+                <FontAwesomeIcon icon={faArrowLeft} />
+                <p>Volver</p>
+            </div>
             <div className={styles.ProductDetailsHeaderContainer}>
-                <Title title={`${product.name}`}/>
+                <Title title={`${product.name}`} />
             </div>
 
             <div className={styles.ProductDetailsContent}>

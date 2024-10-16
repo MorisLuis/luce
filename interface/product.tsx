@@ -16,7 +16,6 @@ export interface Product {
         finishes?: string[]
     };
     categories: string[];
-    category: string;
     mainImage: string;
     pdf?: string;
     seo: {

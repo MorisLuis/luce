@@ -36,7 +36,7 @@ function ProductList() {
   const renderContent = () => {
     return (
       <div className={styles.gridContainer}>
-        {categoriesData.map((category) => (
+        {categoriesData.slice(1).map((category) => (
           <div key={category.id} className={styles.productCard}>
             <Link href={`/categories/${category.name}`} className={styles.productLink}>
               <div

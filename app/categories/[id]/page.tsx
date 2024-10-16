@@ -9,16 +9,21 @@ import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
 import { products } from '@/data/products';
 import { categoriesData } from '@/data/categories';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/navigation';
+config.autoAddCss = false;
+
 
 function ProductList() {
     const params = useParams();
+    const router = useRouter();
+
     const id = params.id;
     const category = decodeURIComponent(id as string);
-
-    console.log({category})
-
     const categoryData = categoriesData.find((item) => category === item.name);
-    console.log({categoryData})
 
     const ProductRender = products.filter((product: Product) =>
         category === "Todos" ? true : product.categories.includes(category)
@@ -74,10 +79,19 @@ function ProductList() {
 
     const renderSideBar = () => {
         return (
-            <nav className={styles.CategoriesNavigation}>
-                <h2>{categoryData?.name}</h2>
-                <p>{categoryData?.description}</p>
-            </nav>
+            <>
+                <nav className={styles.CategoriesNavigation}>
+                    <div
+                        className={styles.goBack}
+                        onClick={() => router.push('/categories')}
+                    >
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                        <p>Volver</p>
+                    </div>
+                    <h2>{categoryData?.name}</h2>
+                    <p>{categoryData?.description}</p>
+                </nav>
+            </>
         )
     }
 
