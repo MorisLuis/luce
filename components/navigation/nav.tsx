@@ -59,7 +59,7 @@ export const Nav = () => {
                             <ul className={`${styles.dropdown} ${showDropDown ? styles.active : ""}`}>
                                 {categories.map((category) => (
                                     <li key={category.id}>
-                                        <Link href={`/categories?category=${category.value}`} onClick={handleNavigate}>
+                                        <Link href={`/categories/${category.value}`} onClick={handleNavigate}>
                                             {category.value}
                                         </Link>
                                     </li>
