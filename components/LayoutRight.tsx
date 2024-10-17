@@ -19,6 +19,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
                 {content()}
             </div>
+
             <div className={style.sidebar}>
                 <div>
                     <div className={style.imageContainer}>
