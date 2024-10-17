@@ -1,40 +1,67 @@
 @import "./main.scss";
 
 .Categories {
-
   .CategoriesNavigation {
     margin-bottom: $margin-bottom;
     width: 100%;
     height: 100vh;
     padding: $padding-horizontal;
     padding-top: 10%;
-
     display: flex;
     flex-direction: column;
     text-align: start;
-
-    .goBack {
-      text-transform: uppercase;
-      margin-bottom: $margin-bottom;
-      font-size: $font-normal;
-      display: flex;
-      gap: 5px;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
 
     h2 {
       text-transform: uppercase;
     }
 
-    >ul {
-      list-style: none;
-    }
+    .option {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 5px;
 
-    ;
+      a {
+        min-width: fit-content;
+      }
+
+      .circle {
+        background-color: transparent;
+        min-width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 1px solid $color-cuaternary;
+        opacity: 0;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+      }
+
+      .activeCircle {
+        opacity: 1;
+        min-width: 6px;
+        background-color: $color-cuaternary;
+      }
+
+      .line{
+        background-color: $color-cuaternary;
+        width: 100%;
+        height: $font-normal / 2;
+        opacity: 0;
+        transition: 0.2s ease;
+      }
+
+      .lineactive{
+        opacity: 1;
+      }
+
+      &:hover {
+        .line{
+          opacity: 1;
+        }
+        .circle {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .gridContainer {
@@ -85,7 +112,6 @@
             left: $padding-horizontal;
           }
         }
-
       }
     }
   }

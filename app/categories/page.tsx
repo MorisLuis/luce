@@ -59,7 +59,7 @@ function ProductList() {
           ))}
         </div>
       </div>
-    )
+    );
   };
 
   const renderSideBar = () => {
@@ -69,26 +69,28 @@ function ProductList() {
           <h2>Categoria</h2>
           <ul>
             {categoriesData.map((item) => (
-              <li
-                key={item.id}
-                style={
-                  item.name === category ? { textDecoration: "underline" } : {}
-                }
-              >
+              <li key={item.id} className={styles.option}>
+                <div
+                  className={
+                    item.name === category
+                      ? `${styles.circle} ${styles.activeCircle}`
+                      : styles.circle
+                  }
+                ></div>
                 <Link href={`/categories/${item.name}`}>{item.name}</Link>
+                <div
+                  className={item.name === category ? `${styles.line} ${styles.lineactive}` : styles.line}
+                ></div>
               </li>
             ))}
           </ul>
         </nav>
       </div>
-    )
-  }
+    );
+  };
 
   return (
-    <LayoutRight
-      content={renderContent}
-      sideBar={renderSideBar}
-    />
+    <LayoutRight content={renderContent} sideBar={renderSideBar} />
   );
 }
 
