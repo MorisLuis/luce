@@ -11,6 +11,21 @@
     flex-direction: column;
     text-align: start;
 
+    .goBack{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $gap;
+      margin-bottom: $margin-bottom;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: $font-normal;
+
+      :hover{
+        text-decoration: underline;
+      }
+    }
+
     h2 {
       text-transform: uppercase;
     }

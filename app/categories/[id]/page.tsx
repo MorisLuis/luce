@@ -29,8 +29,7 @@ function ProductList() {
         category === "Todos" ? true : product.categories.includes(category)
     );
 
-    // Estado para manejar el fade y el índice de la imagen actual
-    const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({}); // Objeto para manejar los estados de fade
+    const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({});
     const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>(
         () => {
             const initialIndex: Record<number, number> = {};
@@ -80,19 +79,17 @@ function ProductList() {
 
     const renderSideBar = () => {
         return (
-            <>
-                <nav className={styles.CategoriesNavigation}>
-                    <div
-                        className={styles.goBack}
-                        onClick={() => router.push('/categories')}
-                    >
-                        <FontAwesomeIcon icon={faArrowLeft} />
-                        <p>Volver</p>
-                    </div>
-                    <h2>{categoryData?.name}</h2>
-                    <p>{categoryData?.description}</p>
-                </nav>
-            </>
+            <nav className={styles.CategoriesNavigation}>
+                <div
+                    className={styles.goBack}
+                    onClick={() => router.push('/categories')}
+                >
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                    <p>Volver</p>
+                </div>
+                <h2>{categoryData?.name}</h2>
+                <p>{categoryData?.description}</p>
+            </nav>
         )
     }
 
