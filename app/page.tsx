@@ -1,9 +1,22 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import LayoutRight from "@/components/LayoutRight";
 import styles from "../styles/Home.module.scss";
+import { useEffect, useState } from "react";
+import { Preloader } from "./Preloader";
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const renderContent = () => {
     return (
@@ -40,6 +53,8 @@ export default function Home() {
       </div>
     )
   };
+
+  if (loading) return <Preloader />
 
   return (
     <div className={styles.Home}>
