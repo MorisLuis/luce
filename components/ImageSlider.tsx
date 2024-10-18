@@ -18,13 +18,11 @@ export default function ImageSlider({
 } : ImageSliderInterface ) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Cambiar la imagen cada 5 segundos (5000ms)
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Cambia cada 5 segundos
+        }, 7000); // Cambia cada 7 segundos
 
-        // Limpiar intervalo cuando el componente se desmonte
         return () => clearInterval(interval);
     }, []);
 
@@ -48,10 +46,9 @@ export default function ImageSlider({
                     <span
                         key={index}
                         onClick={() => handleDotClick(index)}
-                        className={styles.dot}
-                        style={{
-                            backgroundColor: currentIndex === index ? '#000' : '#bbb',
-                        }}
+                        className={
+                            currentIndex === index ? `${styles.dot} ${styles.dotActive}` : styles.dot
+                        }
                     />
                 ))}
             </div>

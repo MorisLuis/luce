@@ -28,8 +28,12 @@
             width: 20px;
             height: 5px;
             border-radius: $border-radius;
-            background-color: #bbb;
+            background-color: $background-color;
             cursor: pointer;
+        }
+
+        .dotActive{
+            background-color: $background-color-tertiary;
         }
     }
 }

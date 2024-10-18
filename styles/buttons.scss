@@ -15,6 +15,7 @@
         background-color: $color-tertiary;
         color: $text-color-secondary;
         cursor: pointer;
+        transition: 0.3s ease;
     }
 }
 
@@ -34,15 +35,16 @@
         background-color: $color-tertiary;
         color: $text-color-secondary;
         cursor: pointer;
+        transition: 0.3s ease;
     }
 }
 
 .input{
-    height: 30px;
     border-color: #00000029;
     border-radius: $border-radius;
     border-width: 1px;
     background-color: $color-secondary;
+    padding: $padding-horizontal;
 
     &.secondary{
         border-width: 1px;
