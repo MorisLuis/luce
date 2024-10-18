@@ -56,7 +56,7 @@ function ProductList() {
                 <h2>{categoryData?.name}</h2>
                 {ProductRender.map((product: Product) => (
                     <div key={product.id} className={styles.productCard}>
-                        <Link href={`/product/${product.id}`} className={styles.productLink}>
+                        <Link href={`/categories/${category}/product/${product.id}`} className={styles.productLink}>
                             <div
                                 className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
                                 onMouseEnter={() => handleMouseEnter(product.id)}

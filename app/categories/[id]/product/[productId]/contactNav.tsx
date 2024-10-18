@@ -3,7 +3,7 @@
 import React from 'react';
 import { Product } from '@/interface/product';
 import styles from "../../../styles/Navigation.module.scss";
-import { useRouter } from 'next/navigation'; // Asegúrate de usar el import correcto
+import { useRouter } from 'next/navigation';
 
 export const ContactNav = ({ product }: { product: Product }) => {
 

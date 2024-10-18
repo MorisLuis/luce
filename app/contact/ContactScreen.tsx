@@ -18,8 +18,6 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
 
-    console.log({ productId })
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -52,7 +50,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
         }
     };
 
-    const ProductRender = products.find((product) => product.id == productId ?? 0);
+    const ProductRender = products.find((product) => product.id == productId);
 
     const getDataOfProduct = () => {
         if (ProductRender) {

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/Button';
 import { Product } from '@/interface/product';
-import styles from "../../../styles/productDetails.module.scss";
+import styles from "../../../../../styles/productDetails.module.scss";
 import { Title } from '@/components/Title';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -13,13 +13,18 @@ config.autoAddCss = false;
 import { useRouter } from 'next/navigation';
 
 
-export default function ProductDetails({ product, handleOpenContact }: { product: Product, handleOpenContact: () => void }) {
+export default function ProductDetails({
+    product,
+    handleOpenContact,
+    next,
+    back,
+    category
+}: { product: Product, handleOpenContact: () => void, next: () => void, back: () => void, category: string }) {
 
     const router = useRouter();
     const handleGoBack = () => {
-        router.back();
+        router.push(`/categories/${category}`);
     };
-
 
     if (!product) return <div>Cargando...</div>;
 
@@ -35,8 +40,6 @@ export default function ProductDetails({ product, handleOpenContact }: { product
             <div className={styles.ProductDetailsHeaderContainer}>
                 <Title title={`${product.name}`} />
             </div>
-
-
 
             <div className={styles.ProductDetailsContent}>
                 <section>
@@ -61,6 +64,11 @@ export default function ProductDetails({ product, handleOpenContact }: { product
                 <section>
                     <label>Categorías:</label>
                     <p>{product.categories.join(', ')}</p>
+                </section>
+
+                <section className={styles.ProductDetailsNavigation}>
+                    <p onClick={back}>ATRAS</p>
+                    <p onClick={next}>SIGUIENTE</p>
                 </section>
 
                 {

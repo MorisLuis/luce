@@ -3,7 +3,7 @@
 .ProductDetails {
     padding: $padding $padding-horizontal;
     width: 100%;
-    margin-bottom: 40%;
+    margin-bottom: 70%;
 
     .goBack {
         text-transform: uppercase;
@@ -41,8 +41,6 @@
         }
     }
 
-    ;
-
     .ProductDetailsContent {
         display: flex;
         flex-direction: column;
@@ -61,6 +59,17 @@
             }
         }
 
+    }
+
+    .ProductDetailsNavigation{
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-normal;
+
+        :hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 
 }
