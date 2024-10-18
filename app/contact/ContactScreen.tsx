@@ -3,21 +3,22 @@ import { Button } from '@/components/Button';
 import React, { useEffect, useState } from 'react';
 import { sendEmail } from '@/services/sendEmail';
 import { products } from '@/data/products';
-import { useSearchParams } from 'next/navigation';
 import styles from "../../styles/Contact.module.scss";
 
 interface ContactScreenInterface {
     center?: boolean
     secondaryDesign?: boolean;
+    productId?: number;
 }
 
-export function ContactScreen({ center, secondaryDesign }: ContactScreenInterface) {
+export function ContactScreen({ center, secondaryDesign, productId }: ContactScreenInterface) {
+
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
-    const searchParams = useSearchParams();
-    const productId = searchParams.get("productId")
+
+    console.log({ productId })
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -51,7 +52,7 @@ export function ContactScreen({ center, secondaryDesign }: ContactScreenInterfac
         }
     };
 
-    const ProductRender = products.find((product) => product.id == parseInt(productId ?? "0"));
+    const ProductRender = products.find((product) => product.id == productId ?? 0);
 
     const getDataOfProduct = () => {
         if (ProductRender) {

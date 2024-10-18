@@ -22,9 +22,7 @@ export default function ProductClientPage({ params }: { params: { id: string } }
     }
 
     const renderContent = () => {
-        return (
-            <ImageSlider images={product.images} />
-        );
+        return <ImageSlider images={product.images} />
     };
 
     return (
@@ -41,7 +39,9 @@ export default function ProductClientPage({ params }: { params: { id: string } }
                 onClose={handleOpenContact}
                 headerTitle="Contacto"
             >
-                <ContactScreen/>
+                <ContactScreen
+                    productId={product.id}
+                />
             </Modal>
         </>
     );

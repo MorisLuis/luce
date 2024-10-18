@@ -81,13 +81,10 @@ export default function ProductDetails({ product, handleOpenContact }: { product
                     />
                 }
 
-                {
-                    product.pdf &&
-                    <Button
-                        title='Contactar'
-                        onClick={handleOpenContact}
-                    />
-                }
+                <Button
+                    title='Contactar'
+                    onClick={handleOpenContact}
+                />
 
             </div>
         </div>

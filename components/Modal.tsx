@@ -16,11 +16,11 @@ export const Modal = ({
 }: ModalInterface) => {
     return visible && (
         <div className={styles.Modal}>
-            <div className={styles.modalBackground}></div>
+            <div className={styles.modalBackground} onClick={onClose}></div>
             <div className={styles.modalContent}>
                 <div onClick={onClose} className={styles.header}>
                     <p>{headerTitle}</p>
-                    <p onClick={onClose}>Cerrar</p>
+                    <p className={styles.modalClose} onClick={onClose}>Cerrar</p>
                 </div>
                 <div className={styles.modalChildren}>{children}</div>
             </div>
