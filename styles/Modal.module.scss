@@ -1,59 +1,70 @@
 @import "./main.scss";
 
 
-.Modal{
+.Modal {
     display: flex;
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
 
     .modalBackground {
         width: 100%;
         height: 100%;
-        background-color: $color-tertiary;
-        opacity: 20%;
+        background-color: rgba(0, 0, 0, 0.2);
         position: fixed;
     }
 
-    .modalContent{
+    .modalContent {
         width: 50%;
-        background-color: $color-secondary;
+        background-color: $background-color-secondary;
         z-index: 99;
+        position: relative;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        pointer-events: all;
 
+        &.visible { 
+            transform: translateX(0);
+        }
 
         @include respond(tab-port) {
             width: 70%;
         }
-    
+
         @include respond(phone) {
             width: 90%;
         }
-        
-        .header{
-            padding: $padding-horizontal;
-            width: 100%;
-            height: 5%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
 
-            .modalClose{
+        .header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .modalClose {
                 cursor: pointer;
-                
-                &:hover{
+
+                &:hover {
                     text-decoration: underline;
                 }
             }
         }
 
-        .modalChildren{
-            padding: $padding-horizontal;
-            width: 100%;
+        .modalChildren {
+            padding: 1rem;
             height: 90%;
         }
     }
 }
+

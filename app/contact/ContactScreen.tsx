@@ -66,6 +66,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
     return (
         <div className={center ? `${styles.Contact} ${styles.center}` : styles.Contact}>
             <div className={styles.ContactContent}>
+                <h1>CONTACTENOS</h1>
                 <form onSubmit={handleSubmit} className={styles.ContactForm}>
                     <div className={styles.inputContainer}>
                         <label htmlFor="email">Mail.</label>
@@ -75,7 +76,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input secondary' : 'input'}
+                            className={secondaryDesign ? 'input' : 'input'}
                         />
                     </div>
                     <div className={styles.inputContainer}>
@@ -86,7 +87,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input secondary' : 'input'}
+                            className={secondaryDesign ? 'input' : 'input'}
                         />
                     </div>
                     <div className={styles.inputContainer}>
@@ -96,7 +97,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input secondary' : 'input'}
+                            className={secondaryDesign ? 'input' : 'input'}
                         />
                     </div>
 
@@ -109,6 +110,10 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         }}
                     />
                 </form>
+                <div className={styles.ContactFooter}>
+                    <p>hola@luce.design</p>
+                    <p>instagram</p>
+                </div>
                 {response && <p>{response}</p>}
             </div>
         </div>

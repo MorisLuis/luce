@@ -23,7 +23,7 @@ export default function ProductClientPage({ params }: { params: { productId: str
 
     const handleOpenContact = () => {
         setContactModal(!contactModal);
-    };
+    }
 
     if (!product) {
         return <div>Producto no encontrado</div>;
