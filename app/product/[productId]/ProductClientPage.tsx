@@ -8,7 +8,7 @@ import LayoutRight from '@/components/LayoutRight';
 import ImageSlider from '@/components/ImageSlider';
 import { Modal } from '@/components/Modal';
 import { ContactScreen } from '@/app/contact/ContactScreen';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function ProductClientPage({ params }: { params: { productId: string, id: string } }) {
 
