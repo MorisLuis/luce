@@ -3,9 +3,9 @@
 import React from 'react';
 import { Button } from '@/components/Button';
 import { Product } from '@/interface/product';
-import styles from "../../../../../styles/productDetails.module.scss";
+import styles from "../../../styles/productDetails.module.scss";
 import { Title } from '@/components/Title';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,13 +17,18 @@ export default function ProductDetails({
     product,
     handleOpenContact,
     next,
-    back,
-    category
-}: { product: Product, handleOpenContact: () => void, next: () => void, back: () => void, category: string }) {
+    back
+}: { product: Product, handleOpenContact: () => void, next: () => void, back: () => void }) {
 
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const from = searchParams.get('from');
     const handleGoBack = () => {
-        router.push(`/categories/${category}`);
+        if (from === 'categories') {
+            return router.push(`/categories`);
+        } else {
+            router.push(`/brands`);
+        }
     };
 
     if (!product) return <div>Cargando...</div>;

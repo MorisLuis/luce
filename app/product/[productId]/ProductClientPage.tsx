@@ -8,18 +8,16 @@ import LayoutRight from '@/components/LayoutRight';
 import ImageSlider from '@/components/ImageSlider';
 import { Modal } from '@/components/Modal';
 import { ContactScreen } from '@/app/contact/ContactScreen';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function ProductClientPage({ params }: { params: { productId: string, id: string } }) {
 
     const [contactModal, setContactModal] = useState(false);
     const router = useRouter();
 
-    const category = decodeURIComponent(params.id as string);
     const product: Product | undefined = products.find(
-        (prod) => prod.id === Number(params.productId) && prod.categories.includes(category)
+        (prod) => prod.id === Number(params.productId)
     );
-
 
     const handleOpenContact = () => {
         setContactModal(!contactModal);
@@ -34,36 +32,31 @@ export default function ProductClientPage({ params }: { params: { productId: str
     };
 
     const goToNextProduct = () => {
-        const nextProduct: Product | undefined = products.find(
-            (prod) => prod.categories.includes(category) && prod.id !== Number(params.productId)
-        );
-
-        if (!nextProduct) return;
-        router.push(`/categories/${params.id}/product/${nextProduct.id}`)
+        const currentProductId = Number(params.productId);
+        const filteredProducts = products
+            .filter((prod) => prod.categories.some(category => product.categories.includes(category)))
+            .sort((a, b) => b.id - a.id);
+        const productsLen = filteredProducts.length;
+        const currentIndex = filteredProducts.findIndex(prod => prod.id === currentProductId);
+        if (productsLen === currentIndex + 1) {
+            router.push(`/product/${filteredProducts[0].id}`)
+        } else {
+            router.push(`/product/${filteredProducts[currentIndex + 1].id}`)
+        }
     };
 
     const goToBackProduct = () => {
         const currentProductId = Number(params.productId);
-
-        // Filtrar los productos que pertenecen a la categoría
         const filteredProducts = products
-            .filter((prod) => prod.categories.includes(category) && prod.id < currentProductId)
+            .filter((prod) => prod.categories.some(category => product.categories.includes(category)))
             .sort((a, b) => b.id - a.id);
-
-        const nextProduct = filteredProducts[0];
-
-        if (!nextProduct) {
-            const filteredProducts = products
-                .filter((prod) => prod.categories.includes(category) && prod.id > currentProductId)
-                .sort((a, b) => b.id - a.id);
-            const nextProduct = filteredProducts[0];
-            if (!nextProduct) return;
-            return router.push(`/categories/${params.id}/product/${nextProduct.id}`);
-        };
-
-        router.push(`/categories/${params.id}/product/${nextProduct.id}`);
+        const currentIndex = filteredProducts.findIndex(prod => prod.id === currentProductId);
+        if (currentIndex === 0) {
+            router.push(`/product/${filteredProducts[filteredProducts.length - 1].id}`)
+        } else {
+            router.push(`/product/${filteredProducts[currentIndex - 1].id}`)
+        }
     };
-
 
     return (
         <>
@@ -75,7 +68,6 @@ export default function ProductClientPage({ params }: { params: { productId: str
                         handleOpenContact={handleOpenContact}
                         next={goToNextProduct}
                         back={goToBackProduct}
-                        category={category}
                     />
                 }
                 bottom={true}

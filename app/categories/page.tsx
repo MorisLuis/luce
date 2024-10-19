@@ -77,7 +77,9 @@ function ProductList() {
                   }
                 ></div>
                 <Link
+                  //href={item.name === "Todos" ? '/categories' : `/categories/${item.name}`}
                   href={item.name === "Todos" ? '/categories' : `/categories/${item.name}`}
+                  //as={`/profile/request/?receipt=${item.name}`}
                 >
                   {item.name}
                 </Link>

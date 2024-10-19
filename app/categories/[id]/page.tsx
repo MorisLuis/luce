@@ -50,13 +50,18 @@ function ProductList() {
         setFadeStates((prev) => ({ ...prev, [id]: false }));
     };
 
+
     const renderContent = () => {
         return (
             <div className={styles.gridContainer}>
                 <h2>{categoryData?.name}</h2>
                 {ProductRender.map((product: Product) => (
                     <div key={product.id} className={styles.productCard}>
-                        <Link href={`/categories/${category}/product/${product.id}`} className={styles.productLink}>
+                        <Link
+                            className={styles.productLink}
+                            href={`/product/${product.id}?from=categories`}
+                            //as={`/product/${product.id}`}
+                        >
                             <div
                                 className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
                                 onMouseEnter={() => handleMouseEnter(product.id)}
