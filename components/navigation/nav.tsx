@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import styles from "../../styles/Navigation.module.scss";
 import { Hamburguer } from './hamburguer';
 import Image from 'next/image';
+import styles from "../../styles/Navigation.module.scss";
 
 const categories = [
     { id: 1, value: "Todos" },

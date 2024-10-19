@@ -8,7 +8,6 @@
     .goBack {
         text-transform: uppercase;
         margin-bottom: $margin-bottom;
-        font-size: $font-normal;
         display: flex;
         gap: 5px;
         cursor: pointer;
@@ -64,7 +63,6 @@
     .ProductDetailsNavigation{
         display: flex;
         justify-content: space-between;
-        font-size: $font-normal;
 
         :hover{
             cursor: pointer;

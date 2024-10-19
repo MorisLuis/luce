@@ -19,7 +19,6 @@
       margin-bottom: $margin-bottom;
       cursor: pointer;
       text-transform: uppercase;
-      font-size: $font-normal;
 
       :hover{
         text-decoration: underline;
@@ -104,7 +103,6 @@
 
     .productCard {
       background-color: $background-color;
-      //border: 1px solid $color-border;
       overflow: hidden;
       transition: transform 0.2s;
       height: fit-content;

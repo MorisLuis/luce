@@ -84,7 +84,6 @@
                 }
 
                 .section {
-                    font-size: $font-med;
                     font-weight: 'bold';
                     text-transform: uppercase;
                     text-decoration: none;
@@ -152,10 +151,11 @@
 
         @include respond(tab-port) {
             right: 20%;
+            max-width: 360px;
         }
 
         @include respond(phone) {
-            top: 5%;
+            top: 30px;
             left: $padding-horizontal;
             transform: translateX(0%);
             width: fit-content;

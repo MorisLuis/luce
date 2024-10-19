@@ -12,7 +12,6 @@ function ProductList() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || "Todos";
 
-  // Estado para manejar el fade y el índice de la imagen actual
   const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({});
   const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>(
     () => {
