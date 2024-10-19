@@ -51,6 +51,9 @@ export default function Home() {
         <li className={styles.section}>
           <Link href={'/categories'}>Categorias</Link>
         </li>
+        <li className={styles.section}>
+          <Link href={'/brands'}>Marcas</Link>
+        </li>
       </div>
     )
   };

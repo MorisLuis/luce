@@ -5,22 +5,18 @@ import React, { useState } from 'react';
 import { Hamburguer } from './hamburguer';
 import Image from 'next/image';
 import styles from "../../styles/Navigation.module.scss";
+import { brandsData } from '@/data/brands';
+import { categoriesData } from '@/data/categories';
 
-const categories = [
-    { id: 1, value: "Todos" },
-    { id: 2, value: "Schwung Design" },
-    { id: 3, value: "Colección Globe" },
-    { id: 4, value: "Candiles" },
-    { id: 5, value: "Lámparas arbotante" },
-];
 
 export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
-    const [showDropDown, setShowDropDown] = useState(false);
+    const [showDropDownCategories, setShowDropDownCategories] = useState(false);
+    const [showDropDownBrands, setShowDropDownBrands] = useState(false);
 
     const handleNavigate = () => {
         setShowMenu(false);
-        setShowDropDown(false);
+        setShowDropDownCategories(false);
     };
 
     return (
@@ -52,18 +48,38 @@ export const Nav = () => {
 
                         <li
                             className={`${styles.section} ${showMenu ? styles.active : ''}`}
-                            onMouseEnter={() => setShowDropDown(true)}
-                            onMouseLeave={() => setShowDropDown(false)}
+                            onMouseEnter={() => setShowDropDownCategories(true)}
+                            onMouseLeave={() => setShowDropDownCategories(false)}
                         >
                             <p>Categorías</p>
-                            <ul className={`${styles.dropdown} ${showDropDown ? styles.active : ""}`}>
-                                {categories.map((category) => (
+                            <ul className={`${styles.dropdown} ${showDropDownCategories ? styles.active : ""}`}>
+                                {categoriesData.map((category) => (
                                     <li key={category.id}>
                                         <Link
-                                            href={category.value === "Todos" ? '/categories' : `/categories/${category.value}`}
+                                            href={category.name === "Todos" ? '/categories' : `/categories/${category.name}`}
                                             onClick={handleNavigate}
                                         >
-                                            {category.value}
+                                            {category.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+
+                        <li
+                            className={`${styles.section} ${showMenu ? styles.active : ''}`}
+                            onMouseEnter={() => setShowDropDownBrands(true)}
+                            onMouseLeave={() => setShowDropDownBrands(false)}
+                        >
+                            <p>Marcas</p>
+                            <ul className={`${styles.dropdown} ${showDropDownBrands ? styles.active : ""}`}>
+                                {brandsData.map((brand) => (
+                                    <li key={brand.id}>
+                                        <Link
+                                            href={brand.name === "Todos" ? '/brands' : `/brands/${brand.name}`}
+                                            onClick={handleNavigate}
+                                        >
+                                            {brand.name}
                                         </Link>
                                     </li>
                                 ))}

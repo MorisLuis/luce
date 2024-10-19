@@ -23,7 +23,6 @@ export const products: Product[] = [
             { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
         ],
-        //pdf: "Lampara_schwung_odysseylg_fichatecnica.pdf",
         seo: {
             keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
@@ -49,13 +48,92 @@ export const products: Product[] = [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
             { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
-            // Más imágenes...
         ],
         pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",
         seo: {
             keywords: ["lámparas decorativas", "candiles", "schwung design", "colección globes"],
             metaDescription: "Descubre nuestro elegante candil con pantallas de vidrio y base de latón en tres acabados sofisticados...",
         }
-    }
-    // Más productos...
+    },
+    {
+        id: 3,
+        name: "Producto Marca 2",
+        brand: "Marca 2",
+        shortDescription: "El candil Armstrong Linear de la colección Globes de Schwung...",
+        longDescription: "El candil Armstrong Linear de la colección Globes de Schwung, captura una sensación de movimiento...",
+        specifications: {
+            glass: ["Vidrio Opalino Mate (Soda Lime Triplex)", "Vidrio Mármol Mate (Soda Lime)", "Vidrio Transparente (Ribbon de Borosilicato)"],
+            weight: "18.6 kg / 41.0 lb",
+            lightSource: "Bombilla LED (incluida) 10 x 4-5 W",
+            maxPower: "10 x 10 W",
+            lumens: "2200 lm",
+            colorTemperature: "2200-3000 K",
+        },
+        categories: ["Productos", "Schwung Design", "Colección Globe", "Candiles"],
+        mainImage: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+        images: [
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
+            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
+        ],
+        pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",
+        seo: {
+            keywords: ["lámparas decorativas", "candiles", "schwung design", "colección globes"],
+            metaDescription: "Descubre nuestro elegante candil con pantallas de vidrio y base de latón en tres acabados sofisticados...",
+        }
+    },
+    {
+        id: 4,
+        name: "Producto Marca 3",
+        brand: "Marca 3",
+        shortDescription: "El candil Armstrong Linear de la colección Globes de Schwung...",
+        longDescription: "El candil Armstrong Linear de la colección Globes de Schwung, captura una sensación de movimiento...",
+        specifications: {
+            glass: ["Vidrio Opalino Mate (Soda Lime Triplex)", "Vidrio Mármol Mate (Soda Lime)", "Vidrio Transparente (Ribbon de Borosilicato)"],
+            weight: "18.6 kg / 41.0 lb",
+            lightSource: "Bombilla LED (incluida) 10 x 4-5 W",
+            maxPower: "10 x 10 W",
+            lumens: "2200 lm",
+            colorTemperature: "2200-3000 K",
+        },
+        categories: ["Productos", "Schwung Design", "Colección Globe", "Candiles"],
+        mainImage: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+        images: [
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
+            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
+        ],
+        pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",
+        seo: {
+            keywords: ["lámparas decorativas", "candiles", "schwung design", "colección globes"],
+            metaDescription: "Descubre nuestro elegante candil con pantallas de vidrio y base de latón en tres acabados sofisticados...",
+        }
+    },
+    {
+        id: 5,
+        name: "Producto Marca 2.2",
+        brand: "Marca 2",
+        shortDescription: "El candil Armstrong Linear de la colección Globes de Schwung...",
+        longDescription: "El candil Armstrong Linear de la colección Globes de Schwung, captura una sensación de movimiento...",
+        specifications: {
+            glass: ["Vidrio Opalino Mate (Soda Lime Triplex)", "Vidrio Mármol Mate (Soda Lime)", "Vidrio Transparente (Ribbon de Borosilicato)"],
+            weight: "18.6 kg / 41.0 lb",
+            lightSource: "Bombilla LED (incluida) 10 x 4-5 W",
+            maxPower: "10 x 10 W",
+            lumens: "2200 lm",
+            colorTemperature: "2200-3000 K",
+        },
+        categories: ["Productos", "Schwung Design", "Colección Globe", "Candiles"],
+        mainImage: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+        images: [
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
+            { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
+            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
+        ],
+        pdf: "candil_schwung_armstronglinear_fichatecnica.pdf",
+        seo: {
+            keywords: ["lámparas decorativas", "candiles", "schwung design", "colección globes"],
+            metaDescription: "Descubre nuestro elegante candil con pantallas de vidrio y base de latón en tres acabados sofisticados...",
+        }
+    },
 ];
