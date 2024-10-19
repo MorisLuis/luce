@@ -31,6 +31,7 @@ export default function Home() {
               alt={'Imagen Land Page'}
               layout="fill"
               objectFit="cover"
+              quality={100}
             />
           </div>
         </div>
