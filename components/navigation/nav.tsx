@@ -15,7 +15,7 @@ const categories = [
 ];
 
 export const Nav = () => {
-    const [showMenu, setShowMenu] = useState(false)
+    const [showMenu, setShowMenu] = useState(false);
     const [showDropDown, setShowDropDown] = useState(false);
 
     const handleNavigate = () => {
@@ -59,7 +59,10 @@ export const Nav = () => {
                             <ul className={`${styles.dropdown} ${showDropDown ? styles.active : ""}`}>
                                 {categories.map((category) => (
                                     <li key={category.id}>
-                                        <Link href={`/categories/${category.value}`} onClick={handleNavigate}>
+                                        <Link
+                                            href={category.value === "Todos" ? '/categories' : `/categories/${category.value}`}
+                                            onClick={handleNavigate}
+                                        >
                                             {category.value}
                                         </Link>
                                     </li>

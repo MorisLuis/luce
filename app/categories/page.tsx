@@ -76,7 +76,11 @@ function ProductList() {
                       : styles.circle
                   }
                 ></div>
-                <Link href={`/categories/${item.name}`}>{item.name}</Link>
+                <Link
+                  href={item.name === "Todos" ? '/categories' : `/categories/${item.name}`}
+                >
+                  {item.name}
+                </Link>
                 <div
                   className={item.name === category ? `${styles.line} ${styles.lineactive}` : styles.line}
                 ></div>
