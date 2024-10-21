@@ -48,11 +48,10 @@ a {
 }
 
 h1 {
-  color: $text-color-secondary;
   font-size: $font-big;
   line-height: $font-big;
   z-index: 99;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   font-family: 'HelveticaNeueLight';
 
   @include respond(big-desktop) {

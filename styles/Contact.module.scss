@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
 
+        h1{
+            margin-bottom: $margin-bottom;
+        }
+
         @include respond(tab-port) {
             width: 70%;
         }
@@ -43,12 +47,11 @@
         margin-top: $margin-bottom * 5;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: $padding;
 
         :hover{
             cursor: pointer;
             text-decoration: underline
         }
     }
-
 };

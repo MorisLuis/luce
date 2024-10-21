@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { sendEmail } from '@/services/sendEmail';
 import { products } from '@/data/products';
 import styles from "../../styles/Contact.module.scss";
+import Link from 'next/link';
 
 interface ContactScreenInterface {
     center?: boolean
@@ -66,7 +67,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
     return (
         <div className={center ? `${styles.Contact} ${styles.center}` : styles.Contact}>
             <div className={styles.ContactContent}>
-                <h1>CONTACTENOS</h1>
+                <h1>Contactenos</h1>
                 <form onSubmit={handleSubmit} className={styles.ContactForm}>
                     <div className={styles.inputContainer}>
                         <label htmlFor="email">Mail.</label>
@@ -106,13 +107,17 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         onClick={handleButtonClick}
                         secondaryDesign={true}
                         extraStyles={{
-                            width: "50%",
+                            width: "30%",
                         }}
                     />
                 </form>
                 <div className={styles.ContactFooter}>
-                    <p>hola@luce.design</p>
-                    <p>instagram</p>
+                    <Link href={'mailto: hola@luce.com.mx'}>
+                        hola@luce.com.mx
+                    </Link>
+                    <Link href={'https://www.instagram.com/luce_mex/'}>
+                        instagram
+                    </Link>
                 </div>
                 {response && <p>{response}</p>}
             </div>
