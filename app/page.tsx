@@ -32,7 +32,6 @@ export default function Home() {
               priority
               quality={100}
               layout="fill"
-              //placeholder="blur"
             />
           </div>
         </div>

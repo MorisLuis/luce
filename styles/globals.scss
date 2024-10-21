@@ -53,15 +53,19 @@ h1 {
   z-index: 99;
   letter-spacing: 8px;
   font-family: 'HelveticaNeueLight';
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 
   @include respond(big-desktop) {
-    font-size: $font-med * 5;
-    line-height: $font-med * 5;
+    font-size: $font-big;
+    line-height: $font-med / 5;
   }
 
   @include respond(phone) {
-    font-size: $font-med * 3;
-    line-height: $font-med * 3;
+    font-size: $font-big / 1.5;
+    line-height: $font-big / 1.5;
   }
 };
 

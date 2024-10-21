@@ -1,4 +1,5 @@
 "use client";
+
 import { Button } from '@/components/Button';
 import React, { useEffect, useState } from 'react';
 import { sendEmail } from '@/services/sendEmail';
@@ -67,8 +68,10 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
     return (
         <div className={center ? `${styles.Contact} ${styles.center}` : styles.Contact}>
             <div className={styles.ContactContent}>
-                <h1>Contactenos</h1>
-                <form onSubmit={handleSubmit} className={styles.ContactForm}>
+                <div className={styles.ContactHeader}>
+                    <h1>Contactenos</h1>
+                </div>
+                <form onSubmit={handleSubmit} className={secondaryDesign ? `${styles.ContactForm} ${styles.secondary}` : styles.ContactForm}>
                     <div className={styles.inputContainer}>
                         <label htmlFor="email">Mail.</label>
                         <input
@@ -77,7 +80,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input' : 'input'}
+                            className={'input'}
                         />
                     </div>
                     <div className={styles.inputContainer}>
@@ -88,7 +91,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input' : 'input'}
+                            className={'input'}
                         />
                     </div>
                     <div className={styles.inputContainer}>
@@ -98,7 +101,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             required
-                            className={secondaryDesign ? 'input' : 'input'}
+                            className={'input'}
                         />
                     </div>
 
