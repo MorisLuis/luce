@@ -16,15 +16,6 @@
         width: 60%;
         display: flex;
         flex-direction: column;
-        
-        h1{
-            font-size: $font-big;
-            margin-bottom: $margin-bottom;
-
-            @include respond(tab-port) {
-                font-size: $font-med;
-            };
-        }
 
         @include respond(tab-port) {
             width: 70%;

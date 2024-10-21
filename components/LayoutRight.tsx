@@ -7,7 +7,6 @@ interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar?: () => React.ReactNode;
     bottom?: boolean;
-
     secondaryDesign?: boolean;
 }
 
@@ -21,7 +20,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             </div>
 
             <div className={style.sidebar}>
-                <div>
+                <>
                     <div className={style.imageContainer}>
                         <Image
                             src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
@@ -41,7 +40,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                     <div className={style.sidebarcontent}>
                         {sideBar?.()}
                     </div>
-                </div>
+                </>
                 {bottom && <div className={style.bottomSidebar}></div>}
             </div>
             <Nav />
