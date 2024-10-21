@@ -53,6 +53,7 @@ h1 {
   line-height: $font-big;
   z-index: 99;
   letter-spacing: 10px;
+  font-family: 'HelveticaNeueLight';
 
   @include respond(big-desktop) {
     font-size: $font-med * 5;
@@ -63,4 +64,9 @@ h1 {
     font-size: $font-med * 3;
     line-height: $font-med * 3;
   }
+};
+
+h2 {
+  font-family: 'HelveticaNeueLight';
+  line-height: 30px;
 }

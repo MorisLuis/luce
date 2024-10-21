@@ -3,10 +3,10 @@
 .ProductDetails {
     padding: $padding $padding-horizontal;
     width: 100%;
-    margin-bottom: 70%;
+    margin-bottom: 200px;
 
     .goBack {
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-bottom: $margin-bottom;
         display: flex;
         gap: 5px;

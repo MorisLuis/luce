@@ -2,7 +2,7 @@
 .button{
     border-width: 1px;
     padding: $padding-horizontal / 1.5;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
     background-color: $color-primary;
     display: flex;
@@ -20,7 +20,7 @@
 .button_secondary{
     border-width: 1px;
     padding: $padding-horizontal / 1.5;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
     background-color: $color-secondary;
     display: flex;

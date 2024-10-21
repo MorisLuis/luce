@@ -4,7 +4,6 @@ import React from 'react';
 import { Button } from '@/components/Button';
 import { Product } from '@/interface/product';
 import styles from "../../../styles/productDetails.module.scss";
-import { Title } from '@/components/Title';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -43,7 +42,9 @@ export default function ProductDetails({
                 <p>Volver</p>
             </div>
             <div className={styles.ProductDetailsHeaderContainer}>
-                <Title title={`${product.name}`} />
+                <h2>
+                    {product.name}
+                </h2>
             </div>
 
             <div className={styles.ProductDetailsContent}>
@@ -56,7 +57,8 @@ export default function ProductDetails({
                     <label>Descripción extensa:</label>
                     <p>{product.longDescription}</p>
                 </section>
-                <section>
+
+                {/* <section>
                     <label>Especificaciones:</label>
                     <ul className={styles.specifications}>
                         <li>Fuente de luz: {product.specifications.lightSource}</li>
@@ -65,7 +67,8 @@ export default function ProductDetails({
                         <li>Temperatura de color: {product.specifications.colorTemperature}</li>
                         <li>Peso: {product.specifications.weight}</li>
                     </ul>
-                </section>
+                </section> */}
+
                 <section>
                     <label>Categorías:</label>
                     <p>{product.categories.join(', ')}</p>

@@ -13,7 +13,6 @@
 
     .content{
         width: 80%;
-        
 
         @include respond(tab-port) {
             width: 60%;
@@ -47,9 +46,8 @@
         overflow: scroll;
         width: 20%;
         padding: $padding;
-        position: absolute;
         right: 0px;
-        height: 100vh;
+        margin-bottom: 100px;
 
         justify-content: space-between;
         align-items: center;
