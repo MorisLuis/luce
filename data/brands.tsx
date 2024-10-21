@@ -5,7 +5,11 @@ export const brandsData: brandsInterface[] = [
         id: 0,
         name: "Todos",
         description: "",
-        images: []
+        images: [],
+        seo: {
+            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
+        }
     },
     {
         id: 1,
@@ -14,7 +18,11 @@ export const brandsData: brandsInterface[] = [
         images: [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
-        ]
+        ],
+        seo: {
+            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
+        }
     },
     {
         id: 2,
@@ -23,7 +31,11 @@ export const brandsData: brandsInterface[] = [
         images: [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
-        ]
+        ],
+        seo: {
+            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
+        }
     },
     {
         id: 3,
@@ -32,6 +44,10 @@ export const brandsData: brandsInterface[] = [
         images: [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
-        ]
+        ],
+        seo: {
+            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
+        }
     }
 ]

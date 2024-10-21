@@ -8,7 +8,7 @@ import LayoutRight from "@/components/LayoutRight";
 import { categoriesData } from "@/data/categories";
 import styles from "../../styles/page.module.scss";
 
-export function CategoryGrid() {
+export function CategoriesGrid() {
     const searchParams = useSearchParams();
     const category = searchParams.get("category") || "Todos";
 

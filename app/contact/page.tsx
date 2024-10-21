@@ -1,13 +1,18 @@
-"use client";
 import React, { Suspense } from 'react';
 import LayoutRight from '@/components/LayoutRight';
 import { ContactScreen } from './ContactScreen';
 
-function ContactPage() {
+export async function generateMetadata() {
+    return {
+        title: "Luce - Contacto",
+        description: "La luz que define el arte de vivir."
+    };
+}
 
+function ContactPage() {
     return (
         <LayoutRight
-            content={() => ContactScreen({ center: true, secondaryDesign: true })}
+            content={() => <ContactScreen center={true} secondaryDesign={true} />}
         />
     );
 };

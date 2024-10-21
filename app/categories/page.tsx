@@ -1,17 +1,19 @@
 import { Suspense } from "react";
-import { CategoryGrid } from "./CategoryGrid";
-import { Metadata } from "next";
+import { CategoriesGrid } from "./CategoriesGrid";
+import { categoriesData } from "@/data/categories";
 
-export const metadata: Metadata = {
-  title: "Luce - Categorias",
-  description: "La luz que define el arte de vivir.",
-};
-
+export async function generateMetadata() {
+  return {
+    title: "Luce - Categorias",
+    description: "La luz que define el arte de vivir.",  
+    keywords: categoriesData.map((category) => category.name)
+  };
+}
 
 export default function Categories() {
   return (
-    <Suspense fallback={<div>Cargando productos...</div>}>
-      <CategoryGrid />
+    <Suspense fallback={<div>Cargando categorias...</div>}>
+      <CategoriesGrid />
     </Suspense>
   );
 }
