@@ -20,28 +20,26 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             </div>
 
             <div className={style.sidebar}>
-                <>
-                    <div className={style.imageContainer}>
-                        <Image
-                            src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
-                            alt={'LUCE'}
-                            layout="fill"
-                            objectFit="container"
-                            className={style.imageContainerWeb}
-                        />
-                        <Image
-                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                            alt={'LUCE'}
-                            layout="fill"
-                            objectFit="container"
-                            className={style.imageContainerMovil}
-                        />
-                    </div>
-                    <div className={style.sidebarcontent}>
-                        {sideBar?.()}
-                    </div>
-                </>
-                {bottom && <div className={style.bottomSidebar}></div>}
+                <div className={style.sidebar_image}>
+                    <Image
+                        src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
+                        alt={'LUCE'}
+                        layout="fill"
+                        objectFit="container"
+                        className={style.imageContainerWeb}
+                    />
+                    <Image
+                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        alt={'LUCE'}
+                        layout="fill"
+                        objectFit="container"
+                        className={style.imageContainerMovil}
+                    />
+                </div>
+                <div className={style.sidebar_content}>
+                    {sideBar?.()}
+                </div>
+                {bottom && <div className={style.sidebar_bottom}></div>}
             </div>
             <Nav />
         </div>

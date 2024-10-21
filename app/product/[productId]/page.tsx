@@ -11,7 +11,6 @@ export async function generateMetadata({ params }: { params: { productId: string
   };
 }
 
-
 export default function ProductPage({ params }: { params: { productId: string, id: string } })  {
   return <ProductClientPage params={params} />;
 }
