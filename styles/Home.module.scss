@@ -11,8 +11,13 @@
 
         .imageContainer {
             position: relative;
+            display: block;
             width: 100%;
             height: 100%;
+            
+            img{
+                object-fit: cover
+            }
         };
     };
 
@@ -31,25 +36,6 @@
         @include respond(phone) {
             width: 80%;
         }
-
-        h1{
-            color: $text-color-secondary;
-            font-size: $font-big;
-            line-height: $font-big;
-            z-index: 99;
-            letter-spacing: 10px;
-
-            @include respond(big-desktop) {
-                font-size: $font-med * 5;
-                line-height: $font-med * 5;
-            }
-
-            @include respond(phone) {
-                font-size: $font-med * 3;
-                line-height: $font-med * 3;
-            }
-        }
-        
     };
 
     .HomeMenu{
@@ -68,7 +54,7 @@
 
         .section{
             list-style: none;
-            text-transform: uppercase;
+            text-transform:capitalize;
             display: flex;
             justify-content: flex-end;
             font-weight: bold;

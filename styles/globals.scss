@@ -46,3 +46,21 @@ a {
   text-decoration: none;
 
 }
+
+h1 {
+  color: $text-color-secondary;
+  font-size: $font-big;
+  line-height: $font-big;
+  z-index: 99;
+  letter-spacing: 10px;
+
+  @include respond(big-desktop) {
+    font-size: $font-med * 5;
+    line-height: $font-med * 5;
+  }
+
+  @include respond(phone) {
+    font-size: $font-med * 3;
+    line-height: $font-med * 3;
+  }
+}

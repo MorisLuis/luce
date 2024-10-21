@@ -8,6 +8,7 @@ import LayoutRight from "@/components/LayoutRight";
 import styles from "../../styles/page.module.scss";
 import { brandsData } from "@/data/brands";
 
+
 function ProductList() {
   const searchParams = useSearchParams();
   const brand = searchParams.get("brand") || "Todos";
@@ -99,7 +100,7 @@ function ProductList() {
 
 export default function Brands() {
   return (
-    <Suspense fallback={<div>Cargando productos...</div>}>
+    <Suspense fallback={<div>Cargando marcas...</div>}>
       <ProductList />
     </Suspense>
   );
