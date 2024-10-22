@@ -145,8 +145,10 @@
         position: fixed;
         z-index: 9999;
         cursor: pointer;
-        right: 10%;
+
         transform: translateX(50%);
+        position: fixed;
+        right: 10%;
         bottom: $padding-horizontal * 4;
 
         @include respond(tab-port) {
@@ -155,8 +157,8 @@
         }
 
         @include respond(phone) {
-            top: 30px;
-            left: $padding-horizontal;
+            top: $padding + 20px;
+            left: $padding;
             transform: translateX(0%);
             width: fit-content;
             height: fit-content;

@@ -11,26 +11,17 @@
     left: 0;
     width: 100%;
     z-index: 9999;
-    opacity: 1; // Comienza visible
-    transition: opacity 1s ease-out; // Transición suave al ocultar
+    opacity: 1; 
+    transition: opacity 1s ease-out;
 
     .imageContainer {
         min-width: 100px;
         height: 100px;
         position: relative;
-
-        @include respond(phone) {
-            position: fixed;
-            top: $padding-horizontal;
-            right: $padding-horizontal;
-            width: 60px;
-            height: 60px;
-        }
     }
 }
 
-// Ocultar el preloader cuando la página esté lista
 .app .preloader {
-    opacity: 0; // Cambia a opacidad cero
-    pointer-events: none; // Desactiva eventos mientras está oculto
+    opacity: 0;
+    pointer-events: none;
 }

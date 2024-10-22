@@ -57,10 +57,7 @@
         };
 
         @include respond(phone) {
-            width: 100%;
-            height: 15%;
-            align-items: none;
-            flex-direction: row-reverse;
+            display: none
         };
 
         .sidebar_content{
@@ -75,20 +72,6 @@
             height: 100px;
             position: relative;
 
-            .imageContainerWeb{ 
-                display: flex;
-                @include respond(phone) {
-                    display: none;
-                }
-            }
-
-            .imageContainerMovil{
-                display: none;
-                @include respond(phone) {
-                    display: flex;
-                }
-            }
-            
             @include respond(phone) {
                 position: fixed;
                 top: $padding-horizontal;
@@ -96,6 +79,18 @@
                 width: 60px;
                 height: 60px;
             };
+
+            .imageContainerWeb{ 
+                display: flex;
+
+                @include respond(phone) {
+                    display: none;
+                }
+            }
+
+            .imageContainerMovil{
+                display: flex;
+            }
         };
 
         .sidebar_bottom {
@@ -116,8 +111,23 @@
         };
     };
 
+    .sidebarlogomobil{
+        display: none;
+        position: fixed;
+        top: $padding;
+        right: $padding;
+        width: 60px;
+        height: 60px;
+        z-index: 99;
+
+        @include respond(phone) {
+            display: flex
+        };
+    }
+
     .sidebarMobil{
         display: none;
+        padding: $padding;
 
         @include respond(phone) {
             display: flex

@@ -15,6 +15,18 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
         <div className={style.layoutRight}>
             <div className={style.sidebarMobil}> {secondaryDesign && sideBar?.()} </div> {/* This is how we show sidebar in movil */}
 
+            <div className={style.sidebarlogomobil}>
+                <div className={style.sidebar_image}>
+                    <Image
+                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        alt={'LUCE'}
+                        layout="fill"
+                        objectFit="container"
+                        className={style.imageContainerMovil}
+                    />
+                </div>
+            </div>
+
             <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
                 {content()}
             </div>
@@ -28,19 +40,20 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                         objectFit="container"
                         className={style.imageContainerWeb}
                     />
-                    <Image
+                    {/* <Image
                         src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
                         layout="fill"
                         objectFit="container"
                         className={style.imageContainerMovil}
-                    />
+                    /> */}
                 </div>
                 <div className={style.sidebar_content}>
                     {sideBar?.()}
                 </div>
                 {bottom && <div className={style.sidebar_bottom}></div>}
             </div>
+
             <Nav />
         </div>
     )
