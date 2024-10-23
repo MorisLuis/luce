@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from '../styles/Preloader.module.scss';
-import Image from 'next/image';
 
 export const Preloader = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            videoRef.current.playbackRate = 2.0;
+        }
+    }, []);
+
     return (
         <div className={styles.preloader}>
-            <div className={styles.imageContainer}>
-                <Image
-                    src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
-                    alt={'LUCE'}
-                    layout="fill"
-                    objectFit="contain" // Asegúrate de que "contain" esté configurado
-                />
+            <div className={styles.videoContainer}>
+                <video
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                >
+                    <source src="/LUCE_1920X1080.mp4" type="video/mp4" />
+                </video>
             </div>
         </div>
     );

@@ -1,12 +1,12 @@
 "use client"
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import React, { useEffect, useState, Suspense } from "react";
-import { Preloader } from "./Preloader";
+import { useState, useEffect, Suspense } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import styles from '../styles/Home.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Preloader } from './Preloader';
+import LayoutRight from '@/components/LayoutRight';
 import banner from '../public/test.webp';
-
-const LayoutRight = React.lazy(() => import("@/components/LayoutRight")); // Lazy load del LayoutRight
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -14,7 +14,8 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 8000);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -36,7 +37,7 @@ export default function Home() {
           </div>
         </div>
       </>
-    )
+    );
   };
 
   const renderSideBar = () => {
@@ -49,27 +50,44 @@ export default function Home() {
           <Link href={'/contact'}>Contacto</Link>
         </li>
         <li className={styles.section}>
-          <Link href={'/categories'}>Categorias</Link>
+          <Link href={'/categories'}>Categorías</Link>
         </li>
         <li className={styles.section}>
           <Link href={'/brands'}>Marcas</Link>
         </li>
       </div>
-    )
+    );
   };
 
   return (
     <div className={styles.Home}>
-      {loading ? (
-        <Preloader />
-      ) : (
-        <Suspense fallback={<Preloader />}>
-          <LayoutRight
-            sideBar={renderSideBar}
-            content={renderContent}
-          />
-        </Suspense>
-      )}
+      <AnimatePresence>
+        {loading ? (
+          // Anima la salida del Preloader
+          <motion.div
+            key="preloader"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Preloader />
+          </motion.div>
+        ) : (
+          // Anima la entrada del contenido de la página
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Suspense fallback={<Preloader />}>
+              <LayoutRight sideBar={renderSideBar} content={renderContent} />
+            </Suspense>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
