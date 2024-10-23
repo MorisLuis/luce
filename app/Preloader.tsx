@@ -6,7 +6,10 @@ export const Preloader = () => {
 
     useEffect(() => {
         if (videoRef.current) {
-            videoRef.current.play();
+            // Asegúrate de que el video puede reproducirse automáticamente
+            videoRef.current.play().catch((error) => {
+                console.error('Error playing video:', error);
+            });
             videoRef.current.playbackRate = 2.0;
         }
     }, []);
@@ -18,6 +21,7 @@ export const Preloader = () => {
                     ref={videoRef}
                     autoPlay
                     muted
+                    playsInline
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 >
                     <source src="/LUCE_1920X1080.mp4" type="video/mp4" />

@@ -63,29 +63,30 @@ export default function Home() {
     <div className={styles.Home}>
       <AnimatePresence>
         {loading ? (
-          // Anima la salida del Preloader
           <motion.div
             key="preloader"
             initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            //animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Preloader />
           </motion.div>
         ) : (
-          // Anima la entrada del contenido de la página
-          <motion.div
-            key="content"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Suspense fallback={<Preloader />}>
-              <LayoutRight sideBar={renderSideBar} content={renderContent} />
-            </Suspense>
-          </motion.div>
+          <Suspense fallback={<Preloader />}>
+            <motion.div
+              key="content"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <LayoutRight
+                sideBar={renderSideBar}
+                content={renderContent}
+              />
+            </motion.div>
+          </Suspense>
         )}
       </AnimatePresence>
     </div>
