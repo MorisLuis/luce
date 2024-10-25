@@ -48,9 +48,11 @@
         >section {
             margin: $margin-bottom*2 0px;
 
-            label{
+            label {
                 font-weight: bold;
-            };
+            }
+
+            ;
 
             li {
                 list-style: none;
@@ -59,14 +61,35 @@
 
     }
 
-    .ProductDetailsNavigation{
+    .ProductDetailsNavigation {
         display: flex;
         justify-content: space-between;
 
-        :hover{
+        :hover {
             cursor: pointer;
             text-decoration: underline;
         }
     }
 
+}
+
+.ProductSpecs {
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+
+    h2 {
+        margin-bottom: $margin-bottom;
+    }
+
+    .specItem {
+        margin-bottom: $margin-bottom;
+    }
+
+    .ProductContent {
+        overflow: scroll;
+    }
 }

@@ -9,10 +9,12 @@ import ImageSlider from '@/components/ImageSlider';
 import { Modal } from '@/components/Modal';
 import { ContactScreen } from '@/app/contact/ContactScreen';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { ProductSpecs } from './ProductSpecs';
 
 export default function ProductClientPage({ params }: { params: { productId: string, id: string } }) {
 
     const [contactModal, setContactModal] = useState(false);
+    const [specsModal, setSpecsModal] = useState(false)
     const router = useRouter();
     const searchParams = useSearchParams();
     const from = searchParams.get('from');
@@ -21,9 +23,9 @@ export default function ProductClientPage({ params }: { params: { productId: str
         (prod) => prod.id === Number(params.productId)
     );
 
-    const handleOpenContact = () => {
-        setContactModal(!contactModal);
-    }
+    const handleOpenContact = () =>  setContactModal(!contactModal);
+    const handleOpenSpecs = () =>  setSpecsModal(!specsModal);
+
 
     if (!product) {
         return <div>Producto no encontrado</div>;
@@ -86,6 +88,7 @@ export default function ProductClientPage({ params }: { params: { productId: str
                     <ProductDetails
                         product={product}
                         handleOpenContact={handleOpenContact}
+                        handleOpenSpecs={handleOpenSpecs}
                         next={goToNextProduct}
                         back={goToBackProduct}
                     />
@@ -101,6 +104,16 @@ export default function ProductClientPage({ params }: { params: { productId: str
             >
                 <ContactScreen
                     productId={product.id}
+                />
+            </Modal>
+
+            <Modal
+                visible={specsModal}
+                onClose={handleOpenSpecs}
+                headerTitle="Especificaciones"
+            >
+                <ProductSpecs
+                    product={product}
                 />
             </Modal>
         </>

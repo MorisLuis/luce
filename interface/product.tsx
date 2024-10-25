@@ -6,7 +6,7 @@ export interface Product {
     brand: string;
     shortDescription: string;
     longDescription: string;
-    specifications: {
+    /* specifications: {
         glass?: string | string[];
         lightSource: string;
         maxPower: string;
@@ -14,7 +14,8 @@ export interface Product {
         colorTemperature: string;
         weight: string;
         finishes?: string[]
-    };
+    }; */
+    specs: string[];
     categories: string[];
     mainImage: string;
     pdf?: string;

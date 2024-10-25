@@ -15,9 +15,10 @@ config.autoAddCss = false;
 export default function ProductDetails({
     product,
     handleOpenContact,
+    handleOpenSpecs,
     next,
     back
-}: { product: Product, handleOpenContact: () => void, next: () => void, back: () => void }) {
+}: { product: Product, handleOpenContact: () => void, next: () => void, handleOpenSpecs: () => void, back: () => void }) {
 
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -91,11 +92,15 @@ export default function ProductDetails({
                             const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
                             if (!newWindow) console.error('La ventana emergente fue bloqueada.');
                         }}
-                        extraStyles={{
-                            marginBottom: "10px"
-                        }}
+                        extraStyles={{ marginBottom: "10px" }}
                     />
                 }
+
+                <Button
+                    title='Especificaciones'
+                    onClick={handleOpenSpecs}
+                    extraStyles={{ marginBottom: "10px" }}
+                />
 
                 <Button
                     title='Contactar'
