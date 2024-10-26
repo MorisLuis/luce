@@ -4,6 +4,9 @@ import styles from '../../styles/Skeletons.module.scss';
 export default function SideBarSkeleton() {
     return (
         <div className={styles.SideBarSkeleton}>
+            <div className={styles.goBack} >
+                <p></p>
+            </div>
             <h1></h1>
             <div className={styles.SideBarSkeletonContent}>
                 <p style={{ width: "50%" }}></p>

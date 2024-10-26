@@ -3,7 +3,7 @@ import LayoutRight from '@/components/LayoutRight';
 import { ContactScreen } from './ContactScreen';
 import LayoutRightSkeleton from '@/components/skeletons/LayoutRightSkeleton';
 import SideBarSkeleton from '@/components/skeletons/SideBarSkeleton';
-import { ContactSkeleton } from '@/components/skeletons/ ContactSkeleton';
+import { ContactSkeleton } from '@/components/skeletons/ContactSkeleton';
 
 export async function generateMetadata() {
     return {

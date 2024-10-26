@@ -31,8 +31,6 @@ export default function ProductDetails({
         }
     };
 
-    if (!product) return <div>Cargando...</div>;
-
     return (
         <div className={styles.ProductDetails}>
             <div
@@ -58,17 +56,6 @@ export default function ProductDetails({
                     <label>Descripción extensa:</label>
                     <p>{product.longDescription}</p>
                 </section>
-
-                {/* <section>
-                    <label>Especificaciones:</label>
-                    <ul className={styles.specifications}>
-                        <li>Fuente de luz: {product.specifications.lightSource}</li>
-                        <li>Potencia máxima: {product.specifications.maxPower}</li>
-                        <li>Lúmenes totales: {product.specifications.lumens}</li>
-                        <li>Temperatura de color: {product.specifications.colorTemperature}</li>
-                        <li>Peso: {product.specifications.weight}</li>
-                    </ul>
-                </section> */}
 
                 <section>
                     <label>Categorías:</label>

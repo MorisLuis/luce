@@ -5,11 +5,13 @@ import NavSkeleton from './NavSkeleton';
 interface LayoutRightInterface {
     contentSkeleton: () => React.ReactNode;
     sideBarSkeleton?: () => React.ReactNode;
+    secondaryDesign?: boolean;
 }
 
-export default function LayoutRightSkeleton({ contentSkeleton, sideBarSkeleton }: LayoutRightInterface) {
+export default function LayoutRightSkeleton({ contentSkeleton, sideBarSkeleton, secondaryDesign }: LayoutRightInterface) {
     return (
         <div className={style.layoutRightSkeleton}>
+            <div className={style.sidebarMobil}> {secondaryDesign && sideBarSkeleton?.()} </div> {/* This is how we show sidebar in movil */}
 
             <div className={style.sidebarlogomobil}>
                 <div className={style.sidebar_image}>
@@ -17,7 +19,7 @@ export default function LayoutRightSkeleton({ contentSkeleton, sideBarSkeleton }
                 </div>
             </div>
 
-            <div className={style.content}>
+            <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
                 {contentSkeleton()}
             </div>
 

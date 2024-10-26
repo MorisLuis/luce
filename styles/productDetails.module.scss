@@ -1,15 +1,14 @@
 @import "./main.scss";
 
 .ProductDetails {
-    padding: $padding $padding-horizontal;
     width: 100%;
 
     .goBack {
         text-transform: capitalize;
-        margin-bottom: $margin-bottom;
         display: flex;
         gap: 5px;
         cursor: pointer;
+        margin-bottom: $margin-bottom;
 
         &:hover {
             text-decoration: underline;
@@ -52,13 +51,10 @@
                 font-weight: bold;
             }
 
-            ;
-
             li {
                 list-style: none;
             }
         }
-
     }
 
     .ProductDetailsNavigation {

@@ -28,14 +28,6 @@ export function ContactSkeleton({ center }: ContactScreenInterface) {
 
                     <div className={styles.button}></div>
 
-                    {/* <Button
-                    title='Enviar'
-                    onClick={handleButtonClick}
-                    secondaryDesign={true}
-                    extraStyles={{
-                        width: "30%",
-                    }}
-                /> */}
                 </form>
                 <div className={styles.ContactFooter}>
                     <div></div>
