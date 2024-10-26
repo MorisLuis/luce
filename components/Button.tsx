@@ -22,6 +22,7 @@ export const Button = ({
     extraStyles,
     secondaryDesign
 }: ButtonInterface) => {
+
     return (
         <button
             onClick={onClick}

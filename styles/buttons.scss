@@ -3,10 +3,13 @@
     padding: $padding-horizontal / 1.5;
     text-transform: capitalize;
     font-weight: bold;
-    background-color: $color-primary;
+    //background-color: $color-primary;
     display: flex;
     justify-content: center;
     gap: $padding-horizontal;
+    background-color: transparent;
+    border-color: black;
+    color: black;
 
     &:hover {
         background-color: $color-tertiary;
