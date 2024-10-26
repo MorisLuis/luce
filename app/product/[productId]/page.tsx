@@ -31,7 +31,7 @@ export default function ProductPage({ params }: { params: { productId: string, i
         secondaryDesign={true}
       />
     }>
-      <ProductClientPage params={params} />;
+      <ProductClientPage params={params} />
     </Suspense>
   )
 
