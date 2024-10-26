@@ -109,9 +109,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         title='Enviar'
                         onClick={handleButtonClick}
                         secondaryDesign={true}
-                        extraStyles={{
-                            width: "30%",
-                        }}
+                        extraStyles={{ width: "30%",}}
                     />
                 </form>
                 <div className={styles.ContactFooter}>
