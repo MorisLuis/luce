@@ -74,9 +74,9 @@ export default function Home() {
         ) : (
           <Suspense fallback={<Preloader />}>
             <LayoutRight
-                sideBar={renderSideBar}
-                content={renderContent}
-              />
+              sideBar={renderSideBar}
+              content={renderContent}
+            />
           </Suspense>
         )}
       </AnimatePresence>

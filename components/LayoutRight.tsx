@@ -40,13 +40,6 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                         objectFit="container"
                         className={style.imageContainerWeb}
                     />
-                    {/* <Image
-                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                        alt={'LUCE'}
-                        layout="fill"
-                        objectFit="container"
-                        className={style.imageContainerMovil}
-                    /> */}
                 </div>
                 <div className={style.sidebar_content}>
                     {sideBar?.()}

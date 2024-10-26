@@ -1,0 +1,244 @@
+@import "./main.scss";
+
+.GridSkeletons {
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: $padding;
+        gap: 16px;
+        min-height: auto;
+        overflow: scroll;
+
+        @include respond(phone) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+        }
+
+        h2 {
+            display: none;
+
+            @include respond(phone) {
+                display: flex;
+                height: $font-med;
+                background-color: $background-color-skeletons;
+                width: 40%;
+                animation: loading 1s infinite;
+            }
+        }
+
+        .productCard {
+            background-color: $background-color-skeletons;
+            overflow: hidden;
+            transition: transform 0.2s;
+            height: fit-content;
+            animation: loading 1s infinite;
+
+            .productLink {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                color: $text-color;
+
+                .imageWrapper {
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.layoutRightSkeleton {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+
+    @include respond(phone) {
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        width: 80%;
+
+        @include respond(tab-port) {
+            width: 60%;
+        }
+
+        &__secondaryDesign {
+            width: 80%;
+
+            @include respond(tab-port) {
+                width: 60%;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            height: 100%;
+            margin-top: 20%; // 15% of .sidebar phone. + 5%
+        }
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: scroll;
+        width: 20%;
+        padding: $padding;
+        right: 0px;
+        margin-bottom: 100px;
+
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-port) {
+            width: 40%;
+        }
+
+        @include respond(phone) {
+            display: none
+        }
+
+        .sidebar_content {
+            height: calc(100% - 100px);
+            width: calc(100%);
+            padding: $padding;
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        .sidebar_image {
+            min-width: 100px;
+            height: 100px;
+            position: relative;
+
+            @include respond(phone) {
+                position: fixed;
+                top: $padding-horizontal;
+                right: $padding-horizontal;
+                width: 60px;
+                height: 60px;
+            }
+
+            .imageContainerWeb {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: $background-color-skeletons;
+                animation: loading 1s infinite;
+
+                @include respond(phone) {
+                    display: none;
+                }
+            }
+
+            .imageContainerMovil {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: $background-color-skeletons;
+                animation: loading 1s infinite;
+            }
+        }
+    }
+
+    .sidebarlogomobil {
+        display: none;
+        position: fixed;
+        top: $padding;
+        right: $padding;
+        width: 60px;
+        height: 60px;
+        z-index: 99;
+
+        @include respond(phone) {
+            display: flex
+        }
+    }
+
+    .menu {
+        .hamburguer {
+            position: fixed;
+            z-index: 9999;
+            transform: translateX(50%);
+            position: fixed;
+            right: 10%;
+            bottom: $padding-horizontal * 4;
+
+            @include respond(tab-port) {
+                right: 20%;
+                max-width: 360px;
+            }
+
+            @include respond(phone) {
+                top: $padding + 20px;
+                left: $padding;
+                transform: translateX(0%);
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .bar {
+                width: 50px;
+                height: 2px;
+                background-color: $background-color-skeletons;
+                margin-bottom: $margin-bottom / 2;
+                transition: all 0.3s ease;
+                animation: loading 1s infinite;
+            }
+        }
+    }
+}
+
+.SideBarSkeleton {
+
+    h1 {
+        height: $font-med;
+        width: 80%;
+        background-color: $background-color-skeletons;
+        animation: loading 1s infinite;
+        margin-bottom: $margin-bottom;
+    }
+
+    .SideBarSkeletonContent{
+        display: flex;
+        flex-direction: column;
+
+        >p{
+            height: $font-normal;
+            width: 55%;
+            background-color: $background-color-skeletons;
+            margin-bottom: $margin-bottom;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
