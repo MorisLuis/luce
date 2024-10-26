@@ -1,5 +1,4 @@
-
-.button{
+.button {
     border-width: 1px;
     padding: $padding-horizontal / 1.5;
     text-transform: capitalize;
@@ -9,7 +8,7 @@
     justify-content: center;
     gap: $padding-horizontal;
 
-    &:hover{
+    &:hover {
         background-color: $color-tertiary;
         color: $text-color-secondary;
         cursor: pointer;
@@ -17,8 +16,8 @@
     }
 }
 
-.button_secondary{
-    border-width: 1px;
+.button_secondary {
+    border-width: 0px;
     padding: $padding-horizontal / 1.5;
     text-transform: capitalize;
     font-weight: bold;
@@ -27,7 +26,7 @@
     justify-content: center;
     gap: $padding-horizontal;
 
-    &:hover{
+    &:hover {
         background-color: $color-tertiary;
         color: $text-color-secondary;
         cursor: pointer;
@@ -35,14 +34,14 @@
     }
 }
 
-.input{
+.input {
     border-color: #00000029;
     border-width: 1px;
     background-color: $color-secondary;
     padding: $padding-horizontal;
     font-size: 16px;
 
-    &.secondary{
+    &.secondary {
         border-width: 1px;
         background-color: $color-primary;
     }
