@@ -63,8 +63,8 @@ export default function ProductDetails({
                 </section>
 
                 <section className={styles.ProductDetailsNavigation}>
-                    <p onClick={back}>ATRAS</p>
-                    <p onClick={next}>SIGUIENTE</p>
+                    <p onClick={back}>Atrás</p>
+                    <p onClick={next}>Siguiente</p>
                 </section>
 
                 {

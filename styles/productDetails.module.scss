@@ -46,6 +46,11 @@
 
         >section {
             margin: $margin-bottom*2 0px;
+            text-align: justify;
+
+            p{
+                text-justify: auto;
+            }
 
             label {
                 font-weight: bold;
@@ -60,6 +65,7 @@
     .ProductDetailsNavigation {
         display: flex;
         justify-content: space-between;
+        text-transform: capitalize;
 
         :hover {
             cursor: pointer;
