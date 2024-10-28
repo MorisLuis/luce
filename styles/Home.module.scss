@@ -47,18 +47,13 @@
     .HomeMenu {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-top: $margin-bottom * 2;
-
+        width: 100%;
+        height: 100%;
         @include respond(phone) {
             display: none
         }
-
-        ;
 
         .section {
             list-style: none;
@@ -72,10 +67,6 @@
             &:hover {
                 text-decoration: underline;
             }
-
-            ;
         }
-
-        ;
     }
 }

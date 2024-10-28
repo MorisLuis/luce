@@ -26,8 +26,10 @@ export const Nav = () => {
                 active={showMenu}
             />
 
+            {showMenu && <div className={styles.menuBackground} onClick={() => setShowMenu(!showMenu)}></div>}
+
             {/* Menu */}
-            <div className={`${styles.menuBackground} ${showMenu ? styles.active : ''}`}>
+            <div className={`${styles.menuContent} ${showMenu ? styles.active : ''}`}>
                 <div className={styles.menuContainer}>
                     <div className={styles.luce}>
                         <Image

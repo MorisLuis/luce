@@ -6,11 +6,11 @@
     justify-content: center;
     height: 100%;
     padding: $padding-horizontal;
-    //background-color: rgba($color: $background-color-secondary, $alpha: 0.25);
     width: 100%;
 
     &.center {
         padding: $padding-horizontal * 5;
+        background-color: $color-secondary;
 
         @include respond(tab-port) {
             background-color: $background-color;
