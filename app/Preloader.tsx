@@ -10,7 +10,7 @@ export const Preloader = () => {
             videoRef.current.play().catch((error) => {
                 console.error('Error playing video:', error);
             });
-            videoRef.current.playbackRate = 2.0;
+            videoRef.current.playbackRate = 4.0;
         }
     }, []);
 
