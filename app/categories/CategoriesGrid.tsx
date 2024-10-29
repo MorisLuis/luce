@@ -36,7 +36,7 @@ export function CategoriesGrid() {
         return (
             <div className={styles.Categories}>
                 <div className={styles.gridContainer}>
-                    <h2>Categoria</h2>
+                    <h2>Categorías</h2>
                     {categoriesData.slice(1).map((category) => (
                         <div key={category.id} className={styles.productCard}>
                             <Link href={`/categories/${category.name}`} className={styles.productLink}>
@@ -65,7 +65,7 @@ export function CategoriesGrid() {
         return (
             <div className={styles.Categories}>
                 <nav className={styles.CategoriesNavigation}>
-                    <h2>Categoria</h2>
+                    <h2>Categorías</h2>
                     <ul>
                         {categoriesData.map((item) => (
                             <li key={item.id} className={styles.option}>

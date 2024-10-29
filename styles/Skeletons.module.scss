@@ -6,7 +6,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        padding: $padding;
+        padding: 0px $padding;
         gap: 16px;
         min-height: auto;
         overflow: scroll;

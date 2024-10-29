@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     text-align: start;
-    //padding: $padding;
+    align-items: center;
 
     .goBack {
       display: flex;
@@ -28,6 +28,7 @@
 
     h2 {
       text-transform: capitalize;
+      margin-bottom: $margin-bottom;
     }
 
     p {
@@ -39,6 +40,8 @@
       align-items: center;
       width: 100%;
       gap: 5px;
+      justify-content: center;
+      margin-bottom: $margin-bottom / 2;
 
       a {
         min-width: fit-content;
@@ -60,7 +63,7 @@
         background-color: $color-cuaternary;
       }
 
-      .line {
+      /* .line {
         background-color: $color-cuaternary;
         width: 100%;
         height: $font-normal / 2;
@@ -70,7 +73,7 @@
 
       .lineactive {
         opacity: 1;
-      }
+      } */
 
       &:hover {
         .line {
@@ -88,7 +91,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    padding: $padding;
+    padding: 0px $padding;
     gap: 16px;
     min-height: auto;
     overflow: scroll;
@@ -129,6 +132,7 @@
             position: absolute;
             bottom: $padding-horizontal;
             left: $padding-horizontal;
+            font-size: $font-med;
           }
         }
       }

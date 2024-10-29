@@ -34,7 +34,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             <div className={style.sidebar}>
                 <div className={style.sidebar_image}>
                     <Image
-                        src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
+                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
                         layout="fill"
                         objectFit="container"
