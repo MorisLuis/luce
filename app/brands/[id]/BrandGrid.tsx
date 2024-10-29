@@ -10,16 +10,12 @@ import { Product } from '@/interface/product';
 import { products } from '@/data/products';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { useRouter } from 'next/navigation';
 import { brandsData } from '@/data/brands';
 config.autoAddCss = false;
 
 
 export function BrandGrid() {
     const params = useParams();
-    const router = useRouter();
 
     const id = params.id;
     const brand = decodeURIComponent(id as string);
@@ -84,13 +80,6 @@ export function BrandGrid() {
     const renderSideBar = () => {
         return (
             <nav className={styles.CategoriesNavigation}>
-                <div
-                    className={styles.goBack}
-                    onClick={() => router.push('/brands')}
-                >
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                    <p>Volver</p>
-                </div>
                 <h2>{brandData?.name}</h2>
                 <p>{brandData?.description}</p>
             </nav>
