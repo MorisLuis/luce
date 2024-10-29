@@ -80,7 +80,11 @@ export function CategoriesGrid() {
                                     {item.name}
                                 </Link>
                                 <div
-                                    className={item.name === category ? `${styles.line} ${styles.lineactive}` : styles.line}
+                                    className={
+                                        item.name === category
+                                            ? `${styles.circle} ${styles.activeCircle}`
+                                            : styles.circle
+                                    }
                                 ></div>
                             </li>
                         ))}
