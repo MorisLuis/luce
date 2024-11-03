@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
 import { categoriesData } from "@/data/categories";
-import styles from "../../styles/page.module.scss";
+import styles from "../../styles/Grid.module.scss";
 
 export function CategoriesGrid() {
     const searchParams = useSearchParams();
@@ -34,7 +34,7 @@ export function CategoriesGrid() {
 
     const renderContent = () => {
         return (
-            <div className={styles.Categories}>
+            <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>Categorías</h2>
                     {categoriesData.slice(1).map((category) => (
@@ -63,8 +63,8 @@ export function CategoriesGrid() {
 
     const renderSideBar = () => {
         return (
-            <div className={styles.Categories}>
-                <nav className={styles.CategoriesNavigation}>
+            <div className={styles.Grid}>
+                <nav className={styles.gridNavigation}>
                     <h2>Categorías</h2>
                     <ul>
                         {categoriesData.map((item) => (
@@ -95,6 +95,9 @@ export function CategoriesGrid() {
     };
 
     return (
-        <LayoutRight content={renderContent} sideBar={renderSideBar} />
+        <LayoutRight
+            content={renderContent}
+            sideBar={renderSideBar}
+        />
     );
 }

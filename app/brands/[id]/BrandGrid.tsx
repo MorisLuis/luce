@@ -2,7 +2,7 @@
 
 import LayoutRight from '@/components/LayoutRight';
 import React, { useState } from 'react'
-import styles from "../../../styles/page.module.scss";
+import styles from "../../../styles/Grid.module.scss";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -49,40 +49,44 @@ export function BrandGrid() {
 
     const renderContent = () => {
         return (
-            <div className={styles.gridContainer}>
-                <h2>{brandData?.name}</h2>
-                {ProductRender.map((product: Product) => (
-                    <div key={product.id} className={styles.productCard}>
-                        <Link
-                            className={styles.productLink}
-                            href={`/product/${product.id}?from=brands`}
-                        >
-                            <div
-                                className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
-                                onMouseEnter={() => handleMouseEnter(product.id)}
-                                onMouseLeave={() => handleMouseLeave(product.id)}
+            <div className={styles.Grid}>
+                <div className={styles.gridContainer}>
+                    <h2>{brandData?.name}</h2>
+                    {ProductRender.map((product: Product) => (
+                        <div key={product.id} className={styles.productCard}>
+                            <Link
+                                className={styles.productLink}
+                                href={`/product/${product.id}?from=brands`}
                             >
-                                <Image
-                                    src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
-                                    alt={product.images[currentImageIndex[product.id]]?.alt}
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                                <p className={styles.productName}>{product.name}</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
+                                <div
+                                    className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
+                                    onMouseEnter={() => handleMouseEnter(product.id)}
+                                    onMouseLeave={() => handleMouseLeave(product.id)}
+                                >
+                                    <Image
+                                        src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
+                                        alt={product.images[currentImageIndex[product.id]]?.alt}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                    <p className={styles.productName}>{product.name}</p>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     };
 
     const renderSideBar = () => {
         return (
-            <nav className={styles.CategoriesNavigation}>
-                <h2>{brandData?.name}</h2>
-                <p>{brandData?.description}</p>
-            </nav>
+            <div className={styles.Grid}>
+                <nav className={styles.gridNavigation}>
+                    <h2>{brandData?.name}</h2>
+                    <p>{brandData?.description}</p>
+                </nav>
+            </div>
         )
     }
 

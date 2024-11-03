@@ -1,8 +1,9 @@
 @import "./main.scss";
 
-.Categories {
+.Grid {
+  height: 100%;
 
-  .CategoriesNavigation {
+  .gridNavigation {
     margin-bottom: $margin-bottom;
     width: 100%;
     height: 100vh;
@@ -80,9 +81,10 @@
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     padding: 0px $padding;
-    gap: 16px;
-    min-height: auto;
-    overflow: scroll;
+    gap: $gap*2;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: auto;
 
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);

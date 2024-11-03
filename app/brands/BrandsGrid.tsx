@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
-import styles from "../../styles/page.module.scss";
+import styles from "../../styles/Grid.module.scss";
 import { brandsData } from "@/data/brands";
 
 export function BrandsCategory() {
@@ -34,7 +34,7 @@ export function BrandsCategory() {
 
     const renderContent = () => {
         return (
-            <div className={styles.Categories}>
+            <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>Marca</h2>
                     {brandsData.slice(1).map((brand) => (
@@ -63,8 +63,8 @@ export function BrandsCategory() {
 
     const renderSideBar = () => {
         return (
-            <div className={styles.Categories}>
-                <nav className={styles.CategoriesNavigation}>
+            <div className={styles.Grid}>
+                <nav className={styles.gridNavigation}>
                     <h2>Marca</h2>
                     <ul>
                         {brandsData.map((item) => (

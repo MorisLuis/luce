@@ -2,7 +2,7 @@
 
 import LayoutRight from '@/components/LayoutRight';
 import React, { useState } from 'react'
-import styles from "../../../styles/page.module.scss";
+import styles from "../../../styles/Grid.module.scss";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -45,47 +45,44 @@ export function CategoryGrid() {
 
     const renderContent = () => {
         return (
-            <div className={styles.gridContainer}>
-                <h2>{categoryData?.name}</h2>
-                {ProductRender.map((product: Product) => (
-                    <div key={product.id} className={styles.productCard}>
-                        <Link
-                            className={styles.productLink}
-                            href={`/product/${product.id}?from=categories`}
-                        >
-                            <div
-                                className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
-                                onMouseEnter={() => handleMouseEnter(product.id)}
-                                onMouseLeave={() => handleMouseLeave(product.id)}
+            <div className={styles.Grid}>
+                <div className={styles.gridContainer}>
+                    <h2>{categoryData?.name}</h2>
+                    {ProductRender.map((product: Product) => (
+                        <div key={product.id} className={styles.productCard}>
+                            <Link
+                                className={styles.productLink}
+                                href={`/product/${product.id}?from=categories`}
                             >
-                                <Image
-                                    src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
-                                    alt={product.images[currentImageIndex[product.id]]?.alt}
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                                <p className={styles.productName}>{product.name}</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
+                                <div
+                                    className={`${styles.imageWrapper} ${fadeStates[product.id] ? styles.fade : ''}`}
+                                    onMouseEnter={() => handleMouseEnter(product.id)}
+                                    onMouseLeave={() => handleMouseLeave(product.id)}
+                                >
+                                    <Image
+                                        src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
+                                        alt={product.images[currentImageIndex[product.id]]?.alt}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                    <p className={styles.productName}>{product.name}</p>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     };
 
     const renderSideBar = () => {
         return (
-            <nav className={styles.CategoriesNavigation}>
-                {/*  <div
-                    className={styles.goBack}
-                    onClick={() => router.push('/categories')}
-                >
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                    <p>Volver</p>
-                </div> */}
-                <h2>{categoryData?.name}</h2>
-                <p>{categoryData?.description}</p>
-            </nav>
+            <div className={styles.Grid}>
+                <nav className={styles.gridNavigation}>
+                    <h2>{categoryData?.name}</h2>
+                    <p>{categoryData?.description}</p>
+                </nav>
+            </div>
         )
     }
 
