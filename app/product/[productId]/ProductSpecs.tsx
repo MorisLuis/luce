@@ -11,8 +11,8 @@ export const ProductSpecs = ({
 }: ProductSpecsInterface) => {
     return (
         <div className={styles.ProductSpecs}>
-            <h1 className='title'>{product.name}</h1>
-            <h2 className='subtitle'>Especificaciones:</h2>
+            <h1>{product.name}</h1>
+            <h2>Especificaciones:</h2>
             <div className={styles.ProductContent}>
                 {product.specs.map((item, index) => {
                     const [label, value] = item.split(':');
