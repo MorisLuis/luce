@@ -26,8 +26,8 @@
         display: flex;
         position: relative;
         position: absolute;
-        bottom: $padding;
-        left: $padding;
+        bottom: 80px;
+        left: 80px;
         width: 50%;
         z-index: 999;
 
@@ -37,10 +37,14 @@
 
         @include respond(tab-port) {
             width: 60%;
+            bottom: $padding;
+            left: $padding;
         }
 
         @include respond(phone) {
             width: 80%;
+            bottom: $padding;
+            left: $padding;
         }
     }
 
@@ -51,6 +55,7 @@
         align-items: center;
         width: 100%;
         height: 100%;
+
         @include respond(phone) {
             display: none
         }

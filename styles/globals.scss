@@ -64,11 +64,18 @@ h1 {
     line-height: $font-med / 5;
   }
 
+  @include respond(tab-port) {
+    font-size: $font-med;
+    line-height: $font-med;
+  }
+
   @include respond(phone) {
     font-size: $font-big / 2;
     line-height: $font-big / 2;
   }
-};
+}
+
+;
 
 h2 {
   font-family: 'HelveticaNeueLight';

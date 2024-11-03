@@ -15,7 +15,7 @@
         width: 80%;
 
         @include respond(tab-port) {
-            width: 60%;
+            width: 70%;
         };
 
         &__secondaryDesign {
@@ -52,7 +52,7 @@
         margin-bottom: 110px;
 
         @include respond(tab-port) {
-            width: 40%;
+            width: 30%;
         };
 
         @include respond(phone) {
