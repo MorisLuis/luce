@@ -20,9 +20,11 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
 
+    const [sendingEmail, setSendingEmail] = useState(false)
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        setSendingEmail(true)
         try {
             const res = await sendEmail({
                 email,
@@ -42,6 +44,9 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
         } catch (error) {
             console.error('Error al enviar el correo:', error);
             setResponse('Error al enviar el correo. Inténtalo de nuevo.');
+            setSendingEmail(false)
+        } finally {
+            setSendingEmail(false)
         }
     };
 
@@ -109,6 +114,9 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         title='Enviar'
                         onClick={handleButtonClick}
                         extraStyles={{ width: "30%" }}
+                        disabled={sendingEmail}
+                        loading={sendingEmail}
+                        titleLoading="Enviando..."
                     />
                 </form>
                 <div className={styles.ContactFooter}>

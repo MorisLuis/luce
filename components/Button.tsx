@@ -7,29 +7,38 @@ config.autoAddCss = false;
 interface ButtonInterface {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
     title: string;
+    titleLoading?: string;
     icon?: IconProp;
     iconStyles?: React.CSSProperties;
     extraStyles?: React.CSSProperties;
+    disabled?: boolean
+    loading?: boolean
 }
 
 export const Button = ({
     onClick,
     title,
+    titleLoading,
     icon,
     iconStyles,
     extraStyles,
+    disabled,
+    loading
 }: ButtonInterface) => {
 
     return (
         <button
             onClick={onClick}
-            className={'button'}
+            className={disabled ? 'button disabled' : 'button'}
             style={extraStyles}
+            disabled={disabled}
         >
-            <p>{title}</p>
+            {
+                loading ? <p>{titleLoading}</p> : <p>{title}</p>
+            }
             {
                 icon &&
-                <FontAwesomeIcon icon={icon} style={iconStyles}/>
+                <FontAwesomeIcon icon={icon} style={iconStyles} />
             }
         </button>
     )

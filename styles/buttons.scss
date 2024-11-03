@@ -10,6 +10,13 @@
     color: $text-color-tertiary;
     width: 100%;
 
+    &.disabled {
+        opacity: 60%;
+        &:hover {
+            background-color: $background-color-tertiary;
+        }
+    }
+
     &:hover {
         background-color: $background-color-secondary;
         cursor: pointer;
@@ -29,6 +36,10 @@
     border-color: $color-border;
     color: $text-color-tertiary;
     width: 100%;
+
+    &.disabled {
+        opacity: 60%;
+    }
 
     &:hover {
         background-color: $color-primary;
