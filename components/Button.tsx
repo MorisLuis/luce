@@ -10,8 +10,6 @@ interface ButtonInterface {
     icon?: IconProp;
     iconStyles?: React.CSSProperties;
     extraStyles?: React.CSSProperties;
-
-    secondaryDesign?: boolean;
 }
 
 export const Button = ({
@@ -20,13 +18,12 @@ export const Button = ({
     icon,
     iconStyles,
     extraStyles,
-    secondaryDesign
 }: ButtonInterface) => {
 
     return (
         <button
             onClick={onClick}
-            className={secondaryDesign ? 'button_secondary' : 'button'}
+            className={'button'}
             style={extraStyles}
         >
             <p>{title}</p>

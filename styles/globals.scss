@@ -20,10 +20,11 @@ body {
   background-color: $color-primary;
   font-family: 'HelveticaNeueLight';
   font-size: $font-normal;
+  color: $text-color;
 }
 
 body {
-  color: var(--foreground);
+  color: $text-color;
   font-family: 'HelveticaNeueLight';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

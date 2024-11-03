@@ -1,8 +1,7 @@
-$color-primary: #B8AE9D;
-$color-secondary: #D9D9D9;
-$color-tertiary: #0E1727;
+$color-primary: #CDC5BA;
+$color-secondary: #66605B;
+$color-tertiary: #A1988F;
 $color-cuaternary: #55524E;
-
 
 $color-red: #ff0000;
 $color-blue: #068FFF;
@@ -10,19 +9,23 @@ $color-green: #1F8A70;
 $color-gray: gray;
 $color-yellow: #EDBD42;
 
-
 $color-border: #0E1727;
 $color-border-secondary: #55524E;
 $color-border-tertiary: #F7F6F2;
 
-$text-color: #0E1727;
-$text-color-light: #55524E;
-$text-color-secondary: #F7F6F2;
+$text-color: #66605B;
+$text-color-secondary: #0E1727;
+$text-color-tertiary: #E2DFD8;
 
-$background-color: #B1B0AC;
-$background-color-secondary: #F7F6F2;
-$background-color-tertiary: #55524E;
-$background-color-skeletons: #a09c97;
+$text-color-light: #FFFFFF;
+
+$background-color: #CDC5BA;
+$background-color-secondary: #66605B;
+$background-color-tertiary: #A1988F;
+$background-color-cuaternary: #E2DFD8;
+$background-color-quinto: #B8AE9D;
+
+$background-color-skeletons: #A1988F;
 
 .blur{
   -webkit-backdrop-filter: blur(10px);
@@ -39,8 +42,8 @@ $gap: 8px;
 //Font-size
 $font-big: 48px;
 $font-med: 24px;
-$font-normal: 14px;
-$font-sm: 10px;
+$font-normal: 16px;
+$font-sm: 12px;
 
 //Phone
 $font-normal-phone: 16px;

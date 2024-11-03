@@ -71,17 +71,20 @@
             min-width: 100px;
             height: 100px;
             position: relative;
-
+            
             @include respond(phone) {
                 position: fixed;
                 top: $padding-horizontal;
                 right: $padding-horizontal;
                 width: 60px;
-                height: 60px;
             };
 
             .imageContainerWeb{ 
                 display: flex;
+
+                &:hover{
+                    opacity: 70%;
+                }
 
                 @include respond(phone) {
                     display: none;
@@ -90,6 +93,7 @@
 
             .imageContainerMovil{
                 display: flex;
+                cursor: pointer
             }
         };
 

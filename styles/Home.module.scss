@@ -32,7 +32,7 @@
         z-index: 999;
 
         h1 {
-            color: $text-color-secondary;
+            color: $text-color-light;
         }
 
         @include respond(tab-port) {

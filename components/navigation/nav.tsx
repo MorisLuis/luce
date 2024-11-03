@@ -32,12 +32,14 @@ export const Nav = () => {
             <div className={`${styles.menuContent} ${showMenu ? styles.active : ''}`}>
                 <div className={styles.menuContainer}>
                     <div className={styles.luce}>
-                        <Image
-                            src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
-                            alt={'LUCE'}
-                            width={100}
-                            height={100}
-                        />
+                        <Link href={"/"}>
+                            <Image
+                                src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                                alt={'LUCE'}
+                                width={100}
+                                height={100}
+                            />
+                        </Link>
                     </div>
 
                     <div className={`${styles.sectionsContainer}`}>

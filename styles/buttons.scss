@@ -1,18 +1,17 @@
 .button {
-    border-width: 1px;
+    border-width: 0px;
     padding: $padding-horizontal / 1.5;
     text-transform: capitalize;
     font-weight: bold;
-    background-color: $color-secondary;
+    background-color: $background-color-tertiary;
     display: flex;
     justify-content: center;
     gap: $padding-horizontal;
-    border-color: $color-border;
-    color: $text-color;
+    color: $text-color-tertiary;
     width: 100%;
 
     &:hover {
-        background-color: $color-primary;
+        background-color: $background-color-secondary;
         cursor: pointer;
         transition: 0.3s ease;
     }
@@ -28,7 +27,7 @@
     justify-content: center;
     gap: $padding-horizontal;
     border-color: $color-border;
-    color: $text-color;
+    color: $text-color-tertiary;
     width: 100%;
 
     &:hover {
@@ -39,14 +38,14 @@
 }
 
 .input {
-    border-color: #00000029;
-    border-width: 1px;
-    background-color: $color-primary;
+    border-width: 0px;
+    background-color: $background-color-quinto;
     padding: $padding-horizontal;
     font-size: 16px;
+    height: 40px;
 
     &.secondary {
         border-width: 1px;
-        background-color: $color-primary;
+        background-color: $background-color-quinto;
     }
 }

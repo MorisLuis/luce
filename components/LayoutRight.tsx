@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { Nav } from './navigation/nav';
 import style from '../styles/LayoutRight.module.scss';
+import Link from 'next/link';
 
 interface LayoutRightInterface {
     content: () => React.ReactNode;
@@ -17,13 +18,14 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
 
             <div className={style.sidebarlogomobil}>
                 <div className={style.sidebar_image}>
-                    <Image
-                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                        alt={'LUCE'}
-                        layout="fill"
-                        objectFit="container"
-                        className={style.imageContainerMovil}
-                    />
+                    <Link href={"/"}>
+                        <Image
+                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                            alt={'LUCE'}
+                            layout="fill"
+                            className={style.imageContainerMovil}
+                        />
+                    </Link>
                 </div>
             </div>
 
@@ -33,13 +35,15 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
 
             <div className={style.sidebar}>
                 <div className={style.sidebar_image}>
-                    <Image
-                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                        alt={'LUCE'}
-                        layout="fill"
-                        objectFit="container"
-                        className={style.imageContainerWeb}
-                    />
+                    <Link href={"/"}>
+                        <Image
+                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                            alt={'LUCE'}
+                            layout="fill"
+                            objectFit="container"
+                            className={style.imageContainerWeb}
+                        />
+                    </Link>
                 </div>
                 <div className={style.sidebar_content}>
                     {sideBar?.()}

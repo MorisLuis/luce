@@ -39,7 +39,7 @@
         z-index: 999;
         height: 100%;
         width: 20%;
-        background-color: $color-secondary;
+        background-color: $background-color;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -75,6 +75,14 @@
                 display: flex;
                 justify-content: flex-end;
 
+                &:hover{
+                    opacity: 70%;
+                }
+
+                img{
+                    cursor: pointer;
+                }
+
                 @include respond(phone) {
                     img {
                         width: 70px;
@@ -86,7 +94,6 @@
             .sectionsContainer {
                 position: relative;
                 width: 100%;
-                padding-top: $padding;
 
                 a {
                     &:hover {
@@ -176,8 +183,8 @@
         }
 
         .bar {
-            width: 50px;
-            height: 2px;
+            width: 40px;
+            height: 5px;
             background-color: $color-tertiary;
             margin-bottom: $margin-bottom / 2;
             transition: all 0.3s ease;
@@ -197,7 +204,7 @@
         }
 
         .activeBar3 {
-            transform: translateY(-13px) rotate(-45deg);
+            transform: translateY(-16px) rotate(-45deg);
         }
     }
 }
