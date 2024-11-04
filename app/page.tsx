@@ -42,22 +42,25 @@ export default function Home() {
 
   const renderSideBar = () => {
     return (
-      <div className={styles.HomeMenu}>
-        <li className={styles.section}>
-          <Link href={'/'}>Inicio</Link>
-        </li>
-        <li className={styles.section}>
-          <Link href={'/contact'}>Contacto</Link>
-        </li>
-        <li className={styles.section}>
-          <Link href={'/categories'}>Categorías</Link>
-        </li>
-        <li className={styles.section}>
-          <Link href={'/brands'}>Marcas</Link>
-        </li>
-      </div>
+        <div className={styles.HomeMenu}>
+            <ul> 
+                <li className={styles.section}>
+                    <Link href={'/'}>Inicio</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/contact'}>Contacto</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/categories'}>Categorías</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/brands'}>Marcas</Link>
+                </li>
+            </ul>
+        </div>
     );
-  };
+};
+
 
   return (
     <div className={styles.Home}>

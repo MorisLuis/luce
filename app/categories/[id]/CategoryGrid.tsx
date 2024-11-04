@@ -66,7 +66,7 @@ export function CategoryGrid() {
                                             :
                                             <Image
                                                 src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
-                                                alt={product.name}
+                                                alt={`${product.brand} - ${product.name}`}
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 priority
