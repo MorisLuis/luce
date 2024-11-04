@@ -32,7 +32,7 @@ export default function Home() {
               alt={'Imagen Land Page'}
               priority
               quality={100}
-              layout="fill"
+              fill
             />
           </div>
         </div>

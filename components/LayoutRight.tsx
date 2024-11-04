@@ -22,7 +22,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                         <Image
                             src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                             alt={'LUCE'}
-                            layout="fill"
+                            fill
                             className={style.imageContainerMovil}
                         />
                     </Link>
@@ -39,8 +39,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                         <Image
                             src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                             alt={'LUCE'}
-                            layout="fill"
-                            objectFit="container"
+                            fill
                             className={style.imageContainerWeb}
                         />
                     </Link>

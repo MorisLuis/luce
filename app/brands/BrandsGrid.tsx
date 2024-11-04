@@ -49,8 +49,7 @@ export function BrandsCategory() {
                                     <Image
                                         src={`/images/${brand.images[currentImageIndex[brand.id]]?.src}`}
                                         alt={brand.images[currentImageIndex[brand.id]]?.alt}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        fill
                                     />
                                     <p className={styles.productName}>{brand.name}</p>
                                 </div>

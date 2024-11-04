@@ -52,8 +52,7 @@ export function CategoriesGrid() {
                                         <Image
                                             src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
                                             alt={category.images[currentImageIndex[category.id]]?.alt}
-                                            layout="fill"
-                                            objectFit="cover"
+                                            fill
                                         />
                                     }
                                     <p className={styles.productName}>{category.name}</p>

@@ -68,10 +68,9 @@ export function BrandGrid() {
                                             <div className={styles.notImage}></div>
                                             :
                                             <Image
-                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
+                                                src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
                                                 alt={product.images[currentImageIndex[product.id]]?.alt}
-                                                layout="fill"
-                                                objectFit="cover"
+                                                fill
                                             />
                                     }
                                     <p className={styles.productName}>{product.name}</p>

@@ -15,6 +15,10 @@
         width: 100%;
         height: 100%;
 
+        img{
+            object-fit: cover;
+        }
+
         .notImage{
             background-color: $background-color-tertiary;
             width: 100%;

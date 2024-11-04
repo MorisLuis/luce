@@ -31,10 +31,6 @@ export default function ImageSlider({
         setCurrentIndex(index);
     };
 
-    console.log({images})
-    console.log({currentIndex})
-    console.log({img: images[currentIndex]})
-
     return (
         <div className={styles.sliderContainer}>
             <div className={styles.imageWrapper}>
@@ -45,8 +41,7 @@ export default function ImageSlider({
                     <Image
                         src={`/images/${images[currentIndex].src}`}
                         alt={images[currentIndex].alt}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
                         quality={100}
                     />
                 }

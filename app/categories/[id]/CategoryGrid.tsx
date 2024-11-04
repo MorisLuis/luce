@@ -67,8 +67,7 @@ export function CategoryGrid() {
                                         <Image
                                             src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
                                             alt={product.name}
-                                            layout="fill"
-                                            objectFit="cover"
+                                            fill
                                         />
                                     }
                                     <p className={styles.productName}>{product.name}</p>

@@ -32,8 +32,6 @@ export default function ProductClientPage({ params }: { params: { productId: str
         return <div>Producto no encontrado</div>;
     }
 
-    console.log({ima: product.images})
-
     const renderContent = () => {
         return <ImageSlider images={product.images} />
     };
