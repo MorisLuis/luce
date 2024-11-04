@@ -49,7 +49,7 @@ export function CategoryGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>{categoryData?.name}</h2>
-                    {ProductRender.map((product: Product) => (
+                    {ProductRender.map((product: Product, index) => (
                         <div key={product.id} className={styles.productCard}>
                             <Link
                                 className={styles.productLink}
@@ -61,14 +61,15 @@ export function CategoryGrid() {
                                     onMouseLeave={() => handleMouseLeave(product.id)}
                                 >
                                     {
-                                        product.mainImages.length === 0 ? 
-                                        <div className={styles.notImage}></div>
-                                        :
-                                        <Image
-                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
-                                            alt={product.name}
-                                            fill
-                                        />
+                                        product.mainImages.length === 0 ?
+                                            <div className={styles.notImage}></div>
+                                            :
+                                            <Image
+                                                src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
+                                                alt={product.name}
+                                                fill
+                                                loading="lazy"
+                                            />
                                     }
                                     <p className={styles.productName}>{product.name}</p>
                                 </div>

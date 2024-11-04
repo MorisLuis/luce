@@ -15,7 +15,7 @@ interface ImageSliderInterface {
 
 export default function ImageSlider({
     images
-} : ImageSliderInterface ) {
+}: ImageSliderInterface) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
 
@@ -36,14 +36,15 @@ export default function ImageSlider({
             <div className={styles.imageWrapper}>
                 {
                     images.length < 1 ?
-                    <div className={styles.notImage}></div>
-                    :
-                    <Image
-                        src={`/images/${images[currentIndex].src}`}
-                        alt={images[currentIndex].alt}
-                        fill
-                        quality={100}
-                    />
+                        <div className={styles.notImage}></div>
+                        :
+                        <Image
+                            src={`/images/${images[currentIndex].src}`}
+                            alt={images[currentIndex].alt}
+                            fill
+                            loading="lazy"
+                            quality={100}
+                        />
                 }
             </div>
 

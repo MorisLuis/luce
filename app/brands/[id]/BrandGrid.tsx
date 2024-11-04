@@ -52,7 +52,7 @@ export function BrandGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>{brandData?.name}</h2>
-                    {ProductRender.map((product: Product) => (
+                    {ProductRender.map((product: Product, index) => (
                         <div key={product.id} className={styles.productCard}>
                             <Link
                                 className={styles.productLink}
@@ -71,6 +71,7 @@ export function BrandGrid() {
                                                 src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
                                                 alt={product.images[currentImageIndex[product.id]]?.alt}
                                                 fill
+                                                loading="lazy"
                                             />
                                     }
                                     <p className={styles.productName}>{product.name}</p>

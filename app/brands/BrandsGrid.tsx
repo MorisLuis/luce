@@ -38,7 +38,7 @@ export function BrandsCategory() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>Marca</h2>
-                    {brandsData.slice(1).map((brand) => (
+                    {brandsData.slice(1).map((brand, index) => (
                         <div key={brand.id} className={styles.productCard}>
                             <Link href={`/brands/${brand.name}`} className={styles.productLink}>
                                 <div
@@ -50,6 +50,7 @@ export function BrandsCategory() {
                                         src={`/images/${brand.images[currentImageIndex[brand.id]]?.src}`}
                                         alt={brand.images[currentImageIndex[brand.id]]?.alt}
                                         fill
+                                        loading="lazy"
                                     />
                                     <p className={styles.productName}>{brand.name}</p>
                                 </div>

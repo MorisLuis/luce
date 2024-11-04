@@ -37,7 +37,7 @@ export function CategoriesGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>Categorías</h2>
-                    {categoriesData.slice(1).map((category) => (
+                    {categoriesData.slice(1).map((category, index) => (
                         <div key={category.id} className={styles.productCard}>
                             <Link href={`/categories/${category.name}`} className={styles.productLink}>
                                 <div
@@ -47,13 +47,14 @@ export function CategoriesGrid() {
                                 >
                                     {
                                         category.images.length < 1 ?
-                                        <div className={styles.notImage}></div>
-                                        :
-                                        <Image
-                                            src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
-                                            alt={category.images[currentImageIndex[category.id]]?.alt}
-                                            fill
-                                        />
+                                            <div className={styles.notImage}></div>
+                                            :
+                                            <Image
+                                                src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
+                                                alt={category.images[currentImageIndex[category.id]]?.alt}
+                                                fill
+                                                loading="lazy"
+                                            />
                                     }
                                     <p className={styles.productName}>{category.name}</p>
                                 </div>
