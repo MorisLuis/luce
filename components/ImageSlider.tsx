@@ -18,14 +18,14 @@ export default function ImageSlider({
 }: ImageSliderInterface) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 7000); // Cambia cada 7 segundos
-
+        }, 7000);
+    
         return () => clearInterval(interval);
-    }, []);
+    }, [images.length]);
+    
 
     const handleDotClick = (index: number) => {
         setCurrentIndex(index);
@@ -42,7 +42,7 @@ export default function ImageSlider({
                             src={`/images/${images[currentIndex].src}`}
                             alt={images[currentIndex].alt}
                             fill
-                            loading="lazy"
+                            priority
                             quality={100}
                         />
                 }

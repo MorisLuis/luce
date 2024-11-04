@@ -3,9 +3,9 @@
 import { Button } from '@/components/Button';
 import React, { useEffect, useState } from 'react';
 import { sendEmail } from '@/services/sendEmail';
-import { products } from '@/data/products';
 import styles from "../../styles/Contact.module.scss";
 import Link from 'next/link';
+import products from '../../data/products.json';
 
 interface ContactScreenInterface {
     center?: boolean

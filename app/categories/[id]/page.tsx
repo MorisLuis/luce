@@ -15,8 +15,6 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
 };
 
-
-
 export default function ProductFromCategory() {
     return (
         <Suspense fallback={

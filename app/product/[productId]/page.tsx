@@ -1,4 +1,4 @@
-import { products } from '@/data/products';
+import products from "../../../data/products.json"
 import ProductClientPage from './ProductClientPage';
 import { Suspense } from 'react';
 import LayoutRightSkeleton from '@/components/skeletons/LayoutRightSkeleton';
