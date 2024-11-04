@@ -38,7 +38,7 @@ export function BrandsCategory() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>Marca</h2>
-                    {brandsData.slice(1).map((brand, index) => (
+                    {brandsData.slice(1).map((brand) => (
                         <div key={brand.id} className={styles.productCard}>
                             <Link href={`/brands/${brand.name}`} className={styles.productLink}>
                                 <div

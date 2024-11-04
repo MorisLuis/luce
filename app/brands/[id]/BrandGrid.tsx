@@ -52,7 +52,7 @@ export function BrandGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     <h2>{brandData?.name}</h2>
-                    {ProductRender.map((product: Product, index) => (
+                    {ProductRender.map((product: Product) => (
                         <div key={product.id} className={styles.productCard}>
                             <Link
                                 className={styles.productLink}
