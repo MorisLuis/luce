@@ -45,12 +45,17 @@ export function CategoriesGrid() {
                                     onMouseEnter={() => handleMouseEnter(category.id)}
                                     onMouseLeave={() => handleMouseLeave(category.id)}
                                 >
-                                    <Image
-                                        src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
-                                        alt={category.images[currentImageIndex[category.id]]?.alt}
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
+                                    {
+                                        category.images.length < 1 ?
+                                        <div className={styles.notImage}></div>
+                                        :
+                                        <Image
+                                            src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
+                                            alt={category.images[currentImageIndex[category.id]]?.alt}
+                                            layout="fill"
+                                            objectFit="cover"
+                                        />
+                                    }
                                     <p className={styles.productName}>{category.name}</p>
                                 </div>
                             </Link>

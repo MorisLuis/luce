@@ -22,6 +22,7 @@ export function BrandsCategory() {
             return initialIndex;
         }
     );
+
     const handleMouseEnter = (id: number) => {
         setCurrentImageIndex((prev) => ({ ...prev, [id]: 1 }));
         setFadeStates((prev) => ({ ...prev, [id]: true }));

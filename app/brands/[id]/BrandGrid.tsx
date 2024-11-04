@@ -7,8 +7,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
-import { products } from '@/data/products';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import products from "../../../data/products.json"
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { brandsData } from '@/data/brands';
 config.autoAddCss = false;
@@ -63,12 +63,17 @@ export function BrandGrid() {
                                     onMouseEnter={() => handleMouseEnter(product.id)}
                                     onMouseLeave={() => handleMouseLeave(product.id)}
                                 >
-                                    <Image
-                                        src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
-                                        alt={product.images[currentImageIndex[product.id]]?.alt}
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
+                                    {
+                                        product.mainImages.length === 0 ?
+                                            <div className={styles.notImage}></div>
+                                            :
+                                            <Image
+                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
+                                                alt={product.images[currentImageIndex[product.id]]?.alt}
+                                                layout="fill"
+                                                objectFit="cover"
+                                            />
+                                    }
                                     <p className={styles.productName}>{product.name}</p>
                                 </div>
                             </Link>

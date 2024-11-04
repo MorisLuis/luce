@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { products } from '@/data/products';
 import ProductDetails from './ProductDetails';
 import { Product } from '@/interface/product';
 import LayoutRight from '@/components/LayoutRight';
@@ -10,6 +9,7 @@ import { Modal } from '@/components/Modal';
 import { ContactScreen } from '@/app/contact/ContactScreen';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ProductSpecs } from './ProductSpecs';
+import products from "../../../data/products.json"
 
 export default function ProductClientPage({ params }: { params: { productId: string, id: string } }) {
 
@@ -19,7 +19,8 @@ export default function ProductClientPage({ params }: { params: { productId: str
     const searchParams = useSearchParams();
     const from = searchParams.get('from');
 
-    const product: Product | undefined = products.find(
+    const typedProduct: Product[] = products as Product[];
+    const product: Product | undefined = typedProduct.find(
         (prod) => prod.id === Number(params.productId)
     );
 
@@ -30,6 +31,8 @@ export default function ProductClientPage({ params }: { params: { productId: str
     if (!product) {
         return <div>Producto no encontrado</div>;
     }
+
+    console.log({ima: product.images})
 
     const renderContent = () => {
         return <ImageSlider images={product.images} />

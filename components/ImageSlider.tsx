@@ -18,6 +18,7 @@ export default function ImageSlider({
 } : ImageSliderInterface ) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -30,15 +31,25 @@ export default function ImageSlider({
         setCurrentIndex(index);
     };
 
+    console.log({images})
+    console.log({currentIndex})
+    console.log({img: images[currentIndex]})
+
     return (
         <div className={styles.sliderContainer}>
             <div className={styles.imageWrapper}>
-                <Image
-                    src={`/images/${images[currentIndex].src}`}
-                    alt={images[currentIndex].alt}
-                    layout="fill"
-                    objectFit="cover"
-                />
+                {
+                    images.length < 1 ?
+                    <div className={styles.notImage}></div>
+                    :
+                    <Image
+                        src={`/images/${images[currentIndex].src}`}
+                        alt={images[currentIndex].alt}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
+                }
             </div>
 
             <div className={styles.dotsContainer}>

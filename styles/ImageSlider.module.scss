@@ -14,6 +14,12 @@
         position: relative;
         width: 100%;
         height: 100%;
+
+        .notImage{
+            background-color: $background-color-tertiary;
+            width: 100%;
+            height: 100%
+        }
     };
 
     .dotsContainer{

@@ -21,9 +21,7 @@ export default function ProductDetails({
     return (
         <div className={styles.ProductDetails}>
             <div className={styles.ProductDetailsHeaderContainer}>
-                <h2>
-                    {product.name}
-                </h2>
+                <h2>{product.name}</h2>
             </div>
 
             <div className={styles.ProductDetailsContent}>

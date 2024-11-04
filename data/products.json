@@ -1,0 +1,357 @@
+[
+    {
+        "id": 1,
+        "name": "PULSAR 150",
+        "images": [
+            {
+                "src": "PULSAR150/Arbotante_schwung_pulsar150_apagado.jpg",
+                "alt": "pulsar_apagado"
+            },
+            {
+                "src": "PULSAR150/Arbotante_schwung_pulsar150_encendido.jpg",
+                "alt": "pulsar_encendido"
+            },
+            {
+                "src": "PULSAR150/Arbotante_schwung_pulsar150_estudio.jpg",
+                "alt": "pulsar_estudio"
+            },
+            {
+                "src": "PULSAR150/Arbotante_schwung_pulsar150_detalle.jpg",
+                "alt": "pulsar_detalles"
+            }
+        ],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "La lámpara Pulsar destaca por su globo de cristal opalino, soplado a mano, y su elegante base de latón. Con un diseño retro que realza la singularidad de cualquier ambiente, esta lámpara de la reconocida marca polaca Schwung emite una luz cálida y acogedora, creando una atmósfera elegante y envolvente.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 4-5 W",
+            "Color de temperatura: 2200-3000 K",
+            "Potencia maxima: 10W",
+            "Lumen: 220lm",
+            "Peso: 1.3 kg",
+            "IP: 20",
+            "Dimensiones: Ø 150 mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "PULSAR150/Arbotante_schwung_pulsar150_apagado.jpg",
+            "PULSAR150/Arbotante_schwung_pulsar150_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_pulsar150_fichatecnica.pdf",
+        "seo": {
+            "keywords": [
+                "primer",
+                "seugndo",
+                "tercero"
+            ],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 2,
+        "name": "PULSAR 200",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "La lámpara Pulsar destaca por su globo de cristal opalino, soplado a mano, y su elegante base de latón. Con un diseño retro que realza la singularidad de cualquier ambiente, esta lámpara de la reconocida marca polaca Schwung emite una luz cálida y acogedora, creando una atmósfera elegante y envolvente.",
+        "specs": [
+            "- Tipo de foco: LED (Incluido) 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 10W\n- Lumen: 220lm\n- Peso: 2.9 kg \n- IP: 20\n- Dimensiones: Ø 200 mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional."
+        ],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "PULSAR200/Arbotante_schwung_pulsar200_apagado.jpg",
+            "PULSAR200/Arbotante_schwung_pulsar200_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_pulsar200_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 3,
+        "name": "SUNSET",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [
+            "- Tipo de foco: LED (Incluido) 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 10W\n- Lumen: 220lm\n- Peso: 1.5 kg \n- IP: 20\n- Dimensiones: Ø 150 mm x 310mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "SUNSET/Arbotante_schwung_sunset_apagado.jpg",
+            "SUNSET/Arbotante_schwung_sunset_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_sunset_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 4,
+        "name": "ARMSTRONG DUAL",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [
+            "- Tipo de foco: LED (Incluido) 2 x 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 2 x 10W\n- Lumen: 440lm\n- Peso: 2.2 kg \n- IP: 20\n- Dimensiones: 2 x Ø 150 mm 150mm x 637mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_apagado.jpg",
+            "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_armstrongdual_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 5,
+        "name": "ARMSTRONG TRIPLE WALL",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_apagado.jpg",
+            "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_armstrongtriplew_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 6,
+        "name": "GLOBE DUAL",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "GLOBEDUAL/Arbotante_schwung_globedual_apagado.jpg",
+            "GLOBEDUAL/Arbotante_schwung_globedual_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_globedual_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 7,
+        "name": "ODYSSEY MD",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Odyssey"
+        ],
+        "mainImages": [
+            "ODYSSEYMD/Arbotante_schwung_odysseymd_apagado.jpg",
+            "ODYSSEYMD/Arbotante_schwung_odysseymd_encendido.jpg"
+        ],
+        "pdf": "arbotante_schwung_odysseymd_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 8,
+        "name": "ODYSSEY LG",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Arbotantes",
+            "Schwung Design",
+            "Odyssey"
+        ],
+        "mainImages": [],
+        "pdf": "arbotante_schwung_odysseylg_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 9,
+        "name": "ARMSTRONG LINEAR",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg",
+            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_armstronglinear_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 10,
+        "name": "ODYSSEY 6",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ODYSSEY6/candil_schwung_odyssey6_apagado.jpg",
+            "ODYSSEY6/candil_schwung_odyssey6_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_odyssey6_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 11,
+        "name": "ODYSSEY LINEAR SM",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_apagado.jpg",
+            "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_odysseylinearsm_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 12,
+        "name": "ODYSSEY LINEAR MD",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_apagado.jpg",
+            "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_odysseylinearmd_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 13,
+        "name": "CLOUD",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Schwung Classic"
+        ],
+        "mainImages": [
+            "CLOUD/candil_schwung_cloud_apagado.jpg",
+            "CLOUD/candil_schwung_cloud_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_cloud_fichatecnica.pdf\n",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    },
+    {
+        "id": 14,
+        "name": "ORION ROUND",
+        "images": [],
+        "brand": "Schwung Design",
+        "shortDescription": "",
+        "longDescription": "",
+        "specs": [],
+        "categories": [
+            "Candiles",
+            "Schwung Design",
+            "Globes"
+        ],
+        "mainImages": [
+            "ORIONROUND/candil_schwung_orionround_apagado.jpg",
+            "ORIONROUND/candil_schwung_orionround_encendido.jpg"
+        ],
+        "pdf": "candil_schwung_orionround_fichatecnica.pdf",
+        "seo": {
+            "keywords": [],
+            "metaDescription": ""
+        }
+    }
+]

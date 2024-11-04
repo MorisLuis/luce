@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
-import { products } from '@/data/products';
+import products from "../../../data/products.json"
 import { categoriesData } from '@/data/categories';
 
 export function CategoryGrid() {
@@ -17,7 +17,8 @@ export function CategoryGrid() {
     const category = decodeURIComponent(id as string);
     const categoryData = categoriesData.find((item) => category === item.name);
 
-    const ProductRender = products.filter((product: Product) =>
+    const typedProducts: Product[] = products as Product[];
+    const ProductRender = typedProducts.filter((product: Product) =>
         category === "Todos" ? true : product.categories.includes(category)
     );
 
@@ -59,12 +60,17 @@ export function CategoryGrid() {
                                     onMouseEnter={() => handleMouseEnter(product.id)}
                                     onMouseLeave={() => handleMouseLeave(product.id)}
                                 >
-                                    <Image
-                                        src={`/images/${product.images[currentImageIndex[product.id]]?.src}`}
-                                        alt={product.images[currentImageIndex[product.id]]?.alt}
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
+                                    {
+                                        product.mainImages.length === 0 ? 
+                                        <div className={styles.notImage}></div>
+                                        :
+                                        <Image
+                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
+                                            alt={product.name}
+                                            layout="fill"
+                                            objectFit="cover"
+                                        />
+                                    }
                                     <p className={styles.productName}>{product.name}</p>
                                 </div>
                             </Link>
