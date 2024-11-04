@@ -50,7 +50,8 @@ export function BrandsCategory() {
                                         src={`/images/${brand.images[currentImageIndex[brand.id]]?.src}`}
                                         alt={brand.images[currentImageIndex[brand.id]]?.alt}
                                         fill
-                                        loading="lazy"
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     />
                                     <p className={styles.productName}>{brand.name}</p>
                                 </div>

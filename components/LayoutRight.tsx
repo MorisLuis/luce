@@ -17,16 +17,14 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             <div className={style.sidebarMobil}> {secondaryDesign && sideBar?.()} </div> {/* This is how we show sidebar in movil */}
 
             <div className={style.sidebarlogomobil}>
-                <div className={style.sidebar_image}>
-                    <Link href={"/"}>
-                        <Image
-                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                            alt={'LUCE'}
-                            fill
-                            className={style.imageContainerMovil}
-                        />
-                    </Link>
-                </div>
+                <Link href={"/"} className={style.sidebar_image}>
+                    <Image
+                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        alt={'LUCE'}
+                        fill
+                        className={style.imageContainerMovil}
+                    />
+                </Link>
             </div>
 
             <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
@@ -34,16 +32,14 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
             </div>
 
             <div className={style.sidebar}>
-                <div className={style.sidebar_image}>
-                    <Link href={"/"}>
-                        <Image
-                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
-                            alt={'LUCE'}
-                            fill
-                            className={style.imageContainerWeb}
-                        />
-                    </Link>
-                </div>
+                <Link href={"/"} className={style.sidebar_image}>
+                    <Image
+                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        alt={'LUCE'}
+                        fill
+                        className={style.imageContainerWeb}
+                    />
+                </Link>
                 <div className={style.sidebar_content}>
                     {sideBar?.()}
                 </div>

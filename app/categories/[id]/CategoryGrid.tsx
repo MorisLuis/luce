@@ -68,7 +68,8 @@ export function CategoryGrid() {
                                                 src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
                                                 alt={product.name}
                                                 fill
-                                                loading="lazy"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                priority
                                             />
                                     }
                                     <p className={styles.productName}>{product.name}</p>

@@ -92,7 +92,8 @@
 
             .imageContainerMovil{
                 display: flex;
-                cursor: pointer
+                cursor: pointer;
+
             }
         };
 
@@ -122,6 +123,10 @@
         width: 60px;
         height: 60px;
         z-index: 99;
+
+        .sidebar_image{
+            position: relative;
+        }
 
         @include respond(phone) {
             display: flex

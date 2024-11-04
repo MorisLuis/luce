@@ -69,9 +69,10 @@ export function BrandGrid() {
                                             :
                                             <Image
                                                 src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
-                                                alt={product.images[currentImageIndex[product.id]]?.alt}
+                                                alt={`${product.brand} - ${product.name}`}
                                                 fill
-                                                loading="lazy"
+                                                priority
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             />
                                     }
                                     <p className={styles.productName}>{product.name}</p>
