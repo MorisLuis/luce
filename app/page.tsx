@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,25 +42,24 @@ export default function Home() {
 
   const renderSideBar = () => {
     return (
-        <div className={styles.HomeMenu}>
-            <ul> 
-                <li className={styles.section}>
-                    <Link href={'/'}>Inicio</Link>
-                </li>
-                <li className={styles.section}>
-                    <Link href={'/contact'}>Contacto</Link>
-                </li>
-                <li className={styles.section}>
-                    <Link href={'/categories'}>Categorías</Link>
-                </li>
-                <li className={styles.section}>
-                    <Link href={'/brands'}>Marcas</Link>
-                </li>
-            </ul>
-        </div>
+      <div className={styles.HomeMenu}>
+        <ul>
+          <li className={styles.section}>
+            <Link href={'/'}>Inicio</Link>
+          </li>
+          <li className={styles.section}>
+            <Link href={'/contact'}>Contacto</Link>
+          </li>
+          <li className={styles.section}>
+            <Link href={'/categories'}>Categorías</Link>
+          </li>
+          <li className={styles.section}>
+            <Link href={'/brands'}>Marcas</Link>
+          </li>
+        </ul>
+      </div>
     );
-};
-
+  };
 
   return (
     <div className={styles.Home}>
@@ -76,10 +75,18 @@ export default function Home() {
           </motion.div>
         ) : (
           <Suspense fallback={<Preloader />}>
-            <LayoutRight
-              sideBar={renderSideBar}
-              content={renderContent}
-            />
+            <motion.div
+              key="content"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <LayoutRight
+                sideBar={renderSideBar}
+                content={renderContent}
+              />
+            </motion.div>
           </Suspense>
         )}
       </AnimatePresence>
@@ -121,4 +128,31 @@ export default function Home() {
     </div>
   );
 
+*/
+
+/* 
+
+  return (
+    <div className={styles.Home}>
+      <AnimatePresence>
+        {loading ? (
+          <motion.div
+            key="preloader"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Preloader />
+          </motion.div>
+        ) : (
+          <Suspense fallback={<Preloader />}>
+            <LayoutRight
+              sideBar={renderSideBar}
+              content={renderContent}
+            />
+          </Suspense>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 */

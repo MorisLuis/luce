@@ -10,7 +10,7 @@ export const Preloader = () => {
             videoRef.current.play().catch((error) => {
                 console.error('Error playing video:', error);
             });
-            videoRef.current.playbackRate = 4.0;
+            videoRef.current.playbackRate = 2;
         }
     }, []);
 
@@ -24,7 +24,7 @@ export const Preloader = () => {
                     playsInline
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 >
-                    <source src="/LUCE_1920X1080.mp4" type="video/mp4" />
+                    <source src="/LUCE_VIDEO.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
