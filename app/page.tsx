@@ -11,13 +11,13 @@ import banner from '../public/test.webp';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, []); */
 
   const renderContent = () => {
     return (
@@ -42,56 +42,57 @@ export default function Home() {
 
   const renderSideBar = () => {
     return (
-      <div className={styles.HomeMenu}>
-        <ul>
-          <li className={styles.section}>
-            <Link href={'/'}>Inicio</Link>
-          </li>
-          <li className={styles.section}>
-            <Link href={'/contact'}>Contacto</Link>
-          </li>
-          <li className={styles.section}>
-            <Link href={'/categories'}>Categorías</Link>
-          </li>
-          <li className={styles.section}>
-            <Link href={'/brands'}>Marcas</Link>
-          </li>
-        </ul>
-      </div>
+        <div className={styles.HomeMenu}>
+            <ul> 
+                <li className={styles.section}>
+                    <Link href={'/'}>Inicio</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/contact'}>Contacto</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/categories'}>Categorías</Link>
+                </li>
+                <li className={styles.section}>
+                    <Link href={'/brands'}>Marcas</Link>
+                </li>
+            </ul>
+        </div>
     );
-  };
+};
 
-  return (
-    <div className={styles.Home}>
-      <AnimatePresence>
-        {loading ? (
+
+return (
+  <div className={styles.Home}>
+    <AnimatePresence>
+      {loading ? (
+        <motion.div
+          key="preloader"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <Preloader onEnded={() => setLoading(false)}/>
+        </motion.div>
+      ) : (
+        <Suspense fallback={<Preloader onEnded={() => setLoading(false)}/>}>
           <motion.div
-            key="preloader"
-            initial={{ opacity: 1 }}
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
-            <Preloader />
+            <LayoutRight
+              sideBar={renderSideBar}
+              content={renderContent}
+            />
           </motion.div>
-        ) : (
-          <Suspense fallback={<Preloader />}>
-            <motion.div
-              key="content"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <LayoutRight
-                sideBar={renderSideBar}
-                content={renderContent}
-              />
-            </motion.div>
-          </Suspense>
-        )}
-      </AnimatePresence>
-    </div>
-  );
+        </Suspense>
+      )}
+    </AnimatePresence>
+  </div>
+);
 }
 
 

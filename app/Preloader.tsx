@@ -1,7 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/Preloader.module.scss';
 
-export const Preloader = () => {
+interface PreloaderInterface {
+    onEnded: () => void
+}
+
+export const Preloader = ({
+    onEnded
+}: PreloaderInterface) => {
+
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -23,6 +30,7 @@ export const Preloader = () => {
                     muted
                     playsInline
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onEnded={onEnded}
                 >
                     <source src="/LUCE_VIDEO.mp4" type="video/mp4" />
                 </video>
