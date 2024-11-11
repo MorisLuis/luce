@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Home.module.scss';
 import Image from 'next/image';
