@@ -11,14 +11,6 @@ import banner from '../public/test.webp';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
- /*  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []); */
-
   const renderContent = () => {
     return (
       <>
@@ -94,66 +86,3 @@ return (
   </div>
 );
 }
-
-
-/* 
-  return (
-    <div className={styles.Home}>
-      <AnimatePresence>
-        {loading ? (
-          <motion.div
-            key="preloader"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Preloader />
-          </motion.div>
-        ) : (
-          <Suspense fallback={<Preloader />}>
-            <motion.div
-              key="content"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <LayoutRight
-                sideBar={renderSideBar}
-                content={renderContent}
-              />
-            </motion.div>
-          </Suspense>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-
-*/
-
-/* 
-
-  return (
-    <div className={styles.Home}>
-      <AnimatePresence>
-        {loading ? (
-          <motion.div
-            key="preloader"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Preloader />
-          </motion.div>
-        ) : (
-          <Suspense fallback={<Preloader />}>
-            <LayoutRight
-              sideBar={renderSideBar}
-              content={renderContent}
-            />
-          </Suspense>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-*/

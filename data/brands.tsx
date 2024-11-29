@@ -23,5 +23,5 @@ export const brandsData: brandsInterface[] = [
             keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
-    },
+    }
 ]

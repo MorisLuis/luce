@@ -21,17 +21,17 @@
             }
         ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "La lámpara Pulsar destaca por su globo de cristal opalino, soplado a mano, y su elegante base de latón. Con un diseño retro que realza la singularidad de cualquier ambiente, esta lámpara de la reconocida marca polaca Schwung emite una luz cálida y acogedora, creando una atmósfera elegante y envolvente.",
+        "shortDescription": "La lámpara Pulsar destaca por su pantalla de cristal en forma de globo y su base de latón, junto con la calidad artesanal del vidrio soplado a mano, fabricado en Europa. Su diseño elegante y atemporal se adapta a cualquier espacio y proyecto.",
+        "longDescription": "La lámpara Pulsar destaca por su pantalla de cristal en forma de globo y su base de latón, junto con la calidad artesanal del vidrio soplado a mano, fabricado en Europa. Su diseño  elegante y atemporal se adapta a cualquier espacio y proyecto. Disponible en 3 acabados de pantalla, base y 3 tamaños, esta lámpara arbotante es completamente adaptable a tus necesidades. ¡Pulsar es una adición perfecta a tus proyectos y espacios!\n\n\n\n\n\n",
         "specs": [
             "Tipo de foco: LED (Incluido) 4-5 W",
-            "Color de temperatura: 2200-3000 K",
+            "Temperatura de color: 2200-3000 K",
             "Potencia maxima: 10W",
-            "Lumen: 220lm",
+            "Lúmenes totales: 220lm",
             "Peso: 1.3 kg",
             "IP: 20",
             "Dimensiones: Ø 150 mm",
-            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
         ],
         "categories": [
             "Arbotantes",
@@ -45,22 +45,51 @@
         "pdf": "arbotante_schwung_pulsar150_fichatecnica.pdf",
         "seo": {
             "keywords": [
-                "primer",
-                "seugndo",
-                "tercero"
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Pulsar",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
             ],
-            "metaDescription": ""
+            "metaDescription": "Descubre la lámpara Pulsar de Schwung Design, con una pantalla de cristal en forma de globo y base de latón. Su diseño elegante y atemporal se adapta a cualquier espacio y proyecto. Hecha en Europa con vidrio soplado a mano, está disponible en tres acabados y tamaños."
         }
     },
     {
         "id": 2,
         "name": "PULSAR 200",
-        "images": [],
+        "images": [
+            {
+                "src": "PULSAR200/Arbotante_schwung_pulsar200_apagado.jpg",
+                "alt": "pulsar_apagado"
+            },
+            {
+                "src": "PULSAR200/Arbotante_schwung_pulsar200_encendido.jpg",
+                "alt": "pulsar_encendido"
+            },
+            {
+                "src": "PULSAR200/Arbotante_schwung_pulsar200_estudio.jpg",
+                "alt": "pulsar_estudio"
+            },
+            {
+                "src": "PULSAR200/Arbotante_schwung_pulsar200_detalle.jpg",
+                "alt": "pulsar_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "La lámpara Pulsar destaca por su globo de cristal opalino, soplado a mano, y su elegante base de latón. Con un diseño retro que realza la singularidad de cualquier ambiente, esta lámpara de la reconocida marca polaca Schwung emite una luz cálida y acogedora, creando una atmósfera elegante y envolvente.",
+        "shortDescription": "La lámpara Pulsar destaca por su pantalla de cristal en forma de globo y su base de latón, junto con la calidad artesanal del vidrio soplado a mano, fabricado en Europa. Su diseño elegante y atemporal se adapta a cualquier espacio y proyecto.",
+        "longDescription": "La lámpara Pulsar destaca por su pantalla de cristal en forma de globo y su base de latón, junto con la calidad artesanal del vidrio soplado a mano, fabricado en Europa. Su diseño  elegante y atemporal se adapta a cualquier espacio y proyecto. Disponible en 3 acabados de pantalla, base y 3 tamaños, esta lámpara arbotante es completamente adaptable a tus necesidades. ¡Pulsar es una adición perfecta a tus proyectos y espacios!\n\n\n\n\n\n",
         "specs": [
-            "- Tipo de foco: LED (Incluido) 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 10W\n- Lumen: 220lm\n- Peso: 2.9 kg \n- IP: 20\n- Dimensiones: Ø 200 mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional."
+            "Tipo de foco: LED (Incluido) 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 10W",
+            "Lúmenes totales: 220lm",
+            "Peso: 2.9 kg",
+            "IP: 20",
+            "Dimensiones: Ø 200 mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional."
         ],
         "categories": [
             "Arbotantes",
@@ -73,19 +102,52 @@
         ],
         "pdf": "arbotante_schwung_pulsar200_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Pulsar",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "Descubre la lámpara Pulsar de Schwung Design, con una pantalla de cristal en forma de globo y base de latón. Su diseño elegante y atemporal se adapta a cualquier espacio y proyecto. Hecha en Europa con vidrio soplado a mano, está disponible en tres acabados y tamaños."
         }
     },
     {
         "id": 3,
         "name": "SUNSET",
-        "images": [],
+        "images": [
+            {
+                "src": "SUNSET/Arbotante_schwung_sunset_apagado.jpg",
+                "alt": "sunset_apagado"
+            },
+            {
+                "src": "SUNSET/Arbotante_schwung_sunset_encendido.jpg",
+                "alt": "sunset_encendido"
+            },
+            {
+                "src": "SUNSET/Arbotante_schwung_sunset_estudio.jpg",
+                "alt": "sunset_estudio"
+            },
+            {
+                "src": "SUNSET/Arbotante_schwung_sunset_estudio2.jpg",
+                "alt": "sunset_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
+        "shortDescription": "La lámpara Sunset se distingue por su pantalla de cristal en forma de globo y su base de latón, acompañada de la calidad artesanal del vidrio soplado a mano. Diseñada y fabricada en Europa, su diseño de inspiración retro aporta un toque único a cualquier espacio.",
+        "longDescription": "La lámpara Sunset se distingue por su pantalla de cristal en forma de globo y su base de latón, acompañada de la calidad artesanal del vidrio soplado a mano. Diseñada y fabricada en Europa, su diseño de inspiración retro aporta un toque único a cualquier espacio. Como su nombre sugiere, Sunset evoca la calidez de un atardecer o amanecer, creando una luz suave que puede ser dirigida según tu deseo, ajustando la orientación del globo. Disponible en 3 acabados de pantalla y 3 acabados de base, esta lámpara se adapta perfectamente a tus espacios y necesidades, ofreciendo elegancia y versatilidad.",
         "specs": [
-            "- Tipo de foco: LED (Incluido) 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 10W\n- Lumen: 220lm\n- Peso: 1.5 kg \n- IP: 20\n- Dimensiones: Ø 150 mm x 310mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+            "Tipo de foco: LED (Incluido) 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 10W",
+            "Lúmenes totales: 220lm",
+            "Peso: 1.5 kg",
+            "IP: 20",
+            "Dimensiones: Ø 150 mm x 310mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
         ],
         "categories": [
             "Arbotantes",
@@ -98,19 +160,52 @@
         ],
         "pdf": "arbotante_schwung_sunset_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Sunset",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lámpara Sunset de Schwung combina un diseño retro con una pantalla de cristal en forma de globo y base de latón. Hecha en Europa con vidrio soplado a mano, evoca la calidez de un atardecer con luz suave y ajustable. Disponible en 3 acabados."
         }
     },
     {
         "id": 4,
         "name": "ARMSTRONG DUAL",
-        "images": [],
+        "images": [
+            {
+                "src": "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_apagado.jpg",
+                "alt": "armstrongdual_apagado"
+            },
+            {
+                "src": "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_encendido.jpg",
+                "alt": "armstrongdual_encendido"
+            },
+            {
+                "src": "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_estudio.jpg",
+                "alt": "armstrongdual_estudio"
+            },
+            {
+                "src": "ARMSTRONGDUAL/Arbotante_schwung_armstrongdual_detalle.jpg",
+                "alt": "armstrongdual_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
+        "shortDescription": "Cuando la luz desafía la gravedad, se requiere una precisión técnica. La lámpara arbotante Armstrong Dual juega con el minimalismo de su estructura metálica, equilibrando dos puntos de luz contenidos en globos de cristal.",
+        "longDescription": "Cuando la luz desafía la gravedad, se requiere una precisión técnica. La lámpara arbotante Armstrong Dual juega con el minimalismo de su estructura metálica, equilibrando dos puntos de luz contenidos en globos de cristal. Armstrong Dual destaca por la calidad de sus materiales y la artesanía del vidrio soplado a mano, diseñada y fabricada en Europa. Con 3 acabados diferentes para su pantalla y estructura, ofrece versatilidad para adaptarse a tus proyectos y espacios, añadiendo un toque de singularidad.",
         "specs": [
-            "- Tipo de foco: LED (Incluido) 2 x 4-5 W \n- Color de temperatura: 2200-3000 K\n- Potencia maxima: 2 x 10W\n- Lumen: 440lm\n- Peso: 2.2 kg \n- IP: 20\n- Dimensiones: 2 x Ø 150 mm 150mm x 637mm\n- Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Transparente Estriado\nBase: 1 Laton 2 Laton Negro 2 Laton Negro 3 Niquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+            "Tipo de foco: LED (Incluido) 2 x 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 2 x 10W",
+            "Lúmenes totales: 440lm",
+            "Peso: 2.2 kg",
+            "IP: 20",
+            "Dimensiones: 2 x Ø 150 mm 150mm x 637mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
         ],
         "categories": [
             "Arbotantes",
@@ -123,18 +218,53 @@
         ],
         "pdf": "arbotante_schwung_armstrongdual_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Armstrong Dual",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lámpara Armstrong Dual de Schwung presenta una estructura metálica minimalista y globos de cristal que equilibran dos fuentes de luz. Hecha en Europa con vidrio soplado a mano, ofrece versatilidad con 3 acabados para adaptarse a tus proyectos y espacios."
         }
     },
     {
         "id": 5,
         "name": "ARMSTRONG TRIPLE WALL",
-        "images": [],
+        "images": [
+            {
+                "src": "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_apagado.jpg",
+                "alt": "armstrongtriple_apagado"
+            },
+            {
+                "src": "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_encendido.jpg",
+                "alt": "armstrongtriple_encendido"
+            },
+            {
+                "src": "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_estudio.jpg",
+                "alt": "armstrongtriple_estudio"
+            },
+            {
+                "src": "ARMSTRONGTRIPLEWALL/Arbotante_schwung_armstrongtriplew_detalle.jpg",
+                "alt": "armstrongtriple_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "Cuando la luz desafía la gravedad, se requiere una precisión técnica. La lámpara Armstrong Triple destaca por el minimalismo de su estructura metálica, realzada por tres globos de cristal que parecen flotar en perfecta armonía.",
+        "longDescription": "Cuando la luz desafía la gravedad, se requiere una precisión técnica. La lámpara Armstrong Triple destaca por el minimalismo de su estructura metálica, realzada por tres globos de cristal que parecen flotar en perfecta armonía. Armstrong Triple combina diseño y precisión con la excelencia artesanal del vidrio soplado a mano. Diseñada y fabricada en Europa, esta lámpara ofrece una variedad de acabados tanto para sus pantallas como para su estructura, adaptándose a diversos espacios y proyectos.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 3 x 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 3 x 10W",
+            "Lúmenes totales: 660lm",
+            "Peso: 2.8 kg",
+            "IP: 20",
+            "Dimensiones: 3 x Ø 150 mm 150mm x 637mm x 331mm",
+            "Acabados:                                                                                                            Pantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Arbotantes",
             "Schwung Design",
@@ -146,18 +276,53 @@
         ],
         "pdf": "arbotante_schwung_armstrongtriplew_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Armstrong Triple",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lámpara Armstrong Triple de Schwung combina una estructura metálica minimalista con tres globos de cristal que parecen flotar en armonía. Hecha en Europa con vidrio soplado a mano, esta lámpara ofrece versatilidad con varios acabados para adaptarse a cualquier espacio o proyecto."
         }
     },
     {
         "id": 6,
         "name": "GLOBE DUAL",
-        "images": [],
+        "images": [
+            {
+                "src": "GLOBEDUAL/Arbotante_schwung_globedual_apagado.jpg",
+                "alt": "globedual_apagado"
+            },
+            {
+                "src": "GLOBEDUAL/Arbotante_schwung_globedual_encendido.jpg",
+                "alt": "globedual_encendido"
+            },
+            {
+                "src": "GLOBEDUAL/Arbotante_schwung_globedual_estudio.jpg",
+                "alt": "globedual_estudio"
+            },
+            {
+                "src": "GLOBEDUAL/Arbotante_schwung_globedual_detalle.jpg",
+                "alt": "globedual_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "Dos globos de cristal se equilibran perfectamente sobre una base de latón. Inspirada en el diseño clásico de las luces de una brasserie, su composición minimalista permite que la calidad artesanal del vidrio soplado a mano —disponible en tres acabados distintivos— sea la verdadera protagonista. ",
+        "longDescription": "Dos globos de cristal se equilibran perfectamente sobre una base de latón. Inspirada en el diseño clásico de las luces de una brasserie, su composición minimalista permite que la calidad artesanal del vidrio soplado a mano —disponible en tres acabados distintivos— sea la verdadera protagonista. Armstrong Triple combina elegancia y funcionalidad, destacando por su diseño atemporal y materiales de alta calidad, ideal para transformar cualquier espacio con un toque de inspiración retro.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 2 x 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 2 x 10W",
+            "Lúmenes totales: 440lm",
+            "Peso: 2.7 kg",
+            "IP: 20",
+            "Dimensiones: 2 x Ø 150 mm 150mm x 922mm x 331mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Arbotantes",
             "Schwung Design",
@@ -169,18 +334,53 @@
         ],
         "pdf": "arbotante_schwung_globedual_fichatecnica.pdf\n",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Globe Dual",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lampara Globe Dual de Schwung presenta dos globos de cristal equilibrados sobre una base de latón, inspirada en el diseño clásico de las luces de brasserie. Su estructura minimalista destaca la artesanía del vidrio soplado a mano, disponible en tres acabados. Con un diseño atemporal y materiales de alta calidad, esta lámpara aporta un toque retro y elegante a cualquier espacio."
         }
     },
     {
         "id": 7,
         "name": "ODYSSEY MD",
-        "images": [],
+        "images": [
+            {
+                "src": "ODYSSEYMD/Arbotante_schwung_odysseymd_apagado.jpg",
+                "alt": "odysseymd_apagado"
+            },
+            {
+                "src": "ODYSSEYMD/Arbotante_schwung_odysseymd_encendido.jpg",
+                "alt": "odysseymd_encendido"
+            },
+            {
+                "src": "ODYSSEYMD/Arbotante_schwung_odysseymd_estudio.jpg",
+                "alt": "odysseymd_estudio"
+            },
+            {
+                "src": "ODYSSEYMD/Arbotante_schwung_odysseymd_detalle.jpg",
+                "alt": "odysseymd_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "La lámpara Odyssey forma parte de la colección Schwung. Esta lámpara arbotante combina una base ovalada de latón y una pantalla de cristal en forma de campana, ambos diseñados con una estética refinada y atemporal",
+        "longDescription": "La lámpara Odyssey forma parte de la colección Schwung. Esta lámpara arbotante combina una base ovalada de latón y una pantalla de cristal en forma de campana, ambos diseñados con una estética refinada y atemporal. Odyssey proyecta una luz serena hacia abajo, creando una atmósfera cálida y envolvente que destaca en cualquier espacio. Ideal para salones, pasillos o dormitorios, esta lámpara aporta un toque de elegancia y simplicidad, adaptándose a diferentes estilos y necesidades. Disponible en varios acabados, Odyssey es la elección perfecta para quienes buscan calidad y diseño excepcional.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 1 x 4 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 1 x 15 W",
+            "Lúmenes totales: 220 lm",
+            "Peso: 2.0 kg",
+            "IP: 20",
+            "Dimensiones: 1 x Ø 100 mm 105mm x 305mm x 142mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino \nBase:1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulidoo (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Arbotantes",
             "Schwung Design",
@@ -192,38 +392,111 @@
         ],
         "pdf": "arbotante_schwung_odysseymd_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Odyssey",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lámpara Odyssey de Schwung presenta una base ovalada de latón y una pantalla de cristal en forma de campana, combinando elegancia y simplicidad. Proyecta una luz suave y cálida, ideal para cualquier espacio. Disponible en varios acabados, Odyssey es perfecta para quienes buscan un diseño atemporal y calidad artesanal."
         }
     },
     {
         "id": 8,
         "name": "ODYSSEY LG",
-        "images": [],
+        "images": [
+            {
+                "src": "ODYSSEYLG/Arbotante_schwung_odysseylg_apagado.jpg",
+                "alt": "odysseylg_apagado"
+            },
+            {
+                "src": "ODYSSEYLG/Arbotante_schwung_odysseylg_encendido.jpg",
+                "alt": "odysseylg_encendido"
+            },
+            {
+                "src": "ODYSSEYLG/Arbotante_schwung_odysseylg_estudio.jpg",
+                "alt": "odysseylg_estudio"
+            },
+            {
+                "src": "ODYSSEYLG/Arbotante_schwung_odysseylg_detalle.jpg",
+                "alt": "odysseylg_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "La lámpara Odyssey forma parte de la colección Schwung. Esta lámpara arbotante combina una base ovalada de latón y una pantalla de cristal en forma de campana, ambos diseñados con una estética refinada y atemporal",
+        "longDescription": "La lámpara Odyssey forma parte de la colección Schwung. Esta lámpara arbotante combina una base ovalada de latón y una pantalla de cristal en forma de campana, ambos diseñados con una estética refinada y atemporal. Odyssey proyecta una luz serena hacia abajo, creando una atmósfera cálida y envolvente que destaca en cualquier espacio. Ideal para salones, pasillos o dormitorios, esta lámpara aporta un toque de elegancia y simplicidad, adaptándose a diferentes estilos y necesidades. Disponible en varios acabados, Odyssey es la elección perfecta para quienes buscan calidad y diseño excepcional.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 1 x 4 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 1 x 15 W",
+            "Lúmenes totales: 220 lm",
+            "Peso: 2.0 kg",
+            "IP: 20",
+            "Dimensiones: 1 x Ø 100 mm 105mm x 380mm x 142mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Arbotantes",
             "Schwung Design",
             "Odyssey"
         ],
-        "mainImages": [],
+        "mainImages": [
+            "ODYSSEYLG/Arbotante_schwung_odysseylg_apagado.jpg",
+            "ODYSSEYLG/Arbotante_schwung_odysseylg_encendido.jpg"
+        ],
         "pdf": "arbotante_schwung_odysseylg_fichatecnica.pdf\n",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de muro",
+                "lámpara arbotante",
+                "lámpara de diseño",
+                "Schwung",
+                "Odyssey",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "La lámpara Odyssey de Schwung presenta una base ovalada de latón y una pantalla de cristal en forma de campana, combinando elegancia y simplicidad. Proyecta una luz suave y cálida, ideal para cualquier espacio. Disponible en varios acabados, Odyssey es perfecta para quienes buscan un diseño atemporal y calidad artesanal."
         }
     },
     {
         "id": 9,
         "name": "ARMSTRONG LINEAR",
-        "images": [],
+        "images": [
+            {
+                "src": "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg",
+                "alt": "odysseylg_apagado"
+            },
+            {
+                "src": "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg",
+                "alt": "odysseylg_encendido"
+            },
+            {
+                "src": "ARMSTRONGLINEAR/candil_schwung_armstronglinear_estudio.jpg",
+                "alt": "odysseylg_estudio"
+            },
+            {
+                "src": "ARMSTRONGLINEAR/candil_schwung_armstronglinear_detalle.jpg",
+                "alt": "odysseylg_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "El candil Armstrong Linear fusiona una esencia dinámica con una estructura meticulosamente diseñada. Los globos de cristal, suspendidos con energía espontánea, fluyen sobre un esqueleto metálico de latón, realzando la elegancia poética de la pieza.",
+        "longDescription": "El candil Armstrong Linear fusiona una esencia dinámica con una estructura meticulosamente diseñada. Los globos de cristal, suspendidos con energía espontánea, fluyen sobre un esqueleto metálico de latón, realzando la elegancia poética de la pieza. Diseñada para ser el centro de atención en cualquier espacio, esta luminaria aporta singularidad y eleva el ambiente con su estética refinada y materiales de alta calidad. Disponible en 3 acabados de base y pantalla. Diseñada y fabricada en Europa por Studio Schwung, esta pieza es una manifestación de la excelencia en diseño y artesanía.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 10 x 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 10 x 10 W",
+            "Lúmenes totales: 2200 lm",
+            "Peso: 18.6 kg",
+            "IP: 20",
+            "Dimensiones: 10 x Ø 200 mm 1635mm x 729mm-1629 mm x 768 mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente  \nBase:1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Candiles",
             "Schwung Design",
@@ -235,18 +508,53 @@
         ],
         "pdf": "candil_schwung_armstronglinear_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de techo",
+                "candil de diseño",
+                "lámpara de diseño",
+                "Schwung",
+                "Armstrong Linear",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "El candil Armstrong Linear fusiona elegancia y diseño dinámico con globos de cristal suspendidos sobre una estructura de latón. Disponible en 3 acabados, fabricado en Europa por Studio Schwung. Ideal para destacar en cualquier espacio."
         }
     },
     {
         "id": 10,
         "name": "ODYSSEY 6",
-        "images": [],
+        "images": [
+            {
+                "src": "ODYSSEY6/candil_schwung_odyssey6_apagado.jpg",
+                "alt": "odyssey6_apagado"
+            },
+            {
+                "src": "ODYSSEY6/candil_schwung_odyssey6_encendido.jpg",
+                "alt": "odyssey6_encendido"
+            },
+            {
+                "src": "ODYSSEY6/candil_schwung_odyssey6_estudio.jpg",
+                "alt": "odyssey6_estudio"
+            },
+            {
+                "src": "ODYSSEY6/candil_schwung_odyssey6_detalle.jpg",
+                "alt": "odyssey6_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "El candil Odyssey 6 se inspira en un diseño futurista que juega con formas geométricas y simetrías. Su estructura, evocadora de las celdas hexagonales de un panal de abeja, está formada por seis pantallas de vidrio que transmiten una sensación de energía almacenada, lista para ser liberada. ",
+        "longDescription": "El candil Odyssey 6 se inspira en un diseño futurista que juega con formas geométricas y simetrías. Su estructura, evocadora de las celdas hexagonales de un panal de abeja, está formada por seis pantallas de vidrio que transmiten una sensación de energía almacenada, lista para ser liberada. Suspensa elegantemente mediante un eje central de latón, la estructura completa refleja el diseño en su totalidad, aportando una estética contemporánea que resalta en cualquier espacio. Ideal para quienes buscan una pieza única que combine sofisticación con un estilo vanguardista. Disponible en varios acabados, este candil destaca por su calidad artesanal y el toque distintivo de Studio Schwung, diseñado y fabricado en Europa.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 6 x 4 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 6 x 15 W",
+            "Lúmenes totales: 1320 lm",
+            "Peso: 7.8 kg",
+            "IP: 20",
+            "Dimensiones: 6 x Ø 100 mm 320mm x 479mm - 1379mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Candiles",
             "Schwung Design",
@@ -258,18 +566,53 @@
         ],
         "pdf": "candil_schwung_odyssey6_fichatecnica.pdf\n",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de techo",
+                "candil de diseño",
+                "lámpara de diseño",
+                "Schwung",
+                "Odyssey",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": " El candil Odyssey 6 de Schwung combina diseño futurista con simetría y una estructura hexagonal de vidrio suspendida en latón. Disponible en varios acabados, fabricado en Europa, con una estética vanguardista que resalta en cualquier espacio."
         }
     },
     {
         "id": 11,
         "name": "ODYSSEY LINEAR SM",
-        "images": [],
+        "images": [
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_apagado.jpg",
+                "alt": "odysseylinearsm_apagado"
+            },
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_encendido.jpg",
+                "alt": "odysseylinearsm_encendido"
+            },
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_estudio.jpg",
+                "alt": "odysseylinearsm_estudio"
+            },
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_detalle.jpg",
+                "alt": "odysseylinearsm_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "El candil Odyssey Linear presenta una serie lineal de fuentes de luz a través de campanas de cristal opalino, que generan una iluminación suave y envolvente. La base lineal de latón contrasta elegantemente con la suavidad de la luz emitida, proporcionando una sensación de equilibrio y armonía.",
+        "longDescription": "El candil Odyssey Linear presenta una serie lineal de fuentes de luz a través de campanas de cristal opalino, que generan una iluminación suave y envolvente. La base lineal de latón contrasta elegantemente con la suavidad de la luz emitida, proporcionando una sensación de equilibrio y armonía. Con su diseño refinado y contemporáneo, este candil añade un toque moderno a cualquier espacio, siendo ideal para quienes buscan la combinación perfecta entre funcionalidad y estética. Diseñado y fabricado en Europa por Studio Schwung, Odyssey Linear está disponible en varios acabados de latón, destacando por su calidad artesanal y su diseño distintivo.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 10 x 4 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 10 x 15 W",
+            "Lúmenes totales: 2200 lm",
+            "Peso: 17.6 kg",
+            "IP: 20",
+            "Dimensiones: 10 x Ø 100 mm 1143mm x 468mm - 1368mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Candiles",
             "Schwung Design",
@@ -281,18 +624,53 @@
         ],
         "pdf": "candil_schwung_odysseylinearsm_fichatecnica.pdf\n",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de techo",
+                "candil de diseño",
+                "lámpara de diseño",
+                "Schwung",
+                "Odyssey",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "El candil Odyssey Linear de Studio Schwung ofrece una iluminación suave a través de campanas de cristal opalino y una base de latón, combinando funcionalidad y estética refinada. Disponible en varios acabados y tamaños, fabricado en Europa con calidad artesanal."
         }
     },
     {
         "id": 12,
         "name": "ODYSSEY LINEAR MD",
-        "images": [],
+        "images": [
+            {
+                "src": "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_apagado.jpg",
+                "alt": "odysseylinearmd_apagado"
+            },
+            {
+                "src": "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_encendido.jpg",
+                "alt": "odysseylinearmd_encendido"
+            },
+            {
+                "src": "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_estudio.jpg",
+                "alt": "odysseylinearmd_estudio"
+            },
+            {
+                "src": "ODYSSEYLINEARMD/candil_schwung_odysseylinearmd_detalle.jpg",
+                "alt": "odysseylinearmd_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "El candil Odyssey Linear presenta una serie lineal de fuentes de luz a través de campanas de cristal opalino, que generan una iluminación suave y envolvente. La base lineal de latón contrasta elegantemente con la suavidad de la luz emitida, proporcionando una sensación de equilibrio y armonía.",
+        "longDescription": "El candil Odyssey Linear presenta una serie lineal de fuentes de luz a través de campanas de cristal opalino, que generan una iluminación suave y envolvente. La base lineal de latón contrasta elegantemente con la suavidad de la luz emitida, proporcionando una sensación de equilibrio y armonía. Con su diseño refinado y contemporáneo, este candil añade un toque moderno a cualquier espacio, siendo ideal para quienes buscan la combinación perfecta entre funcionalidad y estética. Diseñado y fabricado en Europa por Studio Schwung, Odyssey Linear está disponible en varios acabados de latón, destacando por su calidad artesanal y su diseño distintivo.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 12 x 4 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 12 x 15 W",
+            "Lúmenes totales: 2640 lm",
+            "Peso: 20.3 kg",
+            "IP: 20",
+            "Dimensiones: 12 x Ø 100 mm 1371mm x 502mm - 1402mm",
+            "Acabados: \nPantalla de vidrio: 1 Cristal Opalino \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Candiles",
             "Schwung Design",
@@ -304,41 +682,53 @@
         ],
         "pdf": "candil_schwung_odysseylinearmd_fichatecnica.pdf\n",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de techo",
+                "candil de diseño",
+                "lámpara de diseño",
+                "Schwung",
+                "Odyssey",
+                "lámpara de alta calidad",
+                "decoración de interiores",
+                "diseño exclusivo"
+            ],
+            "metaDescription": "El candil Odyssey Linear de Studio Schwung ofrece una iluminación suave a través de campanas de cristal opalino y una base de latón, combinando funcionalidad y estética refinada. Disponible en varios acabados y tamaños, fabricado en Europa con calidad artesanal."
         }
     },
     {
         "id": 13,
-        "name": "CLOUD",
-        "images": [],
-        "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
-        "categories": [
-            "Candiles",
-            "Schwung Design",
-            "Schwung Classic"
-        ],
-        "mainImages": [
-            "CLOUD/candil_schwung_cloud_apagado.jpg",
-            "CLOUD/candil_schwung_cloud_encendido.jpg"
-        ],
-        "pdf": "candil_schwung_cloud_fichatecnica.pdf\n",
-        "seo": {
-            "keywords": [],
-            "metaDescription": ""
-        }
-    },
-    {
-        "id": 14,
         "name": "ORION ROUND",
-        "images": [],
+        "images": [
+            {
+                "src": "ORIONROUND/candil_schwung_orionround_apagado.jpg",
+                "alt": "orionround_apagado"
+            },
+            {
+                "src": "ORIONROUND/candil_schwung_orionround_encendido.jpg",
+                "alt": "orionround_encendido"
+            },
+            {
+                "src": "ORIONROUND/candil_schwung_orionround_detalle.jpg",
+                "alt": "orionround_estudio"
+            },
+            {
+                "src": "ORIONROUND/candil_schwung_orionround_detalle2.jpg",
+                "alt": "orionround_detalles"
+            }
+        ],
         "brand": "Schwung Design",
-        "shortDescription": "",
-        "longDescription": "",
-        "specs": [],
+        "shortDescription": "La lámpara de techo Orion Round está compuesta por doce globos de cristal transparente que parecen flotar etéreamente sobre una estructura de latón, formando una figura circular. ",
+        "longDescription": "La lámpara de techo Orion Round está compuesta por doce globos de cristal transparente que parecen flotar etéreamente sobre una estructura de latón, formando una figura circular. Orion Round transmite ligereza y elegancia a través de su diseño refinado. Ideal para quienes buscan añadir un toque de sofisticación a sus espacios, esta lámpara resalta por su capacidad de transformar ambientes. Disponible en varios acabados, el candil Orion Round destaca por su calidad artesanal y su diseño atemporal, diseñado y fabricado en Europa por Studio Schwung.",
+        "specs": [
+            "Tipo de foco: LED (Incluido) 1 x 4-5 W",
+            "Temperatura de color: 2200-3000 K",
+            "Potencia maxima: 1 x 10 W",
+            "Lúmenes totales: 2640 lm",
+            "Peso: 19.5 kg",
+            "IP: 20",
+            "Dimensiones: 12 x Ø 200 mm 1214mm x327mm - 1225mm",
+            "Acabados: \nPantalla de vidrio:  1 Cristal Opalino 2 Cristal Opalino Marmoleado 3 Cristal Estriado Transparente \nBase: 1 Latón Pulido Lacado 2 Latón Negro Gunmetal 3 Níquel Pulido (Disponible bajo pedido, con un costo adicional.)"
+        ],
         "categories": [
             "Candiles",
             "Schwung Design",
@@ -350,8 +740,15 @@
         ],
         "pdf": "candil_schwung_orionround_fichatecnica.pdf",
         "seo": {
-            "keywords": [],
-            "metaDescription": ""
+            "keywords": [
+                "lámpara de techo",
+                "lámpara de diseño",
+                "Schwung",
+                "Orion Round",
+                "lámpara de alta calidad",
+                "decoración de interiores"
+            ],
+            "metaDescription": "Transforma tu espacio con la lámpara de techo Orion Round. Doce globos de cristal transparente flotan graciosamente sobre una estructura de latón, ofreciendo un diseño refinado y sofisticado. Disponible en varios acabados, Orion Round combina calidad artesanal y un diseño atemporal, diseñado y fabricado en Europa por Studio Schwung."
         }
     }
 ]
