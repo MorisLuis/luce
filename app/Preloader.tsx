@@ -32,7 +32,7 @@ export const Preloader = ({
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     onEnded={onEnded}
                 >
-                    <source src="/LUCE_VIDEO.mp4" type="video/mp4" />
+                    <source src="/LUCE_1920X1080_CAMBIO DE FONDO.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>

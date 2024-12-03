@@ -50,13 +50,13 @@
 
 .input {
     border-width: 0px;
-    background-color: $background-color-quinto;
+    background-color: $background-color;
     padding: $padding-horizontal;
     font-size: 16px;
     height: 40px;
 
     &.secondary {
         border-width: 1px;
-        background-color: $background-color-quinto;
+        background-color: $background-color;
     }
 }

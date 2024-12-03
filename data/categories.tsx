@@ -38,7 +38,7 @@ export const categoriesData: categories[] = [
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
     },
-    {
+/*     {
         id: 3,
         name: "Globes",
         description: "Candiles la cual se caracteriza por ser un estilo retro, transicional, combinación entre lo antiguo y moderno que destaca lo elegante para innovar.",
@@ -50,5 +50,5 @@ export const categoriesData: categories[] = [
             keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
-    }
+    } */
 ]

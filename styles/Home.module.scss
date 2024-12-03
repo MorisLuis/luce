@@ -33,6 +33,8 @@
 
         h1 {
             color: $text-color-light;
+            letter-spacing: 2px;
+            font-size: $font-big;
         }
 
         @include respond(tab-port) {

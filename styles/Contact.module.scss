@@ -24,7 +24,7 @@
 
         .ContactHeader {
             position: relative;
-            bottom: $padding;
+            margin-bottom: $margin-bottom;
             width: 100%;
             z-index: 999;
         }
@@ -34,6 +34,7 @@
             flex-direction: column;
             justify-content: center;
             width: 70%;
+            //margin-bottom: $margin-bottom;
 
             @include respond(tab-port) {
                 width: 100%;
@@ -57,7 +58,7 @@
     }
 
     .ContactFooter {
-        margin-top: $margin-bottom * 5;
+        margin-top: $margin-bottom * 2;
         display: flex;
         flex-direction: row;
         gap: $padding;

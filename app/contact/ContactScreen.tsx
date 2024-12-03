@@ -113,7 +113,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                     <Button
                         title='Enviar'
                         onClick={handleButtonClick}
-                        extraStyles={{ width: "30%" }}
+                        extraStyles={{ width: "30%", marginTop: 10 }}
                         disabled={sendingEmail}
                         loading={sendingEmail}
                         titleLoading="Enviando..."
