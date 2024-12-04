@@ -14,6 +14,19 @@
     .content {
         width: 80%;
 
+        overflow-y: scroll;
+
+        /* Ocultar el scrollbar */
+        /* Firefox */
+        scrollbar-width: none;
+        /* IE y Edge */
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            /* Chrome, Safari y Opera */
+            display: none;
+        }
+
         @include respond(tab-port) {
             width: 70%;
         }
@@ -74,8 +87,9 @@
             margin-bottom: $margin-bottom;
             max-width: 150px;
 
-            img{
-                object-fit: contain; /* Asegura que la imagen no se deforme */
+            img {
+                object-fit: contain;
+                /* Asegura que la imagen no se deforme */
             }
 
             @include respond(big-desktop) {
@@ -117,30 +131,37 @@
         right: $padding;
         z-index: 99;
         max-width: 100px;
-    
+
         /* Ajusta el tamaño del contenedor al tamaño de la imagen */
-        width: auto; /* Se adapta al contenido */
-        height: auto; /* Se adapta al contenido */
-    
+        width: auto;
+        /* Se adapta al contenido */
+        height: auto;
+        /* Se adapta al contenido */
+
         .sidebar_image {
-            width: 100%; /* Controla el ancho desde aquí */
-            height: auto; /* Asegura que la altura sea proporcional */
+            width: 100%;
+            /* Controla el ancho desde aquí */
+            height: auto;
+            /* Asegura que la altura sea proporcional */
             position: relative;
-    
+
             .imageContainerMovil {
                 display: flex;
-                width: 100%; /* Hereda el ancho del contenedor padre */
-                height: auto; /* Ajusta la altura automáticamente */
+                width: 100%;
+                /* Hereda el ancho del contenedor padre */
+                height: auto;
+                /* Ajusta la altura automáticamente */
                 cursor: pointer;
-                object-fit: contain; /* Asegura que la imagen se ajuste al contenedor */
+                object-fit: contain;
+                /* Asegura que la imagen se ajuste al contenedor */
             }
         }
-    
+
         @include respond(phone) {
             display: flex;
         }
     }
-    
+
 
     .sidebarMobil {
         display: none;
