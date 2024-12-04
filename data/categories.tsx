@@ -30,25 +30,12 @@ export const categoriesData: categories[] = [
         name: "Candiles",
         description: "Candiles la cual se caracteriza por ser un estilo retro, transicional, combinación entre lo antiguo y moderno que destaca lo elegante para innovar.",
         images: [
-            { src: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg", alt: "Vista lateral de la lámpara arbotante apagada." },
-            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
+            { src: "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg", alt: "ARMSTRONG LINEAR LUZ APAGADA" },
+            { src: "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg", alt: "ARMSTRONG LINEAR LUZ ENCENDIDA" },
         ],
         seo: {
             keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
-    },
-/*     {
-        id: 3,
-        name: "Globes",
-        description: "Candiles la cual se caracteriza por ser un estilo retro, transicional, combinación entre lo antiguo y moderno que destaca lo elegante para innovar.",
-        images: [
-            { src: "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg", alt: "Vista lateral de la lámpara arbotante apagada." },
-            { src: "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg", alt: "Vista lateral de la lámpara arbotante encendida." },
-        ],
-        seo: {
-            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
-            metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
-        }
-    } */
+    }
 ]
