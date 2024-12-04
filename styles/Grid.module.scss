@@ -81,9 +81,21 @@
     width: 100%;
     padding: 0px $padding;
     gap: $gap*2;
-    overflow-y: scroll;
     overflow-x: hidden;
     height: auto;
+
+    overflow-y: scroll;
+
+    /* Ocultar el scrollbar */
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE y Edge */
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        /* Chrome, Safari y Opera */
+        display: none;
+    }
 
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);
