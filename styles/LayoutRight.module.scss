@@ -18,8 +18,6 @@
             width: 70%;
         }
 
-        ;
-
         &__secondaryDesign {
             width: 80%;
 
@@ -27,15 +25,12 @@
                 width: 60%;
             }
 
-            ;
-
             @include respond(phone) {
                 width: 100%;
                 height: 100%;
                 margin-top: 0%;
             }
 
-            ;
         }
 
         @include respond(phone) {
@@ -43,8 +38,6 @@
             height: 100%;
             margin-top: 20%; // 15% of .sidebar phone. + 5%
         }
-
-        ;
     }
 
     .sidebar {
@@ -75,35 +68,26 @@
         }
 
         .sidebar_image {
-            min-width: 100px;
-            min-height: 100px;
-            position: relative;
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: $margin-bottom;
+            max-width: 150px;
+
+            img{
+                object-fit: contain; /* Asegura que la imagen no se deforme */
+            }
+
+            @include respond(big-desktop) {
+                max-width: 200px;
+            }
 
             @include respond(phone) {
                 position: fixed;
                 top: $padding-horizontal;
                 right: $padding-horizontal;
                 width: 60px;
-            }
-
-            ;
-
-            .imageContainerWeb {
-                display: flex;
-
-                &:hover {
-                    opacity: 70%;
-                }
-
-                @include respond(phone) {
-                    display: none;
-                }
-            }
-
-            .imageContainerMovil {
-                display: flex;
-                cursor: pointer;
-
+                max-width: 100px;
             }
         }
 
@@ -119,13 +103,9 @@
                 width: 40%;
             }
 
-            ;
-
             @include respond(phone) {
                 display: none
             }
-
-            ;
         }
 
     }
@@ -136,22 +116,31 @@
         top: $padding;
         right: $padding;
         z-index: 99;
-
+        max-width: 100px;
+    
+        /* Ajusta el tamaño del contenedor al tamaño de la imagen */
+        width: auto; /* Se adapta al contenido */
+        height: auto; /* Se adapta al contenido */
+    
         .sidebar_image {
-            min-width: 80px;
-            min-height: 60px;
+            width: 100%; /* Controla el ancho desde aquí */
+            height: auto; /* Asegura que la altura sea proporcional */
             position: relative;
-
+    
             .imageContainerMovil {
                 display: flex;
+                width: 100%; /* Hereda el ancho del contenedor padre */
+                height: auto; /* Ajusta la altura automáticamente */
                 cursor: pointer;
+                object-fit: contain; /* Asegura que la imagen se ajuste al contenedor */
             }
         }
-
+    
         @include respond(phone) {
-            display: flex
+            display: flex;
         }
     }
+    
 
     .sidebarMobil {
         display: none;

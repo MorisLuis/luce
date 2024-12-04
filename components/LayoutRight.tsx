@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { Nav } from './navigation/nav';
-import style from '../styles/LayoutRight.module.scss';
 import Link from 'next/link';
+import style from '../styles/LayoutRight.module.scss';
 
 interface LayoutRightInterface {
     content: () => React.ReactNode;
@@ -21,7 +21,9 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                     <Image
                         src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
-                        fill
+                        layout="responsive"
+                        width={200}
+                        height={200}
                         className={style.imageContainerMovil}
                     />
                 </Link>
@@ -36,7 +38,9 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                     <Image
                         src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
-                        fill
+                        layout="responsive"
+                        width={200}
+                        height={100}
                         className={style.imageContainerWeb}
                     />
                 </Link>

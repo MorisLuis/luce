@@ -4,9 +4,9 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Hamburguer } from './hamburguer';
 import Image from 'next/image';
-import styles from "../../styles/Navigation.module.scss";
 import { brandsData } from '@/data/brands';
 import { categoriesData } from '@/data/categories';
+import styles from "../../styles/Navigation.module.scss";
 
 
 export const Nav = () => {
@@ -32,11 +32,12 @@ export const Nav = () => {
             <div className={`${styles.menuContent} ${showMenu ? styles.active : ''}`}>
                 <div className={styles.menuContainer}>
                     <div className={styles.luce}>
-                        <Link href={"/"}>
+                        <Link href={"/"} className={styles.luce__image}>
                             <Image
                                 src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
                                 alt={'LUCE'}
-                                width={100}
+                                layout="responsive"
+                                width={200}
                                 height={100}
                             />
                         </Link>
