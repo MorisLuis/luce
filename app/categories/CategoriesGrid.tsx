@@ -12,7 +12,6 @@ export function CategoriesGrid() {
     const searchParams = useSearchParams();
     const category = searchParams.get("category") || "Todos";
 
-    const [fadeStates, setFadeStates] = useState<Record<number, boolean>>({});
     const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>(
         () => {
             const initialIndex: Record<number, number> = {};
@@ -24,43 +23,44 @@ export function CategoriesGrid() {
     );
     const handleMouseEnter = (id: number) => {
         setCurrentImageIndex((prev) => ({ ...prev, [id]: 1 }));
-        setFadeStates((prev) => ({ ...prev, [id]: true }));
     };
 
     const handleMouseLeave = (id: number) => {
         setCurrentImageIndex((prev) => ({ ...prev, [id]: 0 }));
-        setFadeStates((prev) => ({ ...prev, [id]: false }));
     };
 
     const renderContent = () => {
         return (
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
-                    <h2>Categorías</h2>
                     {categoriesData.slice(1).map((category) => (
-                        <div key={category.id} className={styles.productCard}>
-                            <Link href={`/categories/${category.name}`} className={styles.productLink}>
-                                <div
-                                    className={`${styles.imageWrapper} ${fadeStates[category.id] ? styles.fade : ''}`}
-                                    onMouseEnter={() => handleMouseEnter(category.id)}
-                                    onMouseLeave={() => handleMouseLeave(category.id)}
-                                >
-                                    {
-                                        category.images.length < 1 ?
-                                            <div className={styles.notImage}></div>
-                                            :
-                                            <Image
-                                                src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
-                                                alt={category.images[currentImageIndex[category.id]]?.alt}
-                                                fill
-                                                priority
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            />
-                                    }
-                                    <p className={styles.productName}>{category.name}</p>
-                                </div>
-                            </Link>
-                        </div>
+                        <Link
+                            key={category.id}
+                            href={`/categories/${category.name}`}
+                            onMouseEnter={() => handleMouseEnter(category.id)}
+                            onMouseLeave={() => handleMouseLeave(category.id)}
+                        >
+                            <div
+                                className={styles.productCard}
+                                onMouseEnter={() => handleMouseEnter(category.id)}
+                                onMouseLeave={() => handleMouseLeave(category.id)}
+                            >
+                                {
+                                    category.images.length < 1 ?
+                                        <div className={styles.notImage}></div>
+                                        :
+                                        <Image
+                                            src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
+                                            alt={category.images[currentImageIndex[category.id]]?.alt}
+                                            width={100}
+                                            height={100}
+                                            priority
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
+                                }
+                                <p className={styles.productName}>{category.name}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>
