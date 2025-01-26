@@ -42,8 +42,9 @@ export default function ImageSlider({
                             src={`/images/${images[currentIndex].src}`}
                             alt={images[currentIndex].alt}
                             fill
-                            priority
-                            quality={100}
+                            //quality={100}
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,..."
                         />
                 }
             </div>
