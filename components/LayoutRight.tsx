@@ -47,6 +47,7 @@ export default function LayoutRight({ content, sideBar, bottom, secondaryDesign 
                 <div className={style.sidebar_content}>
                     {sideBar?.()}
                 </div>
+
                 {bottom && <div className={style.sidebar_bottom}></div>}
             </div>
             <Nav />

@@ -86,7 +86,6 @@
             margin: 0 auto;
             margin-bottom: $margin-bottom;
             max-width: 150px;
-
             img {
                 object-fit: contain;
                 /* Asegura que la imagen no se deforme */
@@ -161,7 +160,6 @@
             display: flex;
         }
     }
-
 
     .sidebarMobil {
         display: none;

@@ -8,10 +8,9 @@ export const GridSkeletons = () => {
                 <h2></h2>
                 {Array.from({ length: 6 }, (_, i) => (
                     <div key={i} className={styles.productCard}>
-                        <div className={styles.productLink}>
-                            <div className={`${styles.imageWrapper}`}>
-                            </div>
+                        <div className={`${styles.imageWrapper}`}>
                         </div>
+                        <p className={styles.productName}> </p>
                     </div>
                 ))}
             </div>

@@ -79,7 +79,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas de igual ancho */
     width: 100%;
-    padding: 0px $padding;
+    padding: $padding;
     gap: $gap*2;
     overflow-x: hidden;
     height: auto;
@@ -103,53 +103,31 @@
       padding: $padding;
     }
 
-    h2 {
-      display: none;
-      text-transform: capitalize;
-
-      @include respond(phone) {
-        display: flex;
-      }
-    }
-
     .productCard {
-      background-color: $background-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       overflow: hidden;
       transition: transform 0.2s;
-      height: fit-content;
-      //aspect-ratio: 2 / 1;
+      height: 90vh;
+      position: relative;
+      gap: $gap;
 
-      .productLink {
+      img {
+        object-fit: cover;
+        height: 85vh;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: $text-color;
+      }
 
-        .imageWrapper {
-          width: 100%;
-          height: 300px;
-          position: relative;
-          background-color: $background-color;
+      .notImage {
+        background-color: $background-color-tertiary;
+        width: 100%;
+        height: 100%
+      }
 
-          img {
-            object-fit: cover;
-          }
-
-          .notImage {
-            background-color: $background-color-tertiary;
-            width: 100%;
-            height: 100%
-          }
-
-          .productName {
-            position: absolute;
-            bottom: $padding-horizontal;
-            left: $padding-horizontal;
-            font-size: $font-normal;
-            color: $text-color-tertiary;
-          }
-        }
+      .productName {
+        z-index: 99;
       }
     }
   }

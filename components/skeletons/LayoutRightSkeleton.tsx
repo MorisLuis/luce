@@ -1,6 +1,6 @@
 import React from 'react'
-import style from '../../styles/Skeletons.module.scss';
 import NavSkeleton from './NavSkeleton';
+import style from '../../styles/Skeletons.module.scss';
 
 interface LayoutRightInterface {
     contentSkeleton: () => React.ReactNode;

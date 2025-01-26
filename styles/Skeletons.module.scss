@@ -6,7 +6,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        padding: 0px $padding;
+        padding: $padding;
         gap: 16px;
         min-height: auto;
         overflow: scroll;
@@ -30,28 +30,28 @@
         }
 
         .productCard {
-            background-color: $background-color-skeletons;
-            overflow: hidden;
-            transition: transform 0.2s;
-            height: fit-content;
-            animation: loading 1s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-height: 90vh;
+            gap: $gap;
+            justify-content: space-between;
 
-            .productLink {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-decoration: none;
-                color: $text-color;
+            .imageWrapper {
+                width: 100%;
+                height: 85vh;
+                background-color: $background-color-skeletons;
+                transition: transform 0.2s;
+                animation: loading 1s infinite;
+            }
 
-                .imageWrapper {
-                    width: 100%;
-                    height: 300px;
-                    position: relative;
-                    
-                    img{
-                        object-fit: cover;
-                    }
-                }
+            .productName{
+                height: 100%;
+                max-height: 5vh;
+                width: 30%;
+                background-color: $background-color-skeletons;
+                transition: transform 0.2s;
+                animation: loading 1s infinite;
             }
         }
     }
