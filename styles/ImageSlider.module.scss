@@ -5,6 +5,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    padding: $padding;
 
     @include respond(phone) {
         height: 80vh;
@@ -12,11 +13,12 @@
 
     .imageWrapper{
         position: relative;
-        width: 100%;
         height: 100%;
 
         img{
             object-fit: cover;
+            width: 100%;
+            height: 100%
         }
 
         .notImage{
@@ -28,7 +30,7 @@
 
     .dotsContainer{
         position: absolute;
-        bottom: 5%;
+        bottom: calc(5% + $padding);
         left: 50%;
         transform: translateX(-50%);
         display: flex;
