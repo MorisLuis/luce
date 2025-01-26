@@ -26,51 +26,42 @@ export default function ProductDetails({
 
             <div className={styles.ProductDetailsContent}>
                 <section>
-                    <label>Marca:</label>
-                    <p>{product.brand}</p>
                     <p>{product.shortDescription}</p>
                 </section>
-                <section>
-                    <label>Descripción extensa:</label>
-                    <p>{product.longDescription}</p>
-                </section>
 
-                <section>
-                    <label>Categorías:</label>
-                    <p>{product.categories.join(', ')}</p>
-                </section>
+                <div className={styles.ProductDetailsActions}>
+                    <section className={styles.ProductDetailsNavigation}>
+                        <p onClick={back}>Atrás</p>
+                        <p onClick={next}>Siguiente</p>
+                    </section>
 
-                <section className={styles.ProductDetailsNavigation}>
-                    <p onClick={back}>Atrás</p>
-                    <p onClick={next}>Siguiente</p>
-                </section>
+                    {
+                        product.pdf &&
+                        <Button
+                            title='Descargar PDF'
+                            icon={faArrowLeftLong}
+                            iconStyles={{
+                                rotate: "135deg"
+                            }}
+                            onClick={() => {
+                                const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
+                                if (!newWindow) console.error('La ventana emergente fue bloqueada.');
+                            }}
+                            extraStyles={{ marginBottom: "10px" }}
+                        />
+                    }
 
-                {
-                    product.pdf &&
                     <Button
-                        title='Descargar PDF'
-                        icon={faArrowLeftLong}
-                        iconStyles={{
-                            rotate: "135deg"
-                        }}
-                        onClick={() => {
-                            const newWindow = window.open(`/pdf/${product.pdf}`, '_blank');
-                            if (!newWindow) console.error('La ventana emergente fue bloqueada.');
-                        }}
+                        title='Especificaciones'
+                        onClick={handleOpenSpecs}
                         extraStyles={{ marginBottom: "10px" }}
                     />
-                }
 
-                <Button
-                    title='Especificaciones'
-                    onClick={handleOpenSpecs}
-                    extraStyles={{ marginBottom: "10px" }}
-                />
-
-                <Button
-                    title='Contactar'
-                    onClick={handleOpenContact}
-                />
+                    <Button
+                        title='Contactar'
+                        onClick={handleOpenContact}
+                    />
+                </div>
             </div>
         </div>
     );

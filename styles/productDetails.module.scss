@@ -17,7 +17,6 @@
 
     .ProductDetailsHeaderContainer {
         display: flex;
-        justify-content: center;
         text-align: start;
         width: 100%;
 
@@ -43,6 +42,8 @@
         flex-direction: column;
         text-align: start;
         width: 100%;
+        justify-content: space-between;
+        min-height: 60vh;
 
         >section {
             margin: $margin-bottom*2 0px;
@@ -60,18 +61,23 @@
                 list-style: none;
             }
         }
-    }
 
-    .ProductDetailsNavigation {
-        display: flex;
-        justify-content: space-between;
-        text-transform: capitalize;
-
-        :hover {
-            cursor: pointer;
-            text-decoration: underline;
+        .ProductDetailsActions{
+            
+            .ProductDetailsNavigation {
+                display: flex;
+                justify-content: space-between;
+                text-transform: capitalize;
+                margin-bottom: $margin-bottom;
+        
+                :hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
         }
     }
+
 
 }
 

@@ -1,9 +1,9 @@
 "use client"
-import styles from '../styles/Home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import LayoutRight from '@/components/LayoutRight';
 import banner from '../public/test.webp';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
 
@@ -18,9 +18,9 @@ export default function Home() {
             <Image
               src={banner}
               alt={'Imagen Land Page'}
-              priority
               quality={100}
-              fill
+              placeholder='blur'
+              layout="intrinsic"
             />
           </div>
         </div>
