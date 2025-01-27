@@ -6,7 +6,7 @@
     height: 100vh;
     overflow: hidden;
     padding: $padding;
-
+    cursor: grab; 
     @include respond(phone) {
         height: 80vh;
     };

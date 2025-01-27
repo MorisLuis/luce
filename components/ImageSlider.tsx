@@ -4,23 +4,27 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "../styles/ImageSlider.module.scss";
 
-type image = {
+type ImageType = {
     src: string;
     alt: string;
 };
 
 interface ImageSliderInterface {
-    images: image[];
+    images: ImageType[];
 }
 
 export default function ImageSlider({ images }: ImageSliderInterface) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const startX = useRef<number | null>(null);
+    const currentX = useRef<number | null>(null);
+    const isDragging = useRef(false);
 
     const startInterval = () => {
         intervalRef.current = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 7000);
+        }, 10000);
     };
 
     const clearExistingInterval = () => {
@@ -41,8 +45,62 @@ export default function ImageSlider({ images }: ImageSliderInterface) {
         startInterval();
     };
 
+    const handleStart = (clientX: number) => {
+        startX.current = clientX;
+        isDragging.current = true;
+    };
+
+    const handleMove = (clientX: number) => {
+        if (!isDragging.current || startX.current === null) return;
+        currentX.current = clientX;
+    };
+
+    const handleEnd = () => {
+        if (!isDragging.current || startX.current === null || currentX.current === null) return;
+
+        const diff = startX.current - currentX.current;
+
+        if (diff > 2) {
+            // Deslizar a la izquierda
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        } else if (diff < -2) {
+            // Deslizar a la derecha
+            setCurrentIndex(
+                (prevIndex) => (prevIndex - 1 + images.length) % images.length
+            );
+        }
+
+        // Reiniciar valores
+        startX.current = null;
+        currentX.current = null;
+        isDragging.current = false;
+
+        // Reiniciar el intervalo
+        clearExistingInterval();
+        startInterval();
+    };
+
+    const handleMouseDown = (e: React.MouseEvent) => handleStart(e.clientX);
+    const handleMouseMove = (e: React.MouseEvent) => handleMove(e.clientX);
+    const handleMouseUp = () => handleEnd();
+    const handleMouseLeave = () => handleEnd(); // Finaliza si el mouse sale del área
+
+    const handleTouchStart = (e: React.TouchEvent) => handleStart(e.touches[0].clientX);
+    const handleTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
+    const handleTouchEnd = () => handleEnd();
+
     return (
-        <div className={styles.sliderContainer}>
+        <div
+            className={styles.sliderContainer}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onDragStart={(e) => e.preventDefault()}
+        >
             <div className={styles.imageWrapper}>
                 {images.length < 1 ? (
                     <div className={styles.notImage}></div>
