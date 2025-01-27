@@ -57,40 +57,6 @@ export function BrandGrid() {
                             link={`/product/${product.id}?from=brands`}
                         />
                     ))}
-
-                    {/* {ProductRender.map((product: Product) => (
-                        <Link
-                            key={product.id}
-                            href={`/product/${product.id}?from=brands`}
-                            aria-label={`Ir a la marca ${product.name}`}
-                            onMouseEnter={() => handleMouseEnter(product.id)}
-                            onMouseLeave={() => handleMouseLeave(product.id)}
-                        >
-                            <div className={styles.productCard}>
-                                <div className={styles.imageWrapper}>
-                                    {product.mainImages.length === 0 ? (
-                                        <div className={styles.notImage}></div>
-                                    ) : (
-                                        product.mainImages.map((image, index) => (
-                                            <Image
-                                                key={index}
-                                                src={`/images/${image}`}
-                                                alt={`${product.brand} - ${product.name}`}
-                                                width={100}
-                                                height={100}
-                                                priority
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                className={`${styles.image} ${
-                                                    currentImageIndex[product.id] === index ? styles.active : ''
-                                                }`}
-                                            />
-                                        ))
-                                    )}
-                                </div>
-                                <p className={styles.productName}>{product.name}</p>
-                            </div>
-                        </Link>
-                    ))} */}
                 </div>
             </div>
         )

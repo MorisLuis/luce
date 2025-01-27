@@ -3,7 +3,7 @@ import NavSkeleton from './NavSkeleton';
 import style from '../../styles/Skeletons.module.scss';
 
 interface LayoutRightInterface {
-    contentSkeleton: () => React.ReactNode;
+    contentSkeleton?: () => React.ReactNode;
     sideBarSkeleton?: () => React.ReactNode;
     secondaryDesign?: boolean;
 }
@@ -20,7 +20,7 @@ export default function LayoutRightSkeleton({ contentSkeleton, sideBarSkeleton, 
             </div>
 
             <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
-                {contentSkeleton()}
+                {contentSkeleton?.()}
             </div>
 
             <div className={style.sidebar}>

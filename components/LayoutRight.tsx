@@ -11,7 +11,13 @@ interface LayoutRightInterface {
     secondaryDesign?: boolean;
 }
 
-export default function LayoutRight({ content, sideBar, bottom, secondaryDesign }: LayoutRightInterface) {
+export default function LayoutRight({
+    content,
+    sideBar,
+    bottom,
+    secondaryDesign
+}: LayoutRightInterface) {
+
     return (
         <div className={style.layoutRight}>
             <div className={style.sidebarMobil}> {secondaryDesign && sideBar?.()} </div> {/* This is how we show sidebar in movil */}
