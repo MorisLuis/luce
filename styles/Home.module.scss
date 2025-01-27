@@ -2,6 +2,8 @@
 
 .Home {
     width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
 
     .HomeBackground {
         overflow: hidden;
@@ -26,34 +28,6 @@
                 width: 100%;
                 object-fit: cover;
             }
-        }
-    }
-
-    .HomeHeader {
-        display: flex;
-        position: relative;
-        position: absolute;
-        bottom: 80px;
-        left: 80px;
-        width: 50%;
-        z-index: 999;
-
-        h1 {
-            color: $text-color-light;
-            letter-spacing: 2px;
-            font-size: $font-big;
-        }
-
-        @include respond(tab-port) {
-            width: 60%;
-            bottom: $padding;
-            left: $padding;
-        }
-
-        @include respond(phone) {
-            width: 80%;
-            bottom: $padding;
-            left: $padding;
         }
     }
 
@@ -86,6 +60,21 @@
 
             &:hover {
                 text-decoration: underline;
+            }
+        }
+    }
+
+    .HomeCarrusel {
+        width: 100%;
+        margin: 0px;
+
+        &__content{
+            height: 100vh;
+
+            img{
+                object-fit: cover;
+                height: 100vh;
+                width: 100%;
             }
         }
     }

@@ -45,7 +45,6 @@ export const ProductCard = ({
                                     ? `${product.brand} - ${product.name}` 
                                     : product.name
                             }
-                            //priority
                             width={100}
                             height={100}
                             quality={100}
