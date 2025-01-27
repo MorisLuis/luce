@@ -3,14 +3,13 @@
 import LayoutRight from '@/components/LayoutRight';
 import React, { useState } from 'react'
 import styles from "../../../styles/Grid.module.scss";
-import Link from 'next/link';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import products from "../../../data/products.json"
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { brandsData } from '@/data/brands';
+import { ProductCard } from '@/components/ProductCard';
 config.autoAddCss = false;
 
 
@@ -48,7 +47,18 @@ export function BrandGrid() {
         return (
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
-                    {ProductRender.map((product: Product) => (
+                    {ProductRender.slice(1).map((product) => (
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                            currentImageIndex={currentImageIndex}
+                            handleMouseEnter={handleMouseEnter}
+                            handleMouseLeave={handleMouseLeave}
+                            link={`/product/${product.id}?from=brands`}
+                        />
+                    ))}
+
+                    {/* {ProductRender.map((product: Product) => (
                         <Link
                             key={product.id}
                             href={`/product/${product.id}?from=brands`}
@@ -57,23 +67,30 @@ export function BrandGrid() {
                             onMouseLeave={() => handleMouseLeave(product.id)}
                         >
                             <div className={styles.productCard}>
-                                {
-                                    product.mainImages.length === 0 ?
+                                <div className={styles.imageWrapper}>
+                                    {product.mainImages.length === 0 ? (
                                         <div className={styles.notImage}></div>
-                                        :
-                                        <Image
-                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
-                                            alt={`${product.brand} - ${product.name}`}
-                                            width={100}
-                                            height={100}
-                                            priority
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        />
-                                }
+                                    ) : (
+                                        product.mainImages.map((image, index) => (
+                                            <Image
+                                                key={index}
+                                                src={`/images/${image}`}
+                                                alt={`${product.brand} - ${product.name}`}
+                                                width={100}
+                                                height={100}
+                                                priority
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                className={`${styles.image} ${
+                                                    currentImageIndex[product.id] === index ? styles.active : ''
+                                                }`}
+                                            />
+                                        ))
+                                    )}
+                                </div>
                                 <p className={styles.productName}>{product.name}</p>
                             </div>
                         </Link>
-                    ))}
+                    ))} */}
                 </div>
             </div>
         )

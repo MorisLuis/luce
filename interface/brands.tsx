@@ -6,5 +6,6 @@ export interface brandsInterface {
     seo: {
         keywords: string[],
         metaDescription: string;
-    }
+    };
+    mainImages: string[];
 }

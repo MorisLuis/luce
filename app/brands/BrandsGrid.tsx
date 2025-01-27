@@ -1,12 +1,12 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
 import { brandsData } from "@/data/brands";
 import styles from "../../styles/Grid.module.scss";
+import { ProductCard } from "@/components/ProductCard";
 
 export function BrandsCategory() {
     const searchParams = useSearchParams();
@@ -36,33 +36,16 @@ export function BrandsCategory() {
         return (
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
-                    {brandsData.slice(1).map((brand) => {
-                        if (!brand.name || !brand.images) return null;
-
-                        const currentImage = brand.images?.[currentImageIndex[brand.id]] || {};
-
-                        return (
-                            <Link
-                                key={brand.id}
-                                href={`/brands/${brand.name}`}
-                                aria-label={`Ir a la marca ${brand.name}`}
-                                onMouseEnter={() => handleMouseEnter(brand.id)}
-                                onMouseLeave={() => handleMouseLeave(brand.id)}
-                            >
-                                <div className={styles.productCard}>
-                                    <Image
-                                        src={`/images/${currentImage.src}`}
-                                        alt={currentImage.alt || `Imagen de ${brand.name}`}
-                                        width={100}
-                                        height={100}
-                                        priority
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                    <p className={styles.productName}>{brand.name}</p>
-                                </div>
-                            </Link>
-                        );
-                    })}
+                    {brandsData.slice(1).map((brand) => (
+                        <ProductCard
+                            key={brand.id}
+                            product={brand}
+                            currentImageIndex={currentImageIndex}
+                            handleMouseEnter={handleMouseEnter}
+                            handleMouseLeave={handleMouseLeave}
+                            link={`/brands/${brand.name}`}
+                        />
+                    ))}
                 </div>
             </div>
         );

@@ -10,7 +10,11 @@ export const categoriesData: categories[] = [
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
-        }
+        },
+        mainImages:[
+            "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+            "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg"
+        ],
     },
     {
         id: 1,
@@ -23,7 +27,11 @@ export const categoriesData: categories[] = [
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
-        }
+        },
+        mainImages:[
+            "odyssey-lg/lampara_schwung_odysseylg_apagada.jpg",
+            "odyssey-lg/lampara_schwung_odysseylg_encendida.jpg"
+        ],
     },
     {
         id: 2,
@@ -36,6 +44,10 @@ export const categoriesData: categories[] = [
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
-        }
+        },
+        mainImages:[
+            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg",
+            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg"
+        ],
     }
 ]

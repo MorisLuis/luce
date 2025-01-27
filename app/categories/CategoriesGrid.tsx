@@ -1,12 +1,12 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
 import { categoriesData } from "@/data/categories";
 import styles from "../../styles/Grid.module.scss";
+import { ProductCard } from "@/components/ProductCard";
 
 export function CategoriesGrid() {
     const searchParams = useSearchParams();
@@ -34,33 +34,14 @@ export function CategoriesGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     {categoriesData.slice(1).map((category) => (
-                        <Link
-                            key={category.id}
-                            href={`/categories/${category.name}`}
-                            onMouseEnter={() => handleMouseEnter(category.id)}
-                            onMouseLeave={() => handleMouseLeave(category.id)}
-                        >
-                            <div
-                                className={styles.productCard}
-                                onMouseEnter={() => handleMouseEnter(category.id)}
-                                onMouseLeave={() => handleMouseLeave(category.id)}
-                            >
-                                {
-                                    category.images.length < 1 ?
-                                        <div className={styles.notImage}></div>
-                                        :
-                                        <Image
-                                            src={`/images/${category.images[currentImageIndex[category.id]]?.src}`}
-                                            alt={category.images[currentImageIndex[category.id]]?.alt}
-                                            width={100}
-                                            height={100}
-                                            priority
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        />
-                                }
-                                <p className={styles.productName}>{category.name}</p>
-                            </div>
-                        </Link>
+                        <ProductCard
+                        key={category.id}
+                            product={category}
+                            currentImageIndex={currentImageIndex}
+                            handleMouseEnter={handleMouseEnter}
+                            handleMouseLeave={handleMouseLeave}
+                            link={`/categories/${category.name}`}
+                        />
                     ))}
                 </div>
             </div>

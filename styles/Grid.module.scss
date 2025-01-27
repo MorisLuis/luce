@@ -77,24 +77,21 @@
 
   .gridContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas de igual ancho */
+    grid-template-columns: repeat(2, 1fr); // Siempre 2 columnas de igual ancho
     width: 100%;
     padding: $padding;
-    gap: $gap*2;
+    gap: $gap * 2;
     overflow-x: hidden;
     height: auto;
 
     overflow-y: scroll;
 
-    /* Ocultar el scrollbar */
-    /* Firefox */
-    scrollbar-width: none;
-    /* IE y Edge */
-    -ms-overflow-style: none;
+    // Ocultar el scrollbar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE y Edge
 
     &::-webkit-scrollbar {
-        /* Chrome, Safari y Opera */
-        display: none;
+      display: none; // Chrome, Safari y Opera
     }
 
     @include respond(phone) {
@@ -113,22 +110,83 @@
       position: relative;
       gap: $gap;
 
-      img {
-        object-fit: cover;
-        height: 85vh;
+      .imageWrapper {
+        position: relative;
         width: 100%;
-        display: flex;
+        height: 85vh;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          //transition: opacity 0.5s ease-in-out;
+          opacity: 1;
+          animation: none;
+        }
+
+        .image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          /* Imagen oculta por defecto */
+          transition: opacity 1s ease-in-out;
+          /* Transición suave */
+        }
+
+        .active {
+          opacity: 1;
+          /* Imagen activa completamente visible */
+          z-index: 2;
+          /* Asegura que esté por encima */
+        }
+
+        .image:not(.active) {
+          opacity: 0;
+          /* Imagen que desaparece */
+          z-index: 1;
+          /* Mantiene la imagen por debajo */
+        }
+
       }
 
       .notImage {
         background-color: $background-color-tertiary;
         width: 100%;
-        height: 100%
-      }
-
-      .productName {
-        z-index: 99;
+        height: 100%;
       }
     }
+  }
+
+}
+
+/* Para garantizar que la animación sea fluida */
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+    /* Comienza con opacidad parcial */
+  }
+
+  100% {
+    opacity: 1;
+    /* Termina completamente visible */
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    /* Comienza completamente visible */
+  }
+
+  100% {
+    opacity: 0;
+    /* Termina completamente invisible */
   }
 }

@@ -6,5 +6,6 @@ export interface categories {
     seo: {
         keywords: string[],
         metaDescription: string;
-    }
+    };
+    mainImages: string[]
 }

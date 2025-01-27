@@ -6,6 +6,10 @@ export const brandsData: brandsInterface[] = [
         name: "Todos",
         description: "",
         images: [],
+        mainImages:[
+            "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+            "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg"
+        ],
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
@@ -19,6 +23,11 @@ export const brandsData: brandsInterface[] = [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg", alt: "Vista frontal del candil apagado." },
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
         ],
+        mainImages:[
+            "armstrong-linear/Candil_schwung_armstronglinear_apagado.jpg",
+            "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg"
+        ],
+
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",

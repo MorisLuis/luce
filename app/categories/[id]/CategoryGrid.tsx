@@ -3,12 +3,11 @@
 import LayoutRight from '@/components/LayoutRight';
 import React, { useState } from 'react'
 import styles from "../../../styles/Grid.module.scss";
-import Link from 'next/link';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
 import products from "../../../data/products.json"
 import { categoriesData } from '@/data/categories';
+import { ProductCard } from '@/components/ProductCard';
 
 export function CategoryGrid() {
     const params = useParams();
@@ -46,30 +45,15 @@ export function CategoryGrid() {
             <div className={styles.Grid}>
                 <div className={styles.gridContainer}>
                     {ProductRender.map((product: Product) => (
-                        <Link
-                            key={product.id}
-                            className={styles.productLink}
-                            href={`/product/${product.id}?from=categories`}
-                            onMouseEnter={() => handleMouseEnter(product.id)}
-                            onMouseLeave={() => handleMouseLeave(product.id)}
-                        >
-                            <div className={styles.productCard}>
-                                {
-                                    product.mainImages.length === 0 ?
-                                        <div className={styles.notImage}></div>
-                                        :
-                                        <Image
-                                            src={`/images/${product.mainImages[currentImageIndex[product.id]]}`}
-                                            alt={`${product.brand} - ${product.name}`}
-                                            width={100}
-                                            height={100}
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            priority
-                                        />
-                                }
-                                <p className={styles.productName}>{product.name}</p>
-                            </div>
-                        </Link>
+                        <ProductCard
+                        key={product.id}
+
+                            product={product}
+                            currentImageIndex={currentImageIndex}
+                            handleMouseEnter={handleMouseEnter}
+                            handleMouseLeave={handleMouseLeave}
+                            link={`/product/${product.id}?from=categories`}
+                        />
                     ))}
                 </div>
             </div>
