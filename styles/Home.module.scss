@@ -1,14 +1,19 @@
 @import "./main.scss";
 
 .Home {
+    width: 100%;
 
     .HomeBackground {
         overflow: hidden;
-        position: absolute;
+        height: 100vh;
         top: 0px;
-        height: 100svh;
-        width: 100svw;
         z-index: 0;
+
+
+        @include respond(tab-port) {
+            position: absolute;
+        }
+
 
         .imageContainer {
             position: relative;
@@ -17,7 +22,9 @@
             height: 100%;
 
             img {
-                object-fit: cover
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }

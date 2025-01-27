@@ -7,7 +7,7 @@
     height: 100%;
     padding: $padding-horizontal;
     width: 100%;
-    background-color: $background-color-cuaternary;
+    background-color: $background-color;
 
     &.center {
         padding: $padding-horizontal * 5;
@@ -21,6 +21,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        //background-color: red;
 
         .ContactHeader {
             position: relative;
@@ -33,8 +34,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             width: 70%;
-            //margin-bottom: $margin-bottom;
+            //background-color: orange;
+
 
             @include respond(tab-port) {
                 width: 100%;
@@ -53,6 +56,8 @@
                 margin-bottom: $margin-bottom;
                 flex-direction: column;
                 justify-content: center;
+                width: 100%;
+                border: 1px solid $color-border-tertiary;
             }
         }
     }
@@ -60,8 +65,22 @@
     .ContactFooter {
         margin-top: $margin-bottom * 2;
         display: flex;
-        flex-direction: row;
-        gap: $padding;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        &.secondary {
+            width: 50%;
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
 
         :hover {
             cursor: pointer;

@@ -7,7 +7,7 @@ export const brandsData: brandsInterface[] = [
         description: "",
         images: [],
         seo: {
-            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
     },
@@ -20,7 +20,7 @@ export const brandsData: brandsInterface[] = [
             { src: "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg", alt: "Vista frontal del candil encendido." },
         ],
         seo: {
-            keywords: ["lámparas decorativas", "lámparas arbotantes", "schwung design"],
+            keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         }
     }

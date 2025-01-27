@@ -3,10 +3,11 @@
 import React from 'react';
 import { Button } from '@/components/Button';
 import { Product } from '@/interface/product';
-import styles from "../../../styles/productDetails.module.scss";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
+import styles from "../../../styles/productDetails.module.scss";
+
 config.autoAddCss = false;
 
 
@@ -35,10 +36,16 @@ export default function ProductDetails({
                         <p onClick={next}>Siguiente</p>
                     </section>
 
+                    <Button
+                        title='Me interesa'
+                        onClick={handleOpenContact}
+                        extraStyles={{ marginBottom: "10px" }}
+                    />
+
                     {
                         product.pdf &&
                         <Button
-                            title='Descargar PDF'
+                            title='Descargar ficha técnica'
                             icon={faArrowLeftLong}
                             iconStyles={{
                                 rotate: "135deg"
@@ -52,15 +59,10 @@ export default function ProductDetails({
                     }
 
                     <Button
-                        title='Especificaciones'
+                        title='Ver Especificaciones'
                         onClick={handleOpenSpecs}
-                        extraStyles={{ marginBottom: "10px" }}
                     />
 
-                    <Button
-                        title='Contactar'
-                        onClick={handleOpenContact}
-                    />
                 </div>
             </div>
         </div>

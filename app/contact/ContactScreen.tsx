@@ -78,7 +78,6 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                 </div>
                 <form onSubmit={handleSubmit} className={secondaryDesign ? `${styles.ContactForm} ${styles.secondary}` : styles.ContactForm}>
                     <div className={styles.inputContainer}>
-                        <label htmlFor="email">Mail.</label>
                         <input
                             type="email"
                             id="email"
@@ -86,21 +85,21 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             onChange={(e) => setEmail(e.target.value)}
                             required
                             className={'input'}
+                            placeholder='Nombre*'
                         />
                     </div>
                     <div className={styles.inputContainer}>
-                        <label htmlFor="subject">Asunto.</label>
                         <input
                             type="text"
-                            id="subject"
+                            id="email"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             required
                             className={'input'}
+                            placeholder='Email*'
                         />
                     </div>
                     <div className={styles.inputContainer}>
-                        <label htmlFor="message">Mensaje.</label>
                         <textarea
                             id="message"
                             value={message}
@@ -109,7 +108,6 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                             className={'input'}
                         />
                     </div>
-
                     <Button
                         title='Enviar'
                         onClick={handleButtonClick}
@@ -119,7 +117,9 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         titleLoading="Enviando..."
                     />
                 </form>
-                <div className={styles.ContactFooter}>
+                <div 
+                className={secondaryDesign ? `${styles.ContactFooter} ${styles.secondary}` : styles.ContactFooter}
+                >
                     <Link href={'mailto: hola@luce.com.mx'}>
                         hola@luce.com.mx
                     </Link>
