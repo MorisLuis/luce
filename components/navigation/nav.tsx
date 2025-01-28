@@ -34,7 +34,7 @@ export const Nav = () => {
                     <div className={styles.luce}>
                         <Link href={"/"} className={styles.luce__image}>
                             <Image
-                                src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                                src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
                                 alt={'LUCE'}
                                 layout="responsive"
                                 width={200}

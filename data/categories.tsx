@@ -38,16 +38,22 @@ export const categoriesData: categories[] = [
         name: "Candiles",
         description: "Candiles la cual se caracteriza por ser un estilo retro, transicional, combinación entre lo antiguo y moderno que destaca lo elegante para innovar.",
         images: [
-            { src: "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg", alt: "ARMSTRONG LINEAR LUZ APAGADA" },
-            { src: "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg", alt: "ARMSTRONG LINEAR LUZ ENCENDIDA" },
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_apagado.jpg",
+                "alt": "odysseylinearsm_apagado"
+            },
+            {
+                "src": "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_encendido.jpg",
+                "alt": "odysseylinearsm_encendido"
+            }
         ],
         seo: {
             keywords: ["lámparas decorativas", "lámparas Apliques", "schwung design"],
             metaDescription: "Descubre nuestra elegante lámpara de pared con pantalla de vidrio opalino satinado...",
         },
         mainImages:[
-            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_apagado.jpg",
-            "ARMSTRONGLINEAR/candil_schwung_armstronglinear_encendido.jpg"
+            "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_apagado.jpg",
+            "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_encendido.jpg"
         ],
     }
 ]

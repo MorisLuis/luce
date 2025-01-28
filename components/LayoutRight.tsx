@@ -25,7 +25,7 @@ export default function LayoutRight({
             <div className={style.sidebarlogomobil}>
                 <Link href={"/"} className={style.sidebar_image}>
                     <Image
-                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
                         layout="responsive"
                         width={200}
@@ -42,7 +42,7 @@ export default function LayoutRight({
             <div className={style.sidebar}>
                 <Link href={"/"} className={style.sidebar_image}>
                     <Image
-                        src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                        src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
                         alt={'LUCE'}
                         layout="responsive"
                         width={200}
