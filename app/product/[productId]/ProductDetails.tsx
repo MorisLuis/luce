@@ -26,9 +26,15 @@ export default function ProductDetails({
             </div>
 
             <div className={styles.ProductDetailsContent}>
-                <section>
-                    <p>{product.shortDescription}</p>
-                </section>
+                <div className={styles.information}>
+                    <section>
+                        <p>{product.shortDescription}</p>
+                    </section>
+
+                    <section  className={styles.brand}>
+                        <p>Marca: {product.brand}</p>
+                    </section>
+                </div>
 
                 <div className={styles.ProductDetailsActions}>
                     <section className={styles.ProductDetailsNavigation}>

@@ -13,9 +13,9 @@ export default function Home() {
         <Carousel
           images={[
             'images/landpage/LANDPAGE1.webp',
-            'images/landpage/LANDPAGE2.webp',
             'images/landpage/LANDPAGE3.webp',
             'images/landpage/LANDPAGE4.webp',
+            'images/landpage/LANDPAGE2.webp',
           ]}
         />
       </div>

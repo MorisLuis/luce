@@ -19,22 +19,8 @@
         display: flex;
         text-align: start;
         width: 100%;
-
-        .imageBannerContent {
-            margin: $margin-bottom 0px;
-            width: 100%;
-
-            .imageBanner {
-                height: 300px;
-                min-height: 70vh;
-                position: relative;
-
-                .image {
-                    width: 100%;
-                    height: 100px;
-                }
-            }
-        }
+        justify-content: center;
+        margin-bottom: $margin-bottom;
     }
 
     .ProductDetailsContent {
@@ -45,8 +31,18 @@
         justify-content: space-between;
         min-height: 60vh;
 
+        .information{
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+
+            .brand{
+                font-size: $font-sm;
+            }
+        }
+
         >section {
-            margin: $margin-bottom*2 0px;
+            margin-bottom: $margin-bottom*2 0px;
             text-align: justify;
 
             p{
@@ -69,7 +65,8 @@
                 justify-content: space-between;
                 text-transform: capitalize;
                 margin-bottom: $margin-bottom;
-        
+                text-transform: uppercase;
+
                 :hover {
                     cursor: pointer;
                     text-decoration: underline;

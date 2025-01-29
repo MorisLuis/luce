@@ -68,17 +68,14 @@ h1 {
 
   @include respond(big-desktop) {
     font-size: $font-med;
-    //line-height: $font-med / 5;
   }
 
   @include respond(tab-port) {
     font-size: $font-med;
-    //line-height: $font-med;
   }
 
   @include respond(phone) {
     font-size: $font-big / 2;
-    //line-height: $font-big / 2;
   }
 }
 
@@ -86,5 +83,5 @@ h1 {
 
 h2 {
   font-family: 'HelveticaNeueLight';
-  line-height: 30px;
+  font-size: $font-med;
 }

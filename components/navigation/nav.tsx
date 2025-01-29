@@ -47,9 +47,6 @@ export const Nav = () => {
                         <li className={`${styles.section} ${showMenu ? styles.active : ''}`}>
                             <Link href={'/'} onClick={handleNavigate}>Inicio</Link>
                         </li>
-                        <li className={`${styles.section} ${showMenu ? styles.active : ''}`}>
-                            <Link href={'/contact'} onClick={handleNavigate}>Contacto</Link>
-                        </li>
 
                         <li
                             className={`${styles.section} ${showMenu ? styles.active : ''}`}
@@ -89,6 +86,10 @@ export const Nav = () => {
                                     </li>
                                 ))}
                             </ul>
+                        </li>
+
+                        <li className={`${styles.section} ${showMenu ? styles.active : ''}`}>
+                            <Link href={'/contact'} onClick={handleNavigate}>Contacto</Link>
                         </li>
                     </div>
                 </div>

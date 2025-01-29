@@ -111,8 +111,6 @@ export default function ImageSlider({ images }: ImageSliderInterface) {
                         quality={100}
                         width={100}
                         height={100}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,..."
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 )}
