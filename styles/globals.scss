@@ -1,39 +1,38 @@
 @import "./main.scss";
 
 @font-face {
-  font-family: "HelveticaNeueLight";
-  src: url("/fonts/HelveticaNeueLight.ttf");
+  font-family: "Mulish-Light";
+  src: url("/fonts/MulishLight.ttf");
+  font-weight: lighter;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mulish-Regular";
+  src: url("/fonts/MulishRegular.ttf");
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "HelveticaNeueBold";
-  src: url("/fonts/HelveticaNeueBold.ttf");
+  font-family: "Mulish-Medium";
+  src: url("/fonts/MulishMedium.ttf");
   font-weight: bold;
   font-display: swap;
 }
-
-@font-face {
-  font-family: "RotisSansSerif";
-  src: url("/fonts/RotisSansSerif.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-
 
 html,
 body {
   overflow-x: hidden;
   background-color: $color-primary;
-  font-family: 'HelveticaNeueLight';
+  font-family: 'Mulish-Regular';
   font-size: $font-normal;
   color: $text-color;
 }
 
 body {
   color: $text-color;
-  font-family: 'HelveticaNeueLight';
+  font-family: 'Mulish-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
@@ -47,7 +46,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'HelveticaNeueLight';
+  font-family: 'Mulish-light';
 }
 
 a {
@@ -60,7 +59,7 @@ h1 {
   font-size: $font-med;
   z-index: 99;
   letter-spacing: 2px;
-  font-family: 'HelveticaNeueLight';
+  font-family: 'Mulish-light';
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -82,6 +81,6 @@ h1 {
 ;
 
 h2 {
-  font-family: 'HelveticaNeueLight';
+  font-family: 'Mulish-light';
   font-size: $font-med;
 }

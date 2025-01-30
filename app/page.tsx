@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import LayoutRight from '@/components/LayoutRight';
-import styles from '../styles/Home.module.scss';
 import Carousel from '@/components/carrusel';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
 

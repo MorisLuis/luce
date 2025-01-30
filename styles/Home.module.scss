@@ -58,8 +58,8 @@
             margin-bottom: $margin-bottom / 2;
             z-index: 1;
 
-            &:hover {
-                text-decoration: underline;
+            :hover {
+                font-family: "Mulish-Medium";
             }
         }
     }
