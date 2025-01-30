@@ -19,14 +19,15 @@ export default function LayoutRightSkeleton({ contentSkeleton, sideBarSkeleton, 
                 </div>
             </div>
 
-            <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
+            <div className={style.content}>
                 {contentSkeleton?.()}
             </div>
 
             <div className={style.sidebar}>
-                <div className={style.sidebar_image}>
+{/*                 <div className={style.sidebar_image}>
                     <div className={style.imageContainerWeb}></div>
-                </div>
+                </div> */}
+                
                 <div className={style.sidebar_content}>
                     {sideBarSkeleton?.()}
                 </div>

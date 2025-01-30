@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from '@/components/Button';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { sendEmail } from '@/services/sendEmail';
 import styles from "../../styles/Contact.module.scss";
 import Link from 'next/link';
@@ -59,16 +59,16 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
 
     const ProductRender = products.find((product) => product.id == productId);
 
-    const getDataOfProduct = () => {
+    const getDataOfProduct = useCallback(() => {
         if (ProductRender) {
             setSubject(`Estoy interesad@ en ${ProductRender.name}`)
             setMessage(`Estoy interesad@ en ${ProductRender.name}`);
         }
-    };
+    }, [ProductRender]);
 
     useEffect(() => {
         getDataOfProduct()
-    }, [productId]);
+    }, [productId, getDataOfProduct]);
 
     return (
         <div className={center ? `${styles.Contact} ${styles.center}` : styles.Contact}>
@@ -117,8 +117,8 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                         titleLoading="Enviando..."
                     />
                 </form>
-                <div 
-                className={secondaryDesign ? `${styles.ContactFooter} ${styles.secondary}` : styles.ContactFooter}
+                <div
+                    className={secondaryDesign ? `${styles.ContactFooter} ${styles.secondary}` : styles.ContactFooter}
                 >
                     <Link href={'mailto: hola@luce.com.mx'}>
                         hola@luce.com.mx

@@ -11,11 +11,9 @@
         top: 0px;
         z-index: 0;
 
-
         @include respond(tab-port) {
             position: absolute;
         }
-
 
         .imageContainer {
             position: relative;
@@ -67,6 +65,12 @@
     .HomeCarrusel {
         width: 100%;
         margin: 0px;
+        
+
+        @include respond(phone) {
+            position: fixed;
+            top: 0px;
+        }
 
         &__content{
             height: 100vh;

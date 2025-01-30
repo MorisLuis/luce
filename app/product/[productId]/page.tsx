@@ -1,10 +1,10 @@
+import LayoutRightSkeleton from "@/components/skeletons/LayoutRightSkeleton";
 import products from "../../../data/products.json"
 import ProductClientPage from './ProductClientPage';
-/* import { Suspense } from 'react';
-import LayoutRightSkeleton from '@/components/skeletons/LayoutRightSkeleton';
-import ProductDetailsSkeleton from '@/components/skeletons/ProductDetailsSkeleton';
-import ImageSliderSkeleton from '@/components/skeletons/ImageSliderSkeleton';
- */
+import { Suspense } from "react";
+import ProductDetailsSkeleton from "@/components/skeletons/ProductDetailsSkeleton";
+import ImageSliderSkeleton from "@/components/skeletons/ImageSliderSkeleton";
+
 export async function generateMetadata({ params }: { params: { productId: string } }) {
   const product = products.find((prod) => prod.id === Number(params.productId));
 
@@ -19,30 +19,21 @@ export async function generateMetadata({ params }: { params: { productId: string
 
 export default function ProductPage({ params }: { params: { productId: string, id: string } }) {
 
-/*   const renderContent = () => {
+  const renderContent = () => {
     return <ImageSliderSkeleton />
-  }; */
-
-  return (
-    <ProductClientPage params={params} />
-
-  )
-
-}
-
-
-/* 
-
+  };
 
   return (
     <Suspense fallback={
       <LayoutRightSkeleton
         contentSkeleton={renderContent}
         sideBarSkeleton={() => <ProductDetailsSkeleton />}
-        secondaryDesign={true}
       />
     }>
       <ProductClientPage params={params} />
     </Suspense>
   )
-*/
+
+}
+
+

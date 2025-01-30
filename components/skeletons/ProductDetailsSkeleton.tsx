@@ -23,11 +23,6 @@ export default function ProductDetailsSkeleton() {
                     <p></p>
                 </section>
 
-                <section>
-                    <h3></h3>
-                    <p></p>
-                </section>
-
                 <section className={styles.ProductDetailsNavigation}>
                     <p></p>
                     <p></p>

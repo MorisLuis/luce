@@ -8,19 +8,18 @@ interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar?: () => React.ReactNode;
     bottom?: boolean;
-    secondaryDesign?: boolean;
+    contentVisible?: boolean;
 }
 
 export default function LayoutRight({
     content,
     sideBar,
     bottom,
-    secondaryDesign
+    contentVisible
 }: LayoutRightInterface) {
 
     return (
         <div className={style.layoutRight}>
-            <div className={style.sidebarMobil}> {secondaryDesign && sideBar?.()} </div> {/* This is how we show sidebar in movil */}
 
             <div className={style.sidebarlogomobil}>
                 <Link href={"/"} className={style.sidebar_image}>
@@ -35,22 +34,33 @@ export default function LayoutRight({
                 </Link>
             </div>
 
-            <div className={secondaryDesign ? style.content__secondaryDesign : style.content}>
+            <div className={style.content}>
                 {content()}
             </div>
 
             <div className={style.sidebar}>
-                <Link href={"/"} className={style.sidebar_image}>
-                    <Image
-                        src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
-                        alt={'LUCE'}
-                        layout="responsive"
-                        width={200}
-                        height={100}
-                        className={style.imageContainerWeb}
-                    />
-                </Link>
-                <div className={style.sidebar_content}>
+                <div className={style.sidebar_image}>
+                    <Link href={"/"}>
+                        <Image
+                            src={`/logos/VERTICAL_COLOR PRINCIPAL.svg`}
+                            alt={'LUCE'}
+                            layout="responsive"
+                            width={200}
+                            height={100}
+                            className={style.imageDesktop}
+                        />
+                        <Image
+                            src={`/logos/HORIZONTAL_COLOR PRINCIPAL.svg`}
+                            alt={'LUCE'}
+                            layout="responsive"
+                            width={200}
+                            height={100}
+                            className={style.imageMobile}
+                        />
+                    </Link>
+                </div>
+
+                <div className={contentVisible ? style.sidebar_content : `${style.sidebar_content} ${style.sidebar_hidden}`}>
                     {sideBar?.()}
                 </div>
 

@@ -84,6 +84,9 @@ export function BrandsCategory() {
 
 
     return (
-        <LayoutRight content={renderContent} sideBar={renderSideBar} />
+        <LayoutRight
+            content={renderContent}
+            sideBar={renderSideBar}
+        />
     );
 }

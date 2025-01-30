@@ -95,7 +95,7 @@ export default function ProductClientPage({ params }: { params: { productId: str
                     />
                 }
                 bottom={true}
-                secondaryDesign={true}
+                contentVisible={true}
             />
 
             <Modal
@@ -113,9 +113,8 @@ export default function ProductClientPage({ params }: { params: { productId: str
                 onClose={handleOpenSpecs}
                 headerTitle="Especificaciones"
             >
-                <ProductSpecs
-                    product={product}
-                />
+                <ProductSpecs product={product}
+/>
             </Modal>
         </>
     );

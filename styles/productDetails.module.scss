@@ -36,10 +36,20 @@
         min-height: 60vh;
         gap: 50px;
 
+        @include respond(phone) {
+            min-height: 0px;
+            gap: $gap;
+        }
+
+
         .information {
             display: flex;
             flex-direction: column;
             gap: $gap;
+
+            @include respond(phone) {
+                margin-bottom: $margin-bottom;
+            }
 
             >section {
                 margin-bottom: $margin-bottom*2 0px;
@@ -67,7 +77,6 @@
             }
         }
     }
-
 
 }
 

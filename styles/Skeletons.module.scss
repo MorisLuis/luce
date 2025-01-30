@@ -410,7 +410,7 @@
         width: 100%;
 
         >section {
-            margin: $margin-bottom*2 0px;
+            margin: $margin-bottom 0px;
             width: 100%;
             height: fit-content;
 
@@ -471,6 +471,8 @@
 
     @include respond(phone) {
         height: 80vh;
+        width: -webkit-fill-available;
+    margin: 30px;
     }
 }
 

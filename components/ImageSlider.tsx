@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import styles from "../styles/ImageSlider.module.scss";
 
@@ -21,11 +21,11 @@ export default function ImageSlider({ images }: ImageSliderInterface) {
     const currentX = useRef<number | null>(null);
     const isDragging = useRef(false);
 
-    const startInterval = () => {
+    const startInterval = useCallback(() => {
         intervalRef.current = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 10000);
-    };
+    }, [images.length]);
 
     const clearExistingInterval = () => {
         if (intervalRef.current) {
@@ -37,7 +37,7 @@ export default function ImageSlider({ images }: ImageSliderInterface) {
     useEffect(() => {
         startInterval();
         return () => clearExistingInterval();
-    }, [images.length]);
+    }, [images.length, startInterval]);
 
     const handleDotClick = (index: number) => {
         clearExistingInterval();

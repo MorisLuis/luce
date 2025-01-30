@@ -15,7 +15,7 @@ export async function generateMetadata() {
 function ContactPage() {
     return (
         <LayoutRight
-            content={() => <ContactScreen center={true} secondaryDesign={true} />}
+            content={() => <ContactScreen center={true} />}
         />
     );
 };

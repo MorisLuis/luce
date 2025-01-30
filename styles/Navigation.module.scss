@@ -173,6 +173,8 @@
         position: fixed;
         right: 10%;
         bottom: 80px;
+        width: fit-content;
+        height: fit-content;
 
         @include respond(tab-port) {
             right: 15%;
@@ -183,8 +185,6 @@
             top: 30px;
             left: $padding;
             transform: translateX(0%);
-            width: fit-content;
-            height: fit-content;
         }
 
         .bar {
