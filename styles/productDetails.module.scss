@@ -21,6 +21,10 @@
         width: 100%;
         justify-content: center;
         margin-bottom: $margin-bottom;
+
+        h2 {
+            font-family: 'Mulish-Medium';
+        }
     }
 
     .ProductDetailsContent {
@@ -30,36 +34,25 @@
         width: 100%;
         justify-content: space-between;
         min-height: 60vh;
+        gap: 50px;
 
-        .information{
+        .information {
             display: flex;
             flex-direction: column;
             gap: $gap;
 
-            .brand{
+            >section {
+                margin-bottom: $margin-bottom*2 0px;
+                text-align: justify;
+            }
+
+            .brand {
                 font-size: $font-sm;
             }
         }
 
-        >section {
-            margin-bottom: $margin-bottom*2 0px;
-            text-align: justify;
+        .actions {
 
-            p{
-                text-justify: auto;
-            }
-
-            label {
-                font-weight: bold;
-            }
-
-            li {
-                list-style: none;
-            }
-        }
-
-        .ProductDetailsActions{
-            
             .ProductDetailsNavigation {
                 display: flex;
                 justify-content: space-between;

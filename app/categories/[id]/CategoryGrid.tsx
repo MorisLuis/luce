@@ -2,12 +2,12 @@
 
 import LayoutRight from '@/components/LayoutRight';
 import React, { useState } from 'react'
-import styles from "../../../styles/Grid.module.scss";
 import { useParams } from 'next/navigation';
 import { Product } from '@/interface/product';
 import products from "../../../data/products.json"
 import { categoriesData } from '@/data/categories';
 import { ProductCard } from '@/components/ProductCard';
+import styles from "../../../styles/Grid.module.scss";
 
 export function CategoryGrid() {
     const params = useParams();
@@ -46,8 +46,7 @@ export function CategoryGrid() {
                 <div className={styles.gridContainer}>
                     {ProductRender.map((product: Product) => (
                         <ProductCard
-                        key={product.id}
-
+                            key={product.id}
                             product={product}
                             currentImageIndex={currentImageIndex}
                             handleMouseEnter={handleMouseEnter}

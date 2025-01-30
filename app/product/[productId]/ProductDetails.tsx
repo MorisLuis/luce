@@ -36,7 +36,7 @@ export default function ProductDetails({
                     </section>
                 </div>
 
-                <div className={styles.ProductDetailsActions}>
+                <div className={styles.actions}>
                     <section className={styles.ProductDetailsNavigation}>
                         <p onClick={back}>Atrás</p>
                         <p onClick={next}>Siguiente</p>

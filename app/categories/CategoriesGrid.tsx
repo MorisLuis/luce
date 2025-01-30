@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 import LayoutRight from "@/components/LayoutRight";
 import { categoriesData } from "@/data/categories";
-import styles from "../../styles/Grid.module.scss";
 import { ProductCard } from "@/components/ProductCard";
+import styles from "../../styles/Grid.module.scss";
 
 export function CategoriesGrid() {
     const searchParams = useSearchParams();
@@ -54,7 +54,7 @@ export function CategoriesGrid() {
                 <nav className={styles.gridNavigation}>
                     <h2>Categorías</h2>
                     <ul>
-                        {categoriesData.map((item) => (
+                        {categoriesData.slice(1).map((item) => (
                             <li key={item.id} className={styles.option}>
                                 <div
                                     className={
