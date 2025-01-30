@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .button {
     border-width: 0px;
     padding: $padding-horizontal / 1.5;
@@ -9,6 +11,15 @@
     gap: $padding-horizontal;
     color: $text-color;
     width: 100%;
+
+    &.secondary{
+        width: 30%;
+
+        @include respond (phone) {
+            width: 100%;
+            
+        }
+    }
 
     &.disabled {
         opacity: 60%;
@@ -48,7 +59,6 @@
         transition: 0.3s ease;
     }
 }
-
 
 .input {
     border-width: 0px;

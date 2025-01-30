@@ -66,8 +66,6 @@
 
         @include respond(tab-port) {
             width: 30%;
-            padding: 0px;
-            padding-top: $padding;
         }
 
         @include respond(phone) {
@@ -78,9 +76,6 @@
         .sidebar_content {
             width: 100%;
 
-            @include respond(phone) {
-                padding: $padding;
-            }
         };
 
         .sidebar_hidden{
@@ -95,7 +90,7 @@
             margin: 0 auto;
             margin-bottom: $margin-bottom;
             max-width: 150px;
-            height: 120px;
+            height: fit-content;
             width: 80px;
 
             .imageMobile{

@@ -11,6 +11,7 @@ interface ButtonInterface {
     icon?: IconProp;
     iconStyles?: React.CSSProperties;
     extraStyles?: React.CSSProperties;
+    secondary?: boolean;
     disabled?: boolean
     loading?: boolean
 }
@@ -22,6 +23,7 @@ export const Button = ({
     icon,
     iconStyles,
     extraStyles,
+    secondary,
     disabled,
     loading
 }: ButtonInterface) => {
@@ -29,7 +31,7 @@ export const Button = ({
     return (
         <button
             onClick={onClick}
-            className={disabled ? 'button disabled' : 'button'}
+            className={`button ${disabled ? 'disabled' : ''} ${secondary ? 'secondary' : ''}`.trim()}
             style={extraStyles}
             disabled={disabled}
         >
