@@ -31,13 +31,13 @@ export default function Home() {
               <Link href={'/'}>Inicio</Link>
             </li>
             <li className={styles.section}>
-              <Link href={'/contact'}>Contacto</Link>
-            </li>
-            <li className={styles.section}>
               <Link href={'/categories'}>Categorías</Link>
             </li>
             <li className={styles.section}>
               <Link href={'/brands'}>Marcas</Link>
+            </li>
+            <li className={styles.section}>
+              <Link href={'/contact'}>Contacto</Link>
             </li>
           </ul>
         </div>

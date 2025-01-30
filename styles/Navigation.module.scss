@@ -72,13 +72,15 @@
                 margin: 0 auto;
                 margin-bottom: $margin-bottom;
                 max-width: 150px;
-
+                height: fit-content;
+                width: 80px;
+    
                 .luce__image {
                     display: flex;
                     width: 100%;
                     margin: 0 auto;
                     max-width: 150px;
-                    height: 100px;
+                    height: fit-content;
         
                     img{
                         object-fit: contain;
@@ -149,6 +151,10 @@
                         font-weight: normal;
                         display: none;
 
+                        >li{
+                            margin-bottom: $margin-bottom / 3;
+                        }
+
                         @include respond(phone) {
                             display: flex;
                             flex-direction: column;
@@ -157,6 +163,7 @@
                         &.active {
                             display: flex;
                             flex-direction: column;
+                            
                         }
                     }
                 }

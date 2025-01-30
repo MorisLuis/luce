@@ -55,7 +55,7 @@ export const Nav = () => {
                         >
                             <p>Categorías</p>
                             <ul className={`${styles.dropdown} ${showDropDownCategories ? styles.active : ""}`}>
-                                {categoriesData.map((category) => (
+                                {categoriesData.slice(1).map((category) => (
                                     <li key={category.id}>
                                         <Link
                                             href={category.name === "Todos" ? '/categories' : `/categories/${category.name}`}
@@ -75,7 +75,7 @@ export const Nav = () => {
                         >
                             <p>Marcas</p>
                             <ul className={`${styles.dropdown} ${showDropDownBrands ? styles.active : ""}`}>
-                                {brandsData.map((brand) => (
+                                {brandsData.slice(1).map((brand) => (
                                     <li key={brand.id}>
                                         <Link
                                             href={brand.name === "Todos" ? '/brands' : `/brands/${brand.name}`}

@@ -16,7 +16,7 @@ export const categoriesData: categories[] = [
             "armstrong-linear/Candil_schwung_armstronglinear_encendido.jpg"
         ],
     },
-    {
+    /* {
         id: 1,
         name: "Apliques",
         description: 'Descubre nuestra selección de apliques de pared.',
@@ -55,9 +55,9 @@ export const categoriesData: categories[] = [
             "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_apagado.jpg",
             "ODYSSEYLINEARSM/candil_schwung_odysseylinearsm_encendido.jpg"
         ],
-    },
+    }, */
     {
-        id: 3,
+        id: 1,
         name: "Lámparas colgantes",
         description: "",
         images: [
@@ -80,7 +80,7 @@ export const categoriesData: categories[] = [
         ],
     },
     {
-        id: 4,
+        id: 2,
         name: "Lámparas de pared",
         description: "",
         images: [
@@ -103,7 +103,7 @@ export const categoriesData: categories[] = [
         ],
     },
     {
-        id: 5,
+        id: 3,
         name: "Lámparas de techo",
         description: "",
         images: [
