@@ -79,8 +79,8 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                 <form onSubmit={handleSubmit} className={secondaryDesign ? `${styles.ContactForm} ${styles.secondary}` : styles.ContactForm}>
                     <div className={styles.inputContainer}>
                         <input
-                            type="email"
-                            id="email"
+                            type="text"
+                            id="name"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -111,7 +111,6 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                     <Button
                         title='Enviar'
                         onClick={handleButtonClick}
-                        //extraStyles={{ width: "30%", marginTop: 10 }}
                         disabled={sendingEmail}
                         loading={sendingEmail}
                         titleLoading="Enviando..."

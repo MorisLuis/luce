@@ -39,6 +39,8 @@ export default function LayoutRight({
             </div>
 
             <div className={style.sidebar}>
+                <div className={style.line}></div>
+            
                 <div className={style.sidebar_image}>
                     <Link href={"/"}>
                         <Image
@@ -64,7 +66,9 @@ export default function LayoutRight({
                     {sideBar?.()}
                 </div>
 
-                {bottom && <div className={style.sidebar_bottom}></div>}
+                {bottom && <div className={style.sidebar_bottom}>
+                <div className={style.line}></div>
+                    </div>}
             </div>
 
             <Nav />

@@ -11,6 +11,7 @@
     gap: $padding-horizontal;
     color: $text-color;
     width: 100%;
+    border: 1px solid transparent;
 
     &.secondary{
         width: 30%;

@@ -53,7 +53,7 @@ export const Nav = () => {
                             onMouseEnter={() => setShowDropDownCategories(true)}
                             onMouseLeave={() => setShowDropDownCategories(false)}
                         >
-                            <p>Categorías</p>
+                            <Link href={"/categories"}>Categorías</Link>
                             <ul className={`${styles.dropdown} ${showDropDownCategories ? styles.active : ""}`}>
                                 {categoriesData.slice(1).map((category) => (
                                     <li key={category.id}>
@@ -73,7 +73,7 @@ export const Nav = () => {
                             onMouseEnter={() => setShowDropDownBrands(true)}
                             onMouseLeave={() => setShowDropDownBrands(false)}
                         >
-                            <p>Marcas</p>
+                            <Link href={"/brands"}>Marcas</Link>
                             <ul className={`${styles.dropdown} ${showDropDownBrands ? styles.active : ""}`}>
                                 {brandsData.slice(1).map((brand) => (
                                     <li key={brand.id}>
