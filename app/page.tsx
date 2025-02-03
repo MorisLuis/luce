@@ -49,6 +49,7 @@ export default function Home() {
     <LayoutRight
       sideBar={renderSideBar}
       content={renderContent}
+      bottom={true}
     />
   );
 }

@@ -21,6 +21,7 @@ export const Nav = () => {
 
     return (
         <div className={styles.menu}>
+
             <Hamburguer
                 onClick={() => setShowMenu(!showMenu)}
                 active={showMenu}
@@ -30,6 +31,7 @@ export const Nav = () => {
 
             {/* Menu */}
             <div className={`${styles.menuContent} ${showMenu ? styles.active : ''}`}>
+
                 <div className={styles.menuContainer}>
                     <div className={styles.luce}>
                         <Link href={"/"} className={styles.luce__image}>
