@@ -7,14 +7,12 @@ import style from '../styles/LayoutRight.module.scss';
 interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar?: () => React.ReactNode;
-    bottom?: boolean;
     contentVisible?: boolean;
 }
 
 export default function LayoutRight({
     content,
     sideBar,
-    bottom,
     contentVisible
 }: LayoutRightInterface) {
 

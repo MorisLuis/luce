@@ -94,7 +94,6 @@ export default function ProductClientPage({ params }: { params: { productId: str
                         back={goToBackProduct}
                     />
                 }
-                bottom={true}
                 contentVisible={true}
             />
 
