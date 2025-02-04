@@ -7,14 +7,12 @@ import style from '../styles/LayoutRight.module.scss';
 interface LayoutRightInterface {
     content: () => React.ReactNode;
     sideBar?: () => React.ReactNode;
-    bottom?: boolean;
     contentVisible?: boolean;
 }
 
 export default function LayoutRight({
     content,
     sideBar,
-    bottom,
     contentVisible
 }: LayoutRightInterface) {
 
@@ -39,8 +37,7 @@ export default function LayoutRight({
             </div>
 
             <div className={style.sidebar}>
-                <div className={style.line}></div>
-            
+
                 <div className={style.sidebar_image}>
                     <Link href={"/"}>
                         <Image
@@ -65,10 +62,8 @@ export default function LayoutRight({
                 <div className={contentVisible ? style.sidebar_content : `${style.sidebar_content} ${style.sidebar_hidden}`}>
                     {sideBar?.()}
                 </div>
-
-                {bottom && <div className={style.sidebar_bottom}>
-                <div className={style.line}></div>
-                    </div>}
+                <div className={style.sidebar_bottom}>
+                </div>
             </div>
 
             <Nav />

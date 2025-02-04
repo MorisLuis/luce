@@ -64,18 +64,6 @@
         position: relative;
         overflow-y: auto;
 
-        .line{
-            display: none;
-            width: 5px;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            right: 50%;
-            background: green;
-            z-index: 99999999999;
-            transform: translateX(50%);
-        }
-
         @include respond(tab-port) {
             width: 30%;
         }
@@ -151,18 +139,6 @@
             height: 130px;
             right: 0;
             bottom: 0;
-
-            .line{
-                display: none;
-                width: 5px;
-                height: 100%;
-                position: absolute;
-                top: 0px;
-                right: 50%;
-                background: green;
-                z-index: 99999999999;
-                transform: translateX(50%);
-            }
 
             @include respond(tab-port) {
                 width: 30%;

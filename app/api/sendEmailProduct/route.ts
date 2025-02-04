@@ -8,15 +8,16 @@ export async function POST(req: Request) {
         port: 587,
         secure: false,
         auth: {
-            user: 'moradoluisenrique@gmail.com',
+            user: 'hola@luce.com.mx',
             pass: process.env.PASSWORD_GMAIL, // Cambia esto por tu contraseña de aplicación
         },
     });
 
+    
     // Definir el cuerpo del correo en HTML
     const mailOptions = {
-        from: email,
-        to: 'moradoluisenrique@gmail.com, moradoluisenrique@outlook.com',
+        from: 'hola@luce.com.mx',
+        to: `hola@luce.com.mx`,
         subject: `Te interesa el producto ${product.name}`,
         html: `
             <div style="font-family: Arial, sans-serif; padding: 20px;">
