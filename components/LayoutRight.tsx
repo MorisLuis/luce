@@ -37,7 +37,6 @@ export default function LayoutRight({
             </div>
 
             <div className={style.sidebar}>
-                <div className={style.line}></div>
 
                 <div className={style.sidebar_image}>
                     <Link href={"/"}>
@@ -64,7 +63,6 @@ export default function LayoutRight({
                     {sideBar?.()}
                 </div>
                 <div className={style.sidebar_bottom}>
-                    <div className={style.line}></div>
                 </div>
             </div>
 
