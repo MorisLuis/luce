@@ -13,10 +13,11 @@ export async function POST(req: Request) {
         },
     });
 
+    
     // Definir el cuerpo del correo en HTML
     const mailOptions = {
-        from: email,
-        to: 'moradoluisenrique@gmail.com, hola@luce.com.mx',
+        from: 'hola@luce.com.mx',
+        to: `hola@luce.com.mx`,
         subject: `Te interesa el producto ${product.name}`,
         html: `
             <div style="font-family: Arial, sans-serif; padding: 20px;">
