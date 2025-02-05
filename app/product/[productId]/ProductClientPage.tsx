@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import ProductDetails from './ProductDetails';
 import { Product } from '@/interface/product';
 import LayoutRight from '@/components/LayoutRight';
-import ImageSlider from '@/components/ImageSlider';
 import { Modal } from '@/components/Modal';
 import { ContactScreen } from '@/app/contact/ContactScreen';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ProductSpecs } from './ProductSpecs';
 import products from "../../../data/products.json"
+import CarouselProduct from '@/components/carruselProduct';
 
 export default function ProductClientPage({ params }: { params: { productId: string, id: string } }) {
 
@@ -24,8 +24,8 @@ export default function ProductClientPage({ params }: { params: { productId: str
         (prod) => prod.id === Number(params.productId)
     );
 
-    const handleOpenContact = () =>  setContactModal(!contactModal);
-    const handleOpenSpecs = () =>  setSpecsModal(!specsModal);
+    const handleOpenContact = () => setContactModal(!contactModal);
+    const handleOpenSpecs = () => setSpecsModal(!specsModal);
 
 
     if (!product) {
@@ -33,7 +33,11 @@ export default function ProductClientPage({ params }: { params: { productId: str
     }
 
     const renderContent = () => {
-        return <ImageSlider images={product.images} />
+        return (
+            <CarouselProduct
+                images={product.images}
+            />
+        )
     };
 
     const goToNextProduct = () => {
@@ -113,7 +117,7 @@ export default function ProductClientPage({ params }: { params: { productId: str
                 headerTitle="Especificaciones"
             >
                 <ProductSpecs product={product}
-/>
+                />
             </Modal>
         </>
     );
