@@ -87,6 +87,17 @@
     align-content: center;
     height: 100%;
 
+    overflow-y: scroll;
+
+    // Ocultar el scrollbar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE y Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari y Opera
+    }
+
+
     h1 {
         margin-bottom: $margin-bottom;
     }
@@ -120,7 +131,7 @@
         display: flex;
         height: 100%;
         width: 100%;
-        background-color: orchid;
+        background-color: $background-color-tertiary;
 
         .imageContainer {
             width: 100%;

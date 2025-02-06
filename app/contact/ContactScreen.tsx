@@ -61,8 +61,7 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
 
     const getDataOfProduct = useCallback(() => {
         if (ProductRender) {
-            setSubject(`Estoy interesad@ en ${ProductRender.name}`)
-            setMessage(`Estoy interesad@ en ${ProductRender.name}`);
+            setMessage(`Hola! Estoy interesad@ en ${ProductRender.name}`);
         }
     }, [ProductRender]);
 
@@ -79,8 +78,8 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                 <form onSubmit={handleSubmit} className={secondaryDesign ? `${styles.ContactForm} ${styles.secondary}` : styles.ContactForm}>
                     <div className={styles.inputContainer}>
                         <input
-                            type="text"
                             id="name"
+                            type="text"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -90,8 +89,8 @@ export function ContactScreen({ center, secondaryDesign, productId }: ContactScr
                     </div>
                     <div className={styles.inputContainer}>
                         <input
-                            type="text"
                             id="email"
+                            type="text"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             required
