@@ -80,7 +80,7 @@
 }
 
 .ProductSpecs {
-    padding: $padding;
+    padding: $padding $padding 0px $padding;
     display: flex;
     flex-direction: column;
     justify-content: center;
