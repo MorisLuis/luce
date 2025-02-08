@@ -87,17 +87,6 @@
     align-content: center;
     height: 100%;
 
-    overflow-y: scroll;
-
-    // Ocultar el scrollbar
-    scrollbar-width: none; // Firefox
-    -ms-overflow-style: none; // IE y Edge
-
-    &::-webkit-scrollbar {
-      display: none; // Chrome, Safari y Opera
-    }
-
-
     h1 {
         margin-bottom: $margin-bottom;
     }
@@ -111,7 +100,17 @@
     }
 
     .ProductContent {
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        // Ocultar el scrollbar
+        scrollbar-width: none; // Firefox
+        -ms-overflow-style: none; // IE y Edge
+    
+        &::-webkit-scrollbar {
+          display: none; // Chrome, Safari y Opera
+        }
+    
     }
 }
 
